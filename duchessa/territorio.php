@@ -16,7 +16,7 @@ include 'partials/header.php';
   </div>
 
   <div class="banner copre">
-    <?= foto('img/pagine/territorio/panoramica.webp', 'Girifalco e le colline circostanti viste da lontano', 2400, 1350, 'Panoramica di Girifalco dall\'alto o da lontano', ['subito' => true]) ?>
+    <?= foto('img/pagine/territorio/panoramica.webp', 'Uliveti e campagna visti dall\'alto', 1920, 1434, 'Panoramica di Girifalco dall\'alto o da lontano', ['subito' => true]) ?>
   </div>
 
   <div class="contenitore">

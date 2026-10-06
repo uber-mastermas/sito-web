@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <!-- 1 — Hero: il logo protagonista, nient'altro -->
   <section class="hero copre">
-    <?= foto('img/home/hero-uliveto.webp', 'Uliveto sulle colline di Girifalco', 1920, 1080, 'Paesaggio ulivi / Girifalco, luce calda', ['subito' => true]) ?>
+    <?= foto('img/home/hero-uliveto.webp', 'Uliveto sulle colline di Girifalco nella luce del tramonto', 1800, 1344, 'Paesaggio ulivi / Girifalco, luce calda', ['subito' => true]) ?>
     <div class="hero-testo">
       <img class="hero-logo" src="img/logo/logo-duchessa-chiaro.svg" width="263" height="351" alt="">
       <h1>L'Olio della Duchessa</h1>
@@ -45,7 +45,7 @@ include 'partials/header.php';
 
   <!-- 4 — Chiusura -->
   <section class="quadro copre">
-    <?= foto('img/home/chiusura.webp', 'Ulivi nella luce del tramonto', 2400, 1350, 'Paesaggio o ulivi, immagine suggestiva') ?>
+    <?= foto('img/home/chiusura.webp', 'Uliveti e un sentiero di campagna visti dall\'alto', 1920, 1434, 'Paesaggio o ulivi, immagine suggestiva') ?>
     <div class="quadro-testo" data-appare>
       <h2>L'Olio della Duchessa</h2>
       <p class="frase">Arte olearia per passione.</p>

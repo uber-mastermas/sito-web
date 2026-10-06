@@ -25,7 +25,8 @@ function foto($file, $alt, $w, $h, $soggetto = '', $opz = []) {
   $percorso = __DIR__ . '/../' . $file;
   if (is_file($percorso)) {
     $carica = !empty($opz['subito']) ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
-    return '<img class="foto' . $classe . '" src="' . e($file) . '" width="' . (int)$w . '" height="' . (int)$h . '" alt="' . e($alt) . '" ' . $carica . '>';
+    $versione = '?v=' . filemtime($percorso);   // foto sostituita = indirizzo nuovo, niente cache vecchia
+    return '<img class="foto' . $classe . '" src="' . e($file) . $versione . '" width="' . (int)$w . '" height="' . (int)$h . '" alt="' . e($alt) . '" ' . $carica . '>';
   }
   return '<div class="foto segnaposto' . $classe . '" style="--ar:' . (int)$w . ' / ' . (int)$h . '" role="img" aria-label="' . e($alt) . '">'
        . '<span><strong>' . e($soggetto ?: $alt) . '</strong>'
