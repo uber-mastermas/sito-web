@@ -8,7 +8,7 @@ P="$1"; [ -d "$P" ] || { echo "Cartella $P non trovata"; exit 1; }
 OUT="$P-anteprima"; PORTA=8799
 rm -rf "$OUT"; mkdir -p "$OUT"
 (cd "$P" && tar --exclude='*.php' --exclude=partials -cf - .) | tar -xf - -C "$OUT"
-(cd "$P" && php -S 127.0.0.1:$PORTA >/dev/null 2>&1) & SP=$!
+php -S 127.0.0.1:$PORTA -t "$P" >/dev/null 2>&1 & SP=$!
 sleep 1
 for f in "$P"/*.php; do
   n=$(basename "$f" .php)
@@ -18,5 +18,5 @@ for f in "$P"/*.php; do
     > "$OUT/$n.html"
   echo "  $n.html"
 done
-kill $SP
+kill $SP 2>/dev/null || true
 echo "Anteprima pronta in $OUT/"

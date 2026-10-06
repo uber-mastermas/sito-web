@@ -37,7 +37,7 @@ include 'partials/header.php';
         <p class="frase">Monocultivar Carolea</p>
         <div class="azioni"><a class="bottone bottone-linea" href="prodotto.php">Scopri l'olio</a></div>
         <div class="vetrina-materia">
-          <?= foto('img/home/materica.webp', 'Olive e terra, dettaglio naturale', 1600, 1200, 'Dettaglio materico: terra, olive') ?>
+          <?= foto('img/home/materica.webp', 'Olive appena raccolte sulla rete, sulla terra', 1600, 1200, 'Dettaglio materico: terra, olive') ?>
         </div>
       </div>
     </div>
