@@ -16,7 +16,7 @@ include 'partials/header.php';
   </div>
 
   <div class="banner copre">
-    <?= foto('img/pagine/azienda/uliveti.webp', "Gli uliveti dell'azienda a Girifalco", 1800, 1365, "Vista d'insieme degli ulivi dell'azienda", ['subito' => true]) ?>
+    <?= foto('img/pagine/azienda/uliveti.webp', "Gli uliveti dell'azienda a Girifalco", 1920, 1456, "Vista d'insieme degli ulivi dell'azienda", ['subito' => true]) ?>
   </div>
 
   <div class="contenitore">
