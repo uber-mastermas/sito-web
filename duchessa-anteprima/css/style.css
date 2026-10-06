@@ -609,3 +609,11 @@ body.menu-bloccato .torna-su { display: none; }
 @media (min-width: 860px) {
   .passo-foto.impilata > .foto { height: clamp(200px, 19vw, 290px); object-fit: cover; }
 }
+
+/* ---------- PRIVACY ---------- */
+.informativa { max-width: 720px; padding-bottom: var(--respiro); }
+.informativa section { padding: 32px 0; border-top: 1px solid var(--filetto); }
+.informativa h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .6em; }
+.informativa ul { padding-left: 1.2em; margin: 0 0 1.1em; }
+.informativa li { margin-bottom: .4em; }
+.informativa .nota { padding-top: 24px; border-top: 1px solid var(--filetto); }

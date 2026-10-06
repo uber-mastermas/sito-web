@@ -77,7 +77,7 @@ include 'partials/header.php';
           </div>
           <label class="consenso">
             <input type="checkbox" name="consenso" required>
-            <span>Acconsento al trattamento dei dati per ricevere una risposta. <span class="da-inserire">link all'informativa privacy da inserire</span></span>
+            <span>Acconsento al trattamento dei dati per ricevere una risposta. Leggi l'<a href="privacy.php" target="_blank">informativa privacy</a>.</span>
           </label>
           <div><button class="bottone" type="submit">Invia</button></div>
         </form>
