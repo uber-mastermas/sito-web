@@ -42,5 +42,9 @@
     </div>
   </div>
 </footer>
+
+<a class="torna-su" href="#contenuto" aria-label="Torna all'inizio della pagina">
+  <svg viewBox="0 0 48 30" width="22" height="14" aria-hidden="true"><polyline points="4,26 24,6 44,26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 </body>
 </html>

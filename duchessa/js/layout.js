@@ -36,6 +36,18 @@
     });
   }
 
+  // Pulsante "torna su": compare dopo un po' di scorrimento
+  var su = document.querySelector(".torna-su");
+  if (su) {
+    var mostra = function () { su.classList.toggle("visibile", window.scrollY > 600); };
+    window.addEventListener("scroll", mostra, { passive: true });
+    mostra();
+    su.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+  }
+
   // Comparsa lenta: "entrare lentamente nel mondo dell'olio"
   var lento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var elementi = document.querySelectorAll("[data-appare]");

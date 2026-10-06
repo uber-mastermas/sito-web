@@ -573,3 +573,24 @@ h1, h2, h3 {
 .mappa-etichetta .luogo::before, .mappa-etichetta .luogo::after { display: none; }
 .mappa-etichetta a { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; text-decoration-color: var(--oro); }
 .site-footer .handle { font-size: .82rem; color: var(--sabbia); }
+
+/* ---------- TORNA SU ---------- */
+.torna-su {
+  position: fixed; z-index: 90;
+  right: max(16px, env(safe-area-inset-right, 0px) + 16px);
+  bottom: max(16px, env(safe-area-inset-bottom, 0px) + 16px);
+  display: grid; place-items: center;
+  width: 48px; height: 48px;
+  background: var(--avorio);
+  border: 1px solid var(--oro);
+  border-radius: 50%;
+  color: var(--oliva-scuro);
+  box-shadow: 0 8px 20px rgba(46, 45, 39, .16);
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity .3s, transform .3s, visibility .3s, background-color .3s, color .3s;
+}
+.torna-su.visibile { opacity: 1; visibility: visible; transform: none; }
+.torna-su:hover { background: var(--oliva-scuro); color: var(--avorio); }
+.torna-su svg { margin-top: -2px; }
+body.menu-bloccato .torna-su { display: none; }
+@media (min-width: 900px) { .torna-su { width: 54px; height: 54px; right: 28px; bottom: 28px; } }
