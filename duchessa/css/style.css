@@ -553,3 +553,23 @@ h1, h2, h3 {
 .passo-silenzio img { width: clamp(90px, 12vw, 140px); opacity: .85; }
 .passo-foto.impilata { gap: 18px; }
 .passo-foto.impilata > .foto:last-child { width: 72%; justify-self: end; }
+
+/* ---------- MAPPA (Contatti) ---------- */
+.mappa { position: relative; height: clamp(360px, 62svh, 640px); background: var(--sabbia); }
+.mappa iframe {
+  display: block; width: 100%; height: 100%; border: 0;
+  filter: grayscale(.55) sepia(.18) contrast(.95);   /* colori smorzati verso la palette */
+}
+.mappa-etichetta {
+  position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 18px;
+  width: max-content; max-width: calc(100% - 2 * var(--margine));
+  padding: 12px 22px;
+  background: var(--avorio); border: 1px solid var(--filetto);
+  box-shadow: 0 10px 24px rgba(46, 45, 39, .14);
+  color: var(--oliva-scuro); text-align: center;
+}
+.mappa-etichetta .luogo { color: var(--oliva-scuro); }
+.mappa-etichetta .luogo::before, .mappa-etichetta .luogo::after { display: none; }
+.mappa-etichetta a { font-size: .74rem; letter-spacing: .18em; text-transform: uppercase; text-decoration-color: var(--oro); }
+.site-footer .handle { font-size: .82rem; color: var(--sabbia); }

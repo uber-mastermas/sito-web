@@ -26,7 +26,7 @@
       <div class="footer-colonna">
         <h2>Seguici</h2>
         <ul>
-          <li><?php if ($SITO['instagram'] !== ''): ?><a href="<?= e($SITO['instagram']) ?>" rel="noopener" target="_blank">Instagram · @olio_delladuchessa</a><?php else: ?>Instagram: <?= dato('instagram') ?><?php endif; ?></li>
+          <li><?php if ($SITO['instagram'] !== ''): ?><a href="<?= e($SITO['instagram']) ?>" rel="noopener" target="_blank">Instagram<br><small class="handle">@olio_delladuchessa</small></a><?php else: ?>Instagram: <?= dato('instagram') ?><?php endif; ?></li>
         </ul>
       </div>
 

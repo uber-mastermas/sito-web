@@ -117,4 +117,13 @@ include 'partials/header.php';
     </div>
   </section>
 
+  <section class="mappa" aria-label="Mappa di Girifalco">
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=16.39528%2C38.80161%2C16.48528%2C38.84561&amp;layer=mapnik&amp;marker=38.82361%2C16.44028"
+            title="Mappa di Girifalco, Calabria" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    <div class="mappa-etichetta">
+      <p class="luogo">Girifalco · Calabria · Italia</p>
+      <a href="https://www.openstreetmap.org/?mlat=38.82361&amp;mlon=16.44028#map=14/38.82361/16.44028" target="_blank" rel="noopener">Apri la mappa</a>
+    </div>
+  </section>
+
 <?php include 'partials/footer.php'; ?>
