@@ -2,16 +2,37 @@
 <header class="site-header">
   <div class="barra">
     <a class="logo" href="index.html">
-      <img src="img/gatto-cuore.png" width="341" height="373" alt="">
+      <img src="img/logo/logo-gatto-cuore.png" width="341" height="373" alt="">
       <span>Il mio gatto</span>
     </a>
-    <nav aria-label="Menu principale">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principale">
+      <span class="menu-toggle-icona" aria-hidden="true"></span>
+      <span class="solo-lettori">Apri il menu</span>
+    </button>
+    <nav id="menu-principale" class="nav" aria-label="Menu principale">
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#clinica">La clinica</a></li>
-        <li><a href="index.html#servizi">Servizi</a></li>
-        <li><a href="index.html#raggiungerci">Come arrivare</a></li>
-        <li><a href="index.html#recapiti">Contatti</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li class="ha-sottomenu">
+          <a href="servizi.html">Servizi</a>
+          <button class="chevron" type="button" aria-expanded="false" aria-label="Mostra le voci di Servizi"></button>
+          <ul class="sottomenu">
+            <li><a href="servizi.html#visite">Visite e prevenzione</a></li>
+            <li><a href="servizi.html#diagnostica">Diagnostica</a></li>
+            <li><a href="servizi.html#chirurgia">Chirurgia e odontoiatria</a></li>
+            <li><a href="servizi.html#piani-salute">Piani salute</a></li>
+          </ul>
+        </li>
+        <li class="ha-sottomenu">
+          <a href="storia-del-gatto.html">Il gatto</a>
+          <button class="chevron" type="button" aria-expanded="false" aria-label="Mostra le voci di Il gatto"></button>
+          <ul class="sottomenu">
+            <li><a href="storia-del-gatto.html">La storia del gatto</a></li>
+            <li><a href="index.html#visita">Preparare la visita</a></li>
+            <li><a href="index.html#faq">Domande frequenti</a></li>
+          </ul>
+        </li>
+        <li><a href="contatti.html">Contatti</a></li>
       </ul>
     </nav>
   </div>
