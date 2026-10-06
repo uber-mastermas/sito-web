@@ -18,7 +18,7 @@ include 'partials/header.php';
 
   <!-- 2 — L'identità -->
   <section class="quadro copre" style="margin-top: var(--respiro)">
-    <?= foto('img/home/identita.webp', 'Olive ancora sulla pianta durante la raccolta', 1800, 1200, 'Ulivi, olive o momento della raccolta') ?>
+    <?= foto('img/home/identita.webp', 'Una mano coglie le olive ancora sulla pianta', 1800, 1200, 'Ulivi, olive o momento della raccolta') ?>
     <div class="quadro-testo" data-appare>
       <h2>Una storia che nasce dalla terra</h2>
       <p class="frase">L'Olio della Duchessa nasce a Girifalco, in Calabria.</p>
@@ -45,7 +45,7 @@ include 'partials/header.php';
 
   <!-- 4 — Chiusura -->
   <section class="quadro copre">
-    <?= foto('img/home/chiusura.webp', 'Uliveti e un sentiero di campagna visti dall\'alto', 1600, 900, 'Paesaggio o ulivi, immagine suggestiva') ?>
+    <?= foto('img/home/chiusura.webp', 'Uliveti e un sentiero di campagna visti dall\'alto', 1920, 1440, 'Paesaggio o ulivi, immagine suggestiva') ?>
     <div class="quadro-testo" data-appare>
       <h2>L'Olio della Duchessa</h2>
       <p class="frase">Arte olearia per passione.</p>

@@ -57,7 +57,7 @@ include 'partials/header.php';
     </section>
 
     <div class="coppia" data-appare>
-      <?= foto('img/pagine/prodotto/olio-versato.webp', "L'olio che scende, in primo piano", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
+      <?= foto('img/pagine/prodotto/olio-versato.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
       <?= foto('img/pagine/prodotto/materico.webp', 'Olive appena raccolte sulla rete, sulla terra', 1200, 1200, 'Dettaglio materico: olive o terra') ?>
     </div>
 
