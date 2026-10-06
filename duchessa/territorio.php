@@ -70,7 +70,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre">
-      <?= foto('img/pagine/territorio/luce.webp', 'Il paesaggio nella luce del mattino', 1600, 1200, 'Dettaglio paesaggio, luce del mattino o del tramonto') ?>
+      <?= foto('img/pagine/territorio/luce.webp', "Un sentiero tra gli ulivi nella luce dell'alba", 1920, 1456, 'Dettaglio paesaggio, luce del mattino o del tramonto', ['mobile' => 'img/pagine/territorio/luce-mobile.webp']) ?>
     </div>
   </div>
 

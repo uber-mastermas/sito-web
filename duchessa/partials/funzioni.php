@@ -19,14 +19,20 @@ function dato($chiave) {
    altrimenti un segnaposto con nome del file e misure da shot list.
    Basta caricare il file con quel nome nella cartella indicata
    e la foto compare da sola, senza toccare il codice.
-   $opz: 'classe', 'subito' (true per la prima immagine della pagina) */
+   $opz: 'classe', 'subito' (true per la prima immagine della pagina),
+         'mobile' (versione verticale usata sui telefoni, sotto i 700px) */
 function foto($file, $alt, $w, $h, $soggetto = '', $opz = []) {
   $classe = isset($opz['classe']) ? ' ' . $opz['classe'] : '';
   $percorso = __DIR__ . '/../' . $file;
   if (is_file($percorso)) {
     $carica = !empty($opz['subito']) ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"';
     $versione = '?v=' . filemtime($percorso);   // foto sostituita = indirizzo nuovo, niente cache vecchia
-    return '<img class="foto' . $classe . '" src="' . e($file) . $versione . '" width="' . (int)$w . '" height="' . (int)$h . '" alt="' . e($alt) . '" ' . $carica . '>';
+    $img = '<img class="foto' . $classe . '" src="' . e($file) . $versione . '" width="' . (int)$w . '" height="' . (int)$h . '" alt="' . e($alt) . '" ' . $carica . '>';
+    $mobile = $opz['mobile'] ?? '';
+    if ($mobile !== '' && is_file(__DIR__ . '/../' . $mobile)) {
+      return '<picture><source media="(max-width: 700px)" srcset="' . e($mobile) . '?v=' . filemtime(__DIR__ . '/../' . $mobile) . '">' . $img . '</picture>';
+    }
+    return $img;
   }
   return '<div class="foto segnaposto' . $classe . '" style="--ar:' . (int)$w . ' / ' . (int)$h . '" role="img" aria-label="' . e($alt) . '">'
        . '<span><strong>' . e($soggetto ?: $alt) . '</strong>'

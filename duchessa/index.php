@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <!-- 1 — Hero: il logo protagonista, nient'altro -->
   <section class="hero copre">
-    <?= foto('img/home/hero-uliveto.webp', 'Uliveto sulle colline di Girifalco nella luce del tramonto', 1800, 1344, 'Paesaggio ulivi / Girifalco, luce calda', ['subito' => true]) ?>
+    <?= foto('img/home/hero-uliveto.webp', 'Uliveto sulle colline di Girifalco nella luce del tramonto', 1800, 1344, 'Paesaggio ulivi / Girifalco, luce calda', ['subito' => true, 'mobile' => 'img/home/hero-mobile.webp']) ?>
     <div class="hero-testo">
       <img class="hero-logo" src="img/logo/logo-duchessa-chiaro.svg" width="263" height="351" alt="">
       <h1>L'Olio della Duchessa</h1>

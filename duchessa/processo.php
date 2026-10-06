@@ -22,7 +22,7 @@ include 'partials/header.php';
       <li class="passo" id="raccolta" data-appare>
         <div class="passo-foto doppia">
           <?= foto('img/pagine/processo/raccolta.webp', 'La raccolta delle olive', 1800, 1200, 'Il momento della raccolta, manuale o meccanica', ['subito' => true]) ?>
-          <?= foto('img/pagine/processo/raccolta-dettaglio.webp', 'Olive e mani in primo piano', 1200, 1600, 'Primo piano su olive e mani') ?>
+          <?= foto('img/pagine/processo/raccolta-dettaglio.webp', 'Mani che colgono le olive sopra le reti, con le cassette della raccolta', 1200, 1600, 'Primo piano su olive e mani') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">01</span>
@@ -53,7 +53,7 @@ include 'partials/header.php';
       <li class="passo" id="estrazione" data-appare>
         <div class="passo-foto doppia">
           <?= foto('img/pagine/processo/estrazione.webp', "La fase di estrazione a freddo", 1800, 1200, 'Fase di estrazione a freddo') ?>
-          <?= foto('img/pagine/processo/olio-che-scende.webp', "L'olio appena estratto che scende", 1200, 1600, 'Olio che scende, in primo piano') ?>
+          <?= foto('img/pagine/processo/olio-che-scende.webp', "L'olio appena estratto che scende dal separatore del frantoio", 1200, 1600, 'Olio che scende, in primo piano') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">03</span>
