@@ -1,0 +1,21 @@
+INVIO DELLA POSTA DAL MODULO CONTATTI
+=====================================
+
+I messaggi del modulo partono dall'account info@oliodelladuchessa.com
+e arrivano allo stesso indirizzo (impostazioni in partials/config.php).
+
+Per inviare tramite il server mail.oliodelladuchessa.com (consigliato,
+evita lo spam) serve la password dell'account. NON scriverla in config.php.
+
+1. Crea un file di nome   smtp-password.php
+2. Mettilo UNA CARTELLA SOPRA la root del sito
+   (su SiteGround: accanto a public_html, NON dentro).
+3. Contenuto del file, una sola riga:
+
+   <?php return 'LA-PASSWORD-DI-info@oliodelladuchessa.com';
+
+Se il file non c'è, il sito invia comunque con la funzione mail() del server,
+sempre con mittente info@oliodelladuchessa.com.
+
+Porta usata: 465 (SSL). Se il server richiede 587, cambia 'smtp_porta' in config.php.
+Eventuali errori finiscono nel log degli errori PHP del sito (prefisso "SMTP:").

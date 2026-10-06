@@ -5,8 +5,8 @@ $pagina = 'contatti.php';
 require_once 'partials/funzioni.php';
 
 /* ---------- Invio del modulo ----------
-   Funziona sul server (SiteGround): usa mail() di PHP.
-   L'indirizzo di destinazione si imposta in partials/config.php ('email_modulo'). */
+   Funziona sul server (SiteGround). Mittente: account info@ (vedi partials/config.php).
+   Se c'è la password SMTP invia tramite mail.oliodelladuchessa.com, altrimenti usa mail() di PHP. */
 $esito = null; $errore = false;
 $valori = ['nome' => '', 'email' => '', 'messaggio' => ''];
 
@@ -25,13 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errore = true;
   } else {
     $nome = str_replace(["\r", "\n"], ' ', $valori['nome']);
-    $oggetto = '=?UTF-8?B?' . base64_encode('Richiesta dal sito — ' . $nome) . '?=';
+    $oggetto = 'Richiesta dal sito — ' . $nome;
     $corpo = "Nome: {$nome}\nEmail: {$valori['email']}\n\nMessaggio:\n{$valori['messaggio']}\n";
-    $mittente = 'noreply@' . preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
-    $intestazioni = "From: {$SITO['nome']} <{$mittente}>\r\n"
-                  . "Reply-To: {$valori['email']}\r\n"
-                  . "Content-Type: text/plain; charset=UTF-8\r\n";
-    if (@mail($SITO['email_modulo'], $oggetto, $corpo, $intestazioni)) {
+    if (invia_email($SITO['email_modulo'], $oggetto, $corpo, $valori['email'])) {
       $esito = 'Grazie, il messaggio è stato inviato. Ti risponderemo al più presto.';
       $valori = ['nome' => '', 'email' => '', 'messaggio' => ''];
     } else {

@@ -26,6 +26,14 @@ $SITO = [
 
   // Modulo contatti: dove arrivano i messaggi
   'email_modulo'  => 'info@oliodelladuchessa.com',
+
+  // Invio della posta: mittente e server SMTP dell'account info@
+  // La PASSWORD NON va qui (il repository è pubblico): va nel file
+  // smtp-password.php, una cartella SOPRA la root del sito (vedi LEGGIMI-POSTA.txt).
+  'mittente'      => 'info@oliodelladuchessa.com',
+  'smtp_host'     => 'mail.oliodelladuchessa.com',
+  'smtp_porta'    => 465,            // SSL
+  'smtp_utente'   => 'info@oliodelladuchessa.com',
 ];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
