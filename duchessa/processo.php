@@ -67,15 +67,16 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="decantazione" data-appare>
-        <div class="passo-foto passo-silenzio" aria-hidden="true">
-          <img src="img/logo/logo-duchessa.svg" width="263" height="351" alt="">
+        <div class="passo-foto">
+          <?= foto('img/pagine/processo/silos-decantazione-acciaio.webp', "I silos in acciaio inox dove l'olio decanta prima dell'imbottigliamento", 1920, 1920, 'Silos di decantazione') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">04</span>
           <h2>La decantazione</h2>
           <h3>Lasciare che sia la natura a fare il suo lavoro</h3>
-          <p>Dopo l'estrazione, l'olio viene lasciato decantare naturalmente.</p>
+          <p>Dopo l'estrazione, l'olio viene lasciato decantare naturalmente nei silos in acciaio.</p>
           <p>Le particelle e i residui naturalmente presenti nell'olio si depositano progressivamente.</p>
+          <p>Vi resta solo il tempo necessario prima dell'imbottigliamento, senza spazio di testa: il silos è pieno e l'olio non resta a contatto con l'aria.</p>
           <p>È un passaggio discreto, quasi invisibile, ma parte della nostra idea di lavorazione.</p>
         </div>
       </li>
