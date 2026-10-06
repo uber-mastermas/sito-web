@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contatti · L&#039;Olio della Duchessa</title>
+<meta name="description" content="Scrivici per informazioni su L&#039;Olio della Duchessa: annata, disponibilità, formati e acquisto.">
+<meta name="theme-color" content="#3f472f">
+<link rel="icon" href="img/logo/favicon.png" type="image/png">
+<link rel="icon" href="img/logo/logo-duchessa.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/style.css?v=1">
+<script src="js/layout.js?v=1" defer></script>
+</head>
+<body class="pagina-contatti">
+<a class="salta" href="#contenuto">Vai al contenuto</a>
+
+<header class="site-header">
+  <div class="barra">
+    <a class="logo" href="index.html" aria-label="L&#039;Olio della Duchessa — Home">
+      <img src="img/logo/logo-duchessa.svg" width="263" height="351" alt="">
+      <span>L'Olio della<br>Duchessa</span>
+    </a>
+
+    <nav id="menu-principale" class="nav" aria-label="Menu principale">
+      <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="territorio.html">Il Territorio</a></li>
+                <li><a href="azienda.html">L&#039;Azienda</a></li>
+                <li><a href="processo.html">Il Processo</a></li>
+                <li><a href="prodotto.html">Il Prodotto</a></li>
+                <li><a href="contatti.html" aria-current="page">Contatti</a></li>
+              </ul>
+    </nav>
+
+    <a class="bottone bottone-acquista" href="contatti.html#acquista">Acquista</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principale">
+      <span class="menu-toggle-icona" aria-hidden="true"></span>
+      <span class="solo-lettori">Apri il menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenuto">
+
+  <div class="contenitore testata">
+    <ol class="briciole">
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Contatti</li>
+    </ol>
+    <p class="occhiello">Contatti</p>
+    <h1>Entriamo in contatto</h1>
+    <p class="testo-grande">Per informazioni sull'olio, disponibilità, formati e acquisto, puoi scriverci.</p>
+    <p>Saremo felici di raccontarti l'annata, la produzione e tutto ciò che c'è dietro una bottiglia de L'Olio della Duchessa.</p>
+  </div>
+
+  <div class="contenitore">
+    <div class="contatti-griglia">
+      <section id="scrivici" aria-labelledby="titolo-modulo">
+        <p class="occhiello" id="titolo-modulo">Scrivici</p>
+        <form class="modulo" method="get" onsubmit="alert('Anteprima: il modulo funziona solo sul sito PHP.');return false" action="contatti.html#scrivici">
+                    <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required value="">
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required value="">
+          </div>
+          <div class="campo">
+            <label for="messaggio">Messaggio</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
+          </div>
+          <div class="trappola" aria-hidden="true">
+            <label for="sito">Lascia vuoto</label>
+            <input id="sito" name="sito" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="consenso">
+            <input type="checkbox" name="consenso" required>
+            <span>Acconsento al trattamento dei dati per ricevere una risposta. <span class="da-inserire">link all'informativa privacy da inserire</span></span>
+          </label>
+          <div><button class="bottone" type="submit">Invia</button></div>
+        </form>
+      </section>
+
+      <aside class="recapiti">
+        <h2>L'Olio della Duchessa</h2>
+        <p class="motto">Arte olearia per passione.</p>
+        <p>Girifalco<br>Calabria · Italia</p>
+        <ul>
+          <li>Email: <span class="da-inserire">da inserire</span></li>
+          <li>Tel. <span class="da-inserire">da inserire</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <section class="acquista-blocco" id="acquista">
+    <div class="contenitore">
+      <p class="occhiello centrato" style="justify-content:center">Acquista</p>
+      <h2>Vuoi portarlo sulla tua tavola?</h2>
+      <p>Scrivici indicando formato e quantità: ti risponderemo con disponibilità e modalità di acquisto.</p>
+      <div class="formati">
+        <div class="formato"><h3>Bottiglia</h3><p>500 ml</p></div>
+        <div class="formato"><h3>Latta</h3><p>5 litri</p></div>
+      </div>
+      <div class="azioni"><a class="bottone bottone-chiaro" href="#scrivici">Scrivici per acquistare</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="contenitore">
+    <div class="footer-griglia">
+
+      <div class="footer-marchio">
+        <a class="logo logo-chiaro" href="index.html">
+          <img src="img/logo/logo-duchessa-chiaro.svg" width="263" height="351" alt="">
+          <span>L'Olio della<br>Duchessa</span>
+        </a>
+        <p class="motto">Arte olearia per passione.</p>
+        <p>Girifalco · Calabria · Italia</p>
+      </div>
+
+      <div class="footer-colonna">
+        <h2>Contatti</h2>
+        <ul>
+          <li>Girifalco (CZ) · Calabria</li>
+          <li>Email: <span class="da-inserire">da inserire</span></li>
+          <li>Tel. <span class="da-inserire">da inserire</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-colonna">
+        <h2>Seguici</h2>
+        <ul>
+          <li>Instagram: <span class="da-inserire">da inserire</span></li>
+          <li>Facebook: <span class="da-inserire">da inserire</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-colonna footer-acquista">
+        <h2>Vuoi portarlo sulla tua tavola?</h2>
+        <a class="bottone bottone-chiaro" href="contatti.html#acquista">Acquista</a>
+      </div>
+
+    </div>
+    <div class="footer-fondo">
+      <span>© 2026 Azienda Agricola Tolone · P.IVA <span class="da-inserire">da inserire</span></span>
+      <span>Girifalco (CZ)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
