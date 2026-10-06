@@ -11,13 +11,14 @@
   --giallo-scuro: #ecc94b;  /* linee e separatori */
   --rosa: #ed1e79;          /* colore del logo, accento */
   --rosa-chiaro: #fbd3e4;   /* fondi leggeri, hover */
+  --rosa-cipria: #e8c3c0;   /* fondo dell'immagine hero */
   --bianco: #ffffff;
   --grigio: #46424a;        /* testo */
   --grigio-chiaro: #7d7880; /* etichette, testo secondario */
 
   /* Font */
-  --font-titolo: "Young Serif", Georgia, "Times New Roman", serif;
-  --font-testo: "Nunito Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-titolo: "Prompt", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-testo: "Mulish", "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* Misure */
   --altezza-footer: 52px;
@@ -129,6 +130,17 @@ a { color: var(--rosa); }
 }
 .site-footer a { color: var(--rosa-chiaro); }
 
+/* ---------- IMMAGINE HERO (banner a tutta larghezza) ---------- */
+.banner {
+  background: var(--rosa-cipria); /* visibile mentre l'immagine carica */
+  border-bottom: 3px solid var(--rosa);
+}
+.banner img {
+  width: 100%;
+  max-height: 62vh;
+  object-fit: cover;
+}
+
 /* ---------- CONTENUTO ---------- */
 .pagina {
   max-width: var(--larghezza);
@@ -152,7 +164,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 h1 {
   font-family: var(--font-titolo);
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(3rem, 9vw, 6.2rem);
   line-height: .95;
   margin: 0 0 24px;
@@ -161,7 +173,7 @@ h1 {
 h1 span { color: var(--rosa); }
 h2 {
   font-family: var(--font-titolo);
-  font-weight: 400;
+  font-weight: 500;
   font-size: clamp(1.9rem, 4.5vw, 2.6rem);
   line-height: 1.1;
   margin: 0 0 16px;
