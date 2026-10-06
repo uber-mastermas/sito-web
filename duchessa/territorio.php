@@ -89,8 +89,8 @@ include 'partials/header.php';
       </div>
     </section>
 
-    <div class="foto-sola" data-appare>
-      <?= foto('img/pagine/territorio/palazzo-ducale.webp', 'Il Palazzo Ducale di Girifalco', 1800, 1200, 'Palazzo Ducale o centro storico') ?>
+    <div class="foto-sola larga" data-appare>
+      <?= foto('img/pagine/territorio/palazzo-ducale-girifalco-portale.webp', 'Il portale in pietra del Palazzo Ducale di Girifalco, con la statua sulla facciata', 1920, 1072, 'Palazzo Ducale o centro storico', ['mobile' => 'img/pagine/territorio/palazzo-ducale-girifalco-portale-verticale.webp']) ?>
     </div>
 
     <section class="capitolo" id="duchessa" data-appare>

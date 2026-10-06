@@ -530,3 +530,4 @@ h1, h2, h3 {
 
 /* Velo per foto: le foto chiare o molto dettagliate hanno bisogno di più scuro */
 @media (max-width: 700px) { .hero { --velo: 1.15; } }   /* hero verticale: cielo chiaro */
+.foto-sola.larga .foto { width: min(100%, 980px); }
