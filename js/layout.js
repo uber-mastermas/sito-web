@@ -11,7 +11,7 @@
 
 (function () {
   function carica(file, posizione) {
-    return fetch(file)
+    return fetch(file, { cache: "no-cache" }) // ricontrolla sempre la versione aggiornata
       .then(function (r) {
         if (!r.ok) throw new Error(file + " non trovato (" + r.status + ")");
         return r.text();
