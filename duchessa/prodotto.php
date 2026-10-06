@@ -90,8 +90,8 @@ include 'partials/header.php';
   </div>
 
   <div class="foto-larga" data-appare>
-    <div class="copre">
-      <?= foto('img/pagine/prodotto/tavola.webp', 'Pane, verdure e pesce su una tavola naturale', 1800, 1200, 'A tavola: pane, verdure, pesce, tavola naturale') ?>
+    <div class="copre alta">
+      <?= foto('img/pagine/prodotto/tavola.webp', "Una bottiglia de L'Olio della Duchessa sulla tavola, con pane, pomodori e pesce", 1920, 1456, 'A tavola: pane, verdure, pesce, tavola naturale', ['classe' => 'pos-basso']) ?>
     </div>
   </div>
 

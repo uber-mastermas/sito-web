@@ -522,3 +522,4 @@ h1, h2, h3 {
 .recapiti-foto .foto { width: min(100%, 420px); }
 .copre > .foto.in-alto, .copre > picture > .foto.in-alto { object-position: 50% 40%; }
 .foto-larga .copre.alta { height: clamp(360px, 60vw, 980px); }
+.copre > .foto.pos-basso, .copre > picture > .foto.pos-basso { object-position: 50% 70%; }
