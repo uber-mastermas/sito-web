@@ -148,11 +148,12 @@ a { color: var(--rosa); }
   padding-inline: 20px;
   padding-block: 40px 56px;
   display: grid;
+  grid-template-columns: minmax(0, 1fr); /* impedisce che un contenuto largo allarghi la pagina */
   gap: 72px;
 }
 
 /* Margine per i link interni (#ancore) sotto l'header fisso */
-section[id] { scroll-margin-top: 90px; }
+section[id] { scroll-margin-top: 120px; }
 
 .occhiello {
   font-size: .8rem;
@@ -252,17 +253,178 @@ h2 {
   text-wrap: balance;
 }
 
+/* Bottoni */
+.azioni { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.bottone {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--rosa);
+  color: var(--bianco);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--rosa);
+}
+.bottone:hover { background: var(--grigio); border-color: var(--grigio); }
+.bottone-secondario { background: transparent; color: var(--grigio); border-color: var(--grigio); }
+.bottone-secondario:hover { background: var(--grigio); color: var(--bianco); }
+
+/* Striscia informazioni rapide */
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: -32px; /* avvicina la striscia all'apertura */
+}
+.info-voce {
+  background: var(--bianco);
+  border-radius: 18px;
+  padding: 20px 24px;
+}
+.info-voce .occhiello { margin-bottom: 6px; color: var(--rosa); }
+.info-voce p:last-child { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* Elenco puntato del concept */
+.elenco { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.elenco li { padding-left: 26px; position: relative; }
+.elenco li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--rosa);
+}
+
+/* Griglia di schede (servizi, team, contatti) */
+h3 {
+  font-family: var(--font-titolo);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.griglia.due { grid-template-columns: repeat(2, 1fr); }
+.scheda-servizio {
+  background: var(--bianco);
+  border-radius: 18px;
+  padding: 24px;
+  border-top: 4px solid var(--rosa);
+  min-width: 0;
+}
+.scheda-servizio p { margin: 0 0 10px; }
+.scheda-servizio p:last-child { margin-bottom: 0; }
+
+/* Team */
+.persona {
+  background: var(--bianco);
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.iniziali {
+  display: inline-grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--rosa-chiaro);
+  color: var(--rosa);
+  font-family: var(--font-titolo);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+.persona p { margin: 0; color: var(--grigio-chiaro); font-size: .95rem; }
+
+/* Box con solo testo + passi numerati */
+.box-testo { align-items: start; }
+.passi { margin: 0; padding: 0; list-style: none; counter-reset: passo; display: grid; gap: 16px; }
+.passi li { counter-increment: passo; position: relative; padding-left: 56px; min-height: 40px; }
+.passi li::before {
+  content: counter(passo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rosa);
+  color: var(--bianco);
+  font-family: var(--font-titolo);
+  font-weight: 600;
+}
+
+/* Riquadro prenotazione */
+.prenota {
+  margin-top: 16px;
+  background: var(--grigio);
+  color: var(--bianco);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.prenota > div { max-width: 52ch; min-width: 0; }
+.prenota p { margin: 0; }
+.prenota .numero {
+  font-family: var(--font-titolo);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--rosa-chiaro);
+  user-select: all;
+}
+
+/* Domande frequenti */
+.faq { display: grid; gap: 10px; margin-top: 8px; }
+.faq details {
+  background: var(--bianco);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--rosa); font-size: 1.4rem; line-height: 1; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 12px 0 0; max-width: 70ch; }
+
 @media (prefers-reduced-motion: reduce) {
   .balzo { animation: none; }
   html { scroll-behavior: auto; }
 }
 
+@media (max-width: 960px) {
+  .griglia { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---------- TELEFONO ---------- */
 @media (max-width: 760px) {
-  .hero, .box { grid-template-columns: 1fr; }
-  .hero-img { max-width: 380px; margin: 0 auto; }
+  .hero, .box { grid-template-columns: minmax(0, 1fr); }
+  .hero-img { width: min(100%, 380px); margin: 0 auto; }
   .box { padding: 28px 20px; }
   .dati { grid-template-columns: repeat(2, 1fr); }
+  .info, .griglia, .griglia.due { grid-template-columns: 1fr; }
+  .info { margin-top: -20px; }
   .pagina { gap: 52px; padding-block: 28px 40px; }
   .site-header .barra { justify-content: center; padding-block: 8px; }
   .site-footer .barra { justify-content: center; text-align: center; flex-wrap: wrap; }
