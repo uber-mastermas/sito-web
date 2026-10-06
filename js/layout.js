@@ -34,6 +34,13 @@
       if (a.getAttribute("href") === pagina) a.setAttribute("aria-current", "page");
     });
 
+    // Se l'indirizzo punta a una sezione del footer (es. #recapiti),
+    // ci si sposta dopo averlo caricato
+    if (location.hash) {
+      var dest = document.getElementById(location.hash.slice(1));
+      if (dest) dest.scrollIntoView();
+    }
+
     // Anno corrente nel footer
     document.querySelectorAll("[data-anno]").forEach(function (el) {
       el.textContent = new Date().getFullYear();

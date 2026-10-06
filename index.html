@@ -13,179 +13,143 @@
 <script src="js/layout.js" defer></script>
 </head>
 <body>
+
 <div class="banner">
   <img src="img/hero-gatti.webp" width="1920" height="1080" alt="Illustrazione di due gatti che corrono e saltano su fondo rosa" fetchpriority="high">
 </div>
 
-<main class="pagina">
+<main class="contenitore">
 
   <!-- APERTURA -->
-  <section class="hero">
+  <section class="apertura">
+    <p class="occhiello">Clinica veterinaria per gatti · Roma</p>
+    <h1>Il mio <span>gatto</span></h1>
     <div>
-      <p class="occhiello">Clinica veterinaria per gatti · Roma</p>
-      <h1>IL MIO <span>GATTO</span></h1>
-      <p class="intro">Una clinica dedicata solo ai gatti e alle persone che vivono con loro. Niente cani in sala d'attesa, niente fretta: visite su appuntamento di 30 minuti, in ambienti pensati per un animale che odia i cambiamenti.</p>
+      <p class="testo-grande">Una clinica dedicata solo ai gatti e alle persone che vivono con loro. Visite su appuntamento da 30 minuti, senza fretta e senza altri animali in sala d'attesa.</p>
       <div class="azioni">
-        <a class="bottone" href="#contatti">Prenota una visita</a>
-        <a class="bottone bottone-secondario" href="#servizi">Scopri i servizi</a>
+        <a class="bottone" href="#raggiungerci">Prenota una visita</a>
+        <a class="bottone bottone-secondario" href="#servizi">I servizi</a>
       </div>
-    </div>
-    <img class="hero-img" src="img/gatto-seduto.webp" width="900" height="900" alt="Illustrazione di un gatto seduto con la coda arrotolata a spirale">
-  </section>
-
-  <!-- INFO RAPIDE -->
-  <section class="info" aria-label="Informazioni utili">
-    <div class="info-voce">
-      <p class="occhiello">Dove siamo</p>
-      <p>Via dei Gelsomini 12<br>00100 Roma</p>
-    </div>
-    <div class="info-voce">
-      <p class="occhiello">Contatti</p>
-      <p>Tel. 06 000 0000<br>info@esempio.it</p>
-    </div>
-    <div class="info-voce">
-      <p class="occhiello">Orari</p>
-      <p>Lun–Ven 9:00–19:00<br>Sabato 9:30–16:00</p>
     </div>
   </section>
 
   <!-- CONCEPT -->
-  <section class="box" id="clinica">
-    <img class="balzo" src="img/gatto-salto.png" width="1200" height="1116" alt="Illustrazione di un gatto che salta">
-    <div>
+  <section class="sezione" id="clinica">
+    <div class="sezione-titolo">
       <p class="occhiello">Il nostro concept</p>
       <h2>Una clinica a misura di gatto</h2>
-      <p>Il gatto è un animale sensibile all'ambiente: odori, rumori e spazi sconosciuti lo mettono sotto stress. Per questo abbiamo progettato ogni stanza partendo dalle sue abitudini, seguendo l'approccio <em>cat friendly</em>.</p>
-      <ul class="elenco">
-        <li><strong>Accoglienza:</strong> ripiani rialzati dove appoggiare il trasportino, lontano dal pavimento.</li>
-        <li><strong>Sale visita:</strong> silenziose e raccolte, perché il gatto si senta al sicuro.</li>
-        <li><strong>Ricovero:</strong> lettiera separata dall'area di riposo, come a casa.</li>
-        <li><strong>Visite in degenza:</strong> un angolo con poltrona per stare accanto al vostro gatto.</li>
-      </ul>
+      <img src="img/gatto-salto.png" width="1200" height="1116" alt="" loading="lazy">
+    </div>
+    <div>
+      <p class="testo-grande">Il gatto vive di abitudini. Odori nuovi, rumori e spazi sconosciuti lo mettono sotto stress, e un gatto stressato è più difficile da visitare. Per questo abbiamo progettato ogni stanza partendo da lui.</p>
+      <div class="punti">
+        <div class="punto">
+          <h3>Accoglienza</h3>
+          <p>Ripiani rialzati dove appoggiare il trasportino, lontano dal pavimento e dagli sguardi.</p>
+        </div>
+        <div class="punto">
+          <h3>Sale visita</h3>
+          <p>Ambienti piccoli e silenziosi, dove il gatto può esplorare prima di essere toccato.</p>
+        </div>
+        <div class="punto">
+          <h3>Ricovero</h3>
+          <p>Lettiera separata dall'area di riposo, come a casa, e box distanti tra loro.</p>
+        </div>
+        <div class="punto">
+          <h3>Visite in degenza</h3>
+          <p>Un angolo con poltrona per passare del tempo accanto al vostro gatto.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SERVIZI -->
-  <section id="servizi">
-    <p class="occhiello">I nostri servizi</p>
-    <h2>Tutto quello che serve, sotto lo stesso tetto</h2>
-    <div class="griglia">
-      <article class="scheda-servizio">
-        <h3>Visite e prevenzione</h3>
-        <p>Controlli annuali, vaccinazioni, microchip e consigli su alimentazione e comportamento.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Diagnostica per immagini</h3>
-        <p>Ecografia e radiografia in clinica, con referto discusso insieme a voi il giorno stesso.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Odontoiatria</h3>
-        <p>Pulizia dei denti, radiografie dentali ed estrazioni in anestesia, con monitoraggio continuo.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Chirurgia</h3>
-        <p>Sterilizzazioni e interventi di chirurgia dei tessuti molli, con risveglio in area dedicata.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Ricovero</h3>
-        <p>Degenza in box ampi e tranquilli, separati per evitare contatti tra gatti sconosciuti.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Piani salute</h3>
-        <p>Un abbonamento annuale che copre visite, vaccini e controlli, con una spesa mensile fissa.</p>
-      </article>
+  <section class="sezione" id="servizi">
+    <div class="sezione-titolo">
+      <p class="occhiello">I servizi</p>
+      <h2>Tutto sotto lo stesso tetto</h2>
     </div>
-  </section>
-
-  <!-- TEAM -->
-  <section id="team">
-    <p class="occhiello">Il nostro team</p>
-    <h2>Le persone che si prendono cura di lui</h2>
-    <div class="griglia team">
-      <article class="persona">
-        <span class="iniziali" aria-hidden="true">EM</span>
-        <h3>Dr.ssa Elena Marchi</h3>
-        <p>Medico veterinario · Direttrice sanitaria</p>
-      </article>
-      <article class="persona">
-        <span class="iniziali" aria-hidden="true">LR</span>
-        <h3>Dr. Luca Ravelli</h3>
-        <p>Medico veterinario · Diagnostica per immagini</p>
-      </article>
-      <article class="persona">
-        <span class="iniziali" aria-hidden="true">SV</span>
-        <h3>Sara Valli</h3>
-        <p>Tecnica veterinaria · Accoglienza e ricovero</p>
-      </article>
-    </div>
+    <ul class="servizi">
+      <li><h3>Visite e prevenzione</h3><p>Controlli annuali, vaccinazioni, microchip e consigli su alimentazione e comportamento.</p></li>
+      <li><h3>Diagnostica per immagini</h3><p>Ecografia e radiografia in clinica, con il referto spiegato insieme a voi il giorno stesso.</p></li>
+      <li><h3>Odontoiatria</h3><p>Pulizia dei denti, radiografie dentali ed estrazioni in anestesia, con monitoraggio continuo.</p></li>
+      <li><h3>Chirurgia</h3><p>Sterilizzazioni e chirurgia dei tessuti molli, con risveglio in un'area tranquilla e dedicata.</p></li>
+      <li><h3>Ricovero</h3><p>Degenza in box ampi e silenziosi, separati per evitare il contatto tra gatti che non si conoscono.</p></li>
+      <li><h3>Piani salute</h3><p>Un abbonamento annuale che copre visite, vaccini e controlli, con una quota mensile fissa.</p></li>
+    </ul>
   </section>
 
   <!-- PREPARARE LA VISITA -->
-  <section class="box box-testo" id="visita">
-    <div>
+  <section class="sezione" id="visita">
+    <div class="sezione-titolo">
       <p class="occhiello">Prima di venire</p>
-      <h2>Come preparare il vostro gatto alla visita</h2>
-      <p>Bastano pochi accorgimenti per un viaggio più sereno. Al vostro arrivo ci pensiamo noi: lo maneggiamo con calma e senza forzature.</p>
+      <h2>Preparare il gatto alla visita</h2>
+      <img class="seduto" src="img/gatto-seduto.webp" width="900" height="900" alt="" loading="lazy">
     </div>
     <ol class="passi">
-      <li><strong>Lasciate il trasportino in casa</strong> qualche giorno prima, aperto, con dentro una coperta che conosce.</li>
-      <li><strong>Spruzzate un feromone calmante</strong> nel trasportino 15 minuti prima di partire.</li>
-      <li><strong>Coprite il trasportino</strong> con un telo durante il viaggio: vedere meno lo rassicura.</li>
-      <li><strong>Portate con voi</strong> il libretto sanitario e, se richiesto, un campione di urine.</li>
+      <li><strong>Lasciate il trasportino in casa</strong><span>Qualche giorno prima, aperto, con dentro una coperta che conosce. Diventerà un posto familiare.</span></li>
+      <li><strong>Usate un feromone calmante</strong><span>Spruzzatelo nel trasportino 15 minuti prima di partire, non direttamente sul gatto.</span></li>
+      <li><strong>Coprite il trasportino</strong><span>Un telo durante il viaggio lo aiuta: vedere meno lo rassicura.</span></li>
+      <li><strong>Portate i documenti</strong><span>Il libretto sanitario e, se ve lo abbiamo chiesto, un campione di urine.</span></li>
     </ol>
   </section>
 
   <!-- COME RAGGIUNGERCI -->
-  <section id="contatti">
-    <p class="occhiello">Come raggiungerci</p>
-    <h2>Vieni a trovarci</h2>
-    <div class="griglia due">
-      <article class="scheda-servizio">
-        <h3>In auto</h3>
-        <p>Parcheggi su strada su entrambi i lati della via. Il parcheggio convenzionato all'angolo vi offre <strong>la prima ora gratuita</strong>: dite al personale che siete nostri clienti e fate convalidare il biglietto alla reception.</p>
-        <p>Potete anche lasciare prima il gatto in clinica e parcheggiare con calma.</p>
-      </article>
-      <article class="scheda-servizio">
-        <h3>Con i mezzi pubblici</h3>
-        <p>Fermata dell'autobus a 2 minuti a piedi, servita da diverse linee urbane. La stazione della metropolitana più vicina è a circa 10 minuti a piedi.</p>
-      </article>
+  <section class="sezione" id="raggiungerci">
+    <div class="sezione-titolo">
+      <p class="occhiello">Come raggiungerci</p>
+      <h2>Venire da noi è semplice</h2>
     </div>
-    <div class="prenota">
-      <div>
-        <h3>Prenota una visita</h3>
-        <p>Chiamaci dal lunedì al sabato negli orari di apertura. Le visite durano 30 minuti, così nessuno aspetta a lungo.</p>
+    <div>
+      <div class="colonne">
+        <div>
+          <h3>In auto</h3>
+          <p>Parcheggi su strada su entrambi i lati della via. Nel parcheggio convenzionato all'angolo la prima ora è gratuita: dite al personale che siete nostri clienti e fate convalidare il biglietto alla reception.</p>
+        </div>
+        <div>
+          <h3>Con i mezzi</h3>
+          <p>La fermata dell'autobus è a 2 minuti a piedi ed è servita da diverse linee urbane. La metropolitana più vicina è a circa 10 minuti a piedi.</p>
+        </div>
       </div>
-      <p class="numero">06 000 0000</p>
+      <div class="chiamata">
+        <div>
+          <h3>Prenota una visita</h3>
+          <p>Chiamateci negli orari di apertura: troviamo insieme il momento giusto. Indirizzo e orari sono in fondo alla pagina.</p>
+        </div>
+        <p class="numero">06 000 0000</p>
+      </div>
     </div>
   </section>
 
   <!-- DOMANDE FREQUENTI -->
-  <section id="faq">
-    <p class="occhiello">Domande frequenti</p>
-    <h2>Le risposte alle domande più comuni</h2>
+  <section class="sezione" id="faq">
+    <div class="sezione-titolo">
+      <p class="occhiello">Domande frequenti</p>
+      <h2>Prima che ce lo chiediate</h2>
+    </div>
     <div class="faq">
       <details>
         <summary>Curate anche cani o altri animali?</summary>
-        <p>No. La clinica è dedicata esclusivamente ai gatti: è proprio questo che ci permette di avere ambienti tranquilli e senza odori di altri animali.</p>
+        <p>No. La clinica è dedicata solo ai gatti: è proprio questo che ci permette di avere ambienti tranquilli, senza odori di altri animali.</p>
       </details>
       <details>
         <summary>Cosa faccio in caso di urgenza?</summary>
-        <p>Negli orari di apertura chiamateci subito: se la situazione lo richiede vi riceviamo senza appuntamento. Fuori orario rivolgetevi al pronto soccorso veterinario h24 più vicino a voi.</p>
+        <p>Negli orari di apertura chiamateci subito: se la situazione lo richiede vi riceviamo senza appuntamento. Fuori orario rivolgetevi al pronto soccorso veterinario h24 più vicino.</p>
       </details>
       <details>
         <summary>Devo assicurare il mio gatto?</summary>
-        <p>Non è obbligatorio, ma una malattia o un incidente possono costare molto. In alternativa all'assicurazione potete scegliere uno dei nostri piani salute, che distribuiscono la spesa della prevenzione in rate mensili.</p>
+        <p>Non è obbligatorio, ma una malattia o un incidente possono costare molto. In alternativa potete scegliere uno dei nostri piani salute, che distribuiscono la spesa della prevenzione in quote mensili.</p>
       </details>
       <details>
         <summary>Quanto dura una visita?</summary>
-        <p>Ogni appuntamento dura 30 minuti. È il tempo che serve per visitare il gatto con calma e rispondere a tutte le vostre domande.</p>
+        <p>Trenta minuti. È il tempo che serve per visitare il gatto con calma e rispondere a tutte le vostre domande.</p>
       </details>
     </div>
   </section>
 
   <!-- CHIUSURA -->
-  <section class="cuore">
-    <img src="img/gatto-cuore.png" width="341" height="373" alt="Gatto disegnato con una linea rosa a forma di cuore">
+  <section class="chiusura">
+    <img src="img/gatto-cuore.png" width="341" height="373" alt="" loading="lazy">
     <p>Un gatto non si possiede: ti sceglie. Noi ci prendiamo cura di lui.</p>
   </section>
 
