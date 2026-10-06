@@ -531,3 +531,25 @@ h1, h2, h3 {
 /* Velo per foto: le foto chiare o molto dettagliate hanno bisogno di più scuro */
 @media (max-width: 700px) { .hero { --velo: 1.15; } }   /* hero verticale: cielo chiaro */
 .foto-sola.larga .foto { width: min(100%, 980px); }
+
+/* Coppia di foto della stessa forma: colonne uguali */
+@media (min-width: 760px) { .coppia.pari { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Processo: passo senza foto (decantazione) e passo con la bottiglia */
+.passo-silenzio {
+  display: grid; place-items: center;
+  min-height: clamp(220px, 32vw, 420px);
+  background: var(--sabbia);
+  padding: 40px 24px;
+  text-align: center;
+}
+.passo-silenzio .frase { margin: 0; color: var(--oliva-scuro); }
+.passo-bottiglia {
+  display: grid; place-items: center;
+  background: var(--sabbia);
+  padding: clamp(36px, 6vw, 64px) 20px;
+}
+.passo-bottiglia .foto { width: auto; max-height: min(60svh, 520px); }
+.passo-silenzio img { width: clamp(90px, 12vw, 140px); opacity: .85; }
+.passo-foto.impilata { gap: 18px; }
+.passo-foto.impilata > .foto:last-child { width: 72%; justify-self: end; }

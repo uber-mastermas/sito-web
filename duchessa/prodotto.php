@@ -56,9 +56,9 @@ include 'partials/header.php';
       </div>
     </section>
 
-    <div class="coppia" data-appare>
+    <div class="coppia pari" data-appare>
+      <?= foto('img/pagine/prodotto/assaggio-olio-bicchiere-blu.webp', "L'assaggio dell'olio nel bicchiere blu da degustazione", 1232, 1920, 'Assaggio') ?>
       <?= foto('img/pagine/prodotto/olio-versato-bicchieri-degustazione.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
-      <?= foto('img/pagine/prodotto/olive-raccolte-rete-quadrata.webp', 'Olive appena raccolte sulla rete, sulla terra', 1200, 1200, 'Dettaglio materico: olive o terra') ?>
     </div>
 
     <section class="capitolo" id="dati" data-appare>

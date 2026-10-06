@@ -50,8 +50,8 @@ include 'partials/header.php';
     </section>
 
     <div class="coppia inversa" data-appare>
-      <?= foto('img/pagine/azienda/terra.webp', 'Il suolo dell\'uliveto, radici e terra', 1400, 1400, 'Dettaglio della terra: suolo, radici') ?>
-      <?= foto('img/pagine/azienda/mani.webp', 'Mani al lavoro durante la raccolta', 1200, 1500, 'Raccolta o cura della pianta: mani al lavoro') ?>
+      <?= foto('img/pagine/azienda/olive-cadute-sulla-terra-quadrata.webp', "Olive mature cadute sulla terra dell'uliveto, tra le foglie", 1792, 1792, 'Dettaglio della terra') ?>
+      <?= foto('img/pagine/azienda/mano-olive-mature-ramo.webp', 'Una mano coglie le olive mature dal ramo', 1475, 1920, 'Mani al lavoro') ?>
     </div>
 
     <section class="capitolo" id="uliveti" data-appare>

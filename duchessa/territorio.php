@@ -49,8 +49,8 @@ include 'partials/header.php';
     </section>
 
     <div class="coppia" data-appare>
-      <?= foto('img/pagine/territorio/foglie.webp', "Foglie e rami d'ulivo da vicino", 1200, 1600, "Dettaglio: foglie o rami d'ulivo") ?>
-      <?= foto('img/pagine/territorio/uliveti-quota.webp', 'Terrazzamenti collinari coltivati a ulivo', 1800, 1200, 'Uliveti in quota, terrazzamenti') ?>
+      <?= foto('img/pagine/territorio/girifalco/fontana-del-diavolo-girifalco-verticale.webp', 'La fontana barocca in pietra nella piazza di Girifalco', 1434, 1920, 'Girifalco') ?>
+      <?= foto('img/pagine/territorio/girifalco/girifalco-centro-storico-dall-alto.webp', 'I tetti del centro storico di Girifalco, con gli uliveti sulle colline intorno', 1920, 1072, 'Girifalco dall\'alto') ?>
     </div>
 
     <section class="capitolo" data-appare>

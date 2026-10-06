@@ -44,8 +44,8 @@ include 'partials/header.php';
   </section>
 
   <!-- 4 — Chiusura -->
-  <section class="quadro copre" style="--velo: 1.2">
-    <?= foto('img/home/uliveti-sentiero-dall-alto.webp', 'Uliveti e un sentiero di campagna visti dall\'alto', 1920, 1440, 'Paesaggio o ulivi, immagine suggestiva') ?>
+  <section class="quadro copre" style="--velo: 1.3">
+    <?= foto('img/pagine/territorio/uliveto-controluce-tramonto.webp', "L'uliveto in controluce al tramonto", 1920, 1434, 'Paesaggio o ulivi, immagine suggestiva') ?>
     <div class="quadro-testo" data-appare>
       <h2>L'Olio della Duchessa</h2>
       <p class="frase">Arte olearia per passione.</p>

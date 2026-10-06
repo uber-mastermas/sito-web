@@ -36,8 +36,9 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="molitura" data-appare>
-        <div class="passo-foto">
-          <?= foto('img/pagine/processo/secchio-olive-raccolte.webp', 'Un secchio di olive appena raccolte, pronte per il frantoio', 1920, 1434, 'Arrivo delle olive al frantoio') ?>
+        <div class="passo-foto impilata">
+          <?= foto('img/pagine/processo/lavaggio-olive-frantoio.webp', 'Le olive appena arrivate al frantoio nella vasca di lavaggio', 1920, 1000, 'Arrivo delle olive al frantoio') ?>
+          <?= foto('img/pagine/processo/secchio-olive-raccolte.webp', 'Un secchio di olive appena raccolte, pronte per il frantoio', 1920, 1434, 'Olive raccolte') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">02</span>
@@ -51,8 +52,9 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="estrazione" data-appare>
-        <div class="passo-foto">
-          <?= foto('img/pagine/processo/olio-appena-estratto-frantoio.webp', "L'olio appena estratto a freddo che scende dal separatore del frantoio", 1920, 1434, 'Fase di estrazione a freddo', ['mobile' => 'img/pagine/processo/olio-appena-estratto-frantoio-verticale.webp']) ?>
+        <div class="passo-foto doppia">
+          <?= foto('img/pagine/processo/olio-appena-estratto-frantoio.webp', "L'olio appena estratto a freddo che scende dal separatore del frantoio", 1920, 1434, 'Fase di estrazione a freddo') ?>
+          <?= foto('img/pagine/processo/gramola-pasta-di-olive.webp', "La pasta di olive nella gramola, da cui affiora l'olio", 1920, 1920, 'Pasta di olive') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">03</span>
@@ -65,8 +67,8 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="decantazione" data-appare>
-        <div class="passo-foto">
-          <?= foto('img/pagine/processo/decantazione.webp', "L'olio a riposo durante la decantazione", 1800, 1200, 'Silos o momento di decantazione naturale') ?>
+        <div class="passo-foto passo-silenzio" aria-hidden="true">
+          <img src="img/logo/logo-duchessa.svg" width="263" height="351" alt="">
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">04</span>
@@ -79,8 +81,8 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="imbottigliamento" data-appare>
-        <div class="passo-foto">
-          <?= foto('img/pagine/processo/imbottigliamento.webp', "L'imbottigliamento", 1800, 1200, "Fase finale dell'imbottigliamento") ?>
+        <div class="passo-foto passo-bottiglia">
+          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "La bottiglia de L'Olio della Duchessa", 322, 1600, 'Bottiglia') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">05</span>
