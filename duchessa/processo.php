@@ -21,8 +21,8 @@ include 'partials/header.php';
 
       <li class="passo" id="raccolta" data-appare>
         <div class="passo-foto doppia">
-          <?= foto('img/pagine/processo/raccolta.webp', 'La raccolta delle olive', 1800, 1200, 'Il momento della raccolta, manuale o meccanica', ['subito' => true]) ?>
-          <?= foto('img/pagine/processo/raccolta-dettaglio.webp', 'Mani che colgono le olive sopra le reti, con le cassette della raccolta', 1200, 1600, 'Primo piano su olive e mani') ?>
+          <?= foto('img/pagine/processo/mani-olive-cesto.webp', 'Mani che colgono le olive dal ramo sopra il cesto della raccolta', 1920, 1072, 'Il momento della raccolta, manuale o meccanica', ['subito' => true]) ?>
+          <?= foto('img/pagine/processo/mani-raccolta-olive-reti.webp', 'Mani che colgono le olive sopra le reti, con le cassette della raccolta', 1200, 1600, 'Primo piano su olive e mani') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">01</span>
@@ -37,7 +37,7 @@ include 'partials/header.php';
 
       <li class="passo" id="molitura" data-appare>
         <div class="passo-foto">
-          <?= foto('img/pagine/processo/molitura.webp', 'Le olive arrivano al frantoio', 1800, 1200, 'Arrivo delle olive al frantoio') ?>
+          <?= foto('img/pagine/processo/secchio-olive-raccolte.webp', 'Un secchio di olive appena raccolte, pronte per il frantoio', 1920, 1434, 'Arrivo delle olive al frantoio') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">02</span>
@@ -51,15 +51,14 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="estrazione" data-appare>
-        <div class="passo-foto doppia">
-          <?= foto('img/pagine/processo/estrazione.webp', "La fase di estrazione a freddo", 1800, 1200, 'Fase di estrazione a freddo') ?>
-          <?= foto('img/pagine/processo/olio-che-scende.webp', "L'olio appena estratto che scende dal separatore del frantoio", 1200, 1600, 'Olio che scende, in primo piano') ?>
+        <div class="passo-foto">
+          <?= foto('img/pagine/processo/olio-appena-estratto-frantoio.webp', "L'olio appena estratto a freddo che scende dal separatore del frantoio", 1920, 1434, 'Fase di estrazione a freddo', ['mobile' => 'img/pagine/processo/olio-appena-estratto-frantoio-verticale.webp']) ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">03</span>
           <h2>L'estrazione</h2>
           <h3>A freddo</h3>
-          <p>L'olio viene estratto a freddo, a temperatura inferiore ai 27 °C.</p>
+          <p>L'olio viene estratto a freddo, a temperatura inferiore ai 27&nbsp;°C.</p>
           <p>Una lavorazione attenta, pensata per preservare le caratteristiche dell'olio e il patrimonio aromatico delle olive.</p>
           <p>È qui che dalla pasta di olive comincia a emergere ciò che diventerà L'Olio della Duchessa.</p>
         </div>

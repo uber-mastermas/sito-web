@@ -15,7 +15,6 @@
 
   /* Derivati (trasparenze della palette) */
   --filetto: rgba(180, 154, 98, .55);
-  --velo: rgba(46, 45, 39, .42);
 
   /* Font */
   --font-titolo: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
@@ -268,7 +267,12 @@ h1, h2, h3 {
 .quadro { min-height: clamp(520px, 86svh, 900px); }
 .hero::after, .quadro::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(46, 45, 39, .18) 0%, rgba(46, 45, 39, .30) 45%, rgba(46, 45, 39, .58) 100%);
+  /* velo scuro sotto il testo: --velo regola l'intensità per ogni foto
+     (1 = normale, più alto per foto chiare o piene di dettagli) */
+  background: linear-gradient(180deg,
+    rgba(46, 45, 39, calc(.26 * var(--velo, 1))) 0%,
+    rgba(46, 45, 39, calc(.40 * var(--velo, 1))) 45%,
+    rgba(46, 45, 39, calc(.64 * var(--velo, 1))) 100%);
   pointer-events: none;
 }
 .hero-testo, .quadro-testo {
@@ -523,3 +527,6 @@ h1, h2, h3 {
 .copre > .foto.in-alto, .copre > picture > .foto.in-alto { object-position: 50% 40%; }
 .foto-larga .copre.alta { height: clamp(360px, 60vw, 980px); }
 .copre > .foto.pos-basso, .copre > picture > .foto.pos-basso { object-position: 50% 70%; }
+
+/* Velo per foto: le foto chiare o molto dettagliate hanno bisogno di più scuro */
+@media (max-width: 700px) { .hero { --velo: 1.15; } }   /* hero verticale: cielo chiaro */

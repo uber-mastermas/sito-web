@@ -12,7 +12,7 @@ include 'partials/header.php';
     </ol>
     <div class="scheda">
       <div class="scheda-bottiglia">
-        <?= foto('img/pagine/prodotto/bottiglia-500.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 322, 1600, 'Bottiglia isolata, luce naturale', ['subito' => true]) ?>
+        <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 322, 1600, 'Bottiglia isolata, luce naturale', ['subito' => true]) ?>
       </div>
       <div>
         <p class="occhiello">Il Prodotto</p>
@@ -57,8 +57,8 @@ include 'partials/header.php';
     </section>
 
     <div class="coppia" data-appare>
-      <?= foto('img/pagine/prodotto/olio-versato.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
-      <?= foto('img/pagine/prodotto/materico.webp', 'Olive appena raccolte sulla rete, sulla terra', 1200, 1200, 'Dettaglio materico: olive o terra') ?>
+      <?= foto('img/pagine/prodotto/olio-versato-bicchieri-degustazione.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
+      <?= foto('img/pagine/prodotto/olive-raccolte-rete-quadrata.webp', 'Olive appena raccolte sulla rete, sulla terra', 1200, 1200, 'Dettaglio materico: olive o terra') ?>
     </div>
 
     <section class="capitolo" id="dati" data-appare>
@@ -91,7 +91,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre alta">
-      <?= foto('img/pagine/prodotto/tavola.webp', "Una bottiglia de L'Olio della Duchessa sulla tavola, con pane, pomodori e pesce", 1920, 1456, 'A tavola: pane, verdure, pesce, tavola naturale', ['classe' => 'pos-basso']) ?>
+      <?= foto('img/pagine/prodotto/bottiglia-tavola-pane-pomodori-pesce.webp', "Una bottiglia de L'Olio della Duchessa sulla tavola, con pane, pomodori e pesce", 1920, 1456, 'A tavola: pane, verdure, pesce, tavola naturale', ['classe' => 'pos-basso']) ?>
     </div>
   </div>
 
@@ -142,7 +142,7 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">Un olio prezioso merita di essere custodito.</p>
-          <p>Conservare la bottiglia in un luogo fresco e asciutto, idealmente tra 12 e 18 °C, lontano dalla luce e dalle fonti di calore.</p>
+          <p>Conservare la bottiglia in un luogo fresco e asciutto, idealmente tra 12 e 18&nbsp;°C, lontano dalla luce e dalle fonti di calore.</p>
           <p>Una naturale presenza di deposito può verificarsi nel tempo e non rappresenta necessariamente un difetto: può essere conseguenza della naturale decantazione.</p>
           <p>Per apprezzarne al meglio le caratteristiche, consigliamo di consumarlo entro il periodo indicato in etichetta.</p>
         </div>
@@ -167,7 +167,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre alta">
-      <?= foto('img/pagine/prodotto/sala.webp', "Una bottiglia de L'Olio della Duchessa su un tavolo apparecchiato di un ristorante", 1920, 1456, 'Bottiglia in un contesto elegante', ['classe' => 'in-alto']) ?>
+      <?= foto('img/pagine/prodotto/bottiglia-tavolo-ristorante.webp', "Una bottiglia de L'Olio della Duchessa su un tavolo apparecchiato di un ristorante", 1920, 1456, 'Bottiglia in un contesto elegante', ['classe' => 'in-alto']) ?>
     </div>
   </div>
 
@@ -183,7 +183,7 @@ include 'partials/header.php';
           <p>Quello che arriva quando tutto il resto è pronto. Il filo d'olio sul pane. Sulla verdura. Sul pesce. Sulla zuppa.</p>
           <div class="formati">
             <div class="formato">
-              <?= foto('img/pagine/prodotto/bottiglia-500.webp', 'Bottiglia da 500 ml', 322, 1600, 'Bottiglia 500 ml') ?>
+              <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 322, 1600, 'Bottiglia 500 ml') ?>
               <h3>Bottiglia</h3>
               <p>500 ml</p>
             </div>

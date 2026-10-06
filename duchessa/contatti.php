@@ -96,7 +96,7 @@ include 'partials/header.php';
           <li><?php if ($SITO['telefono'] !== ''): ?><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a><?php else: ?>Tel. <?= dato('telefono') ?><?php endif; ?></li>
         </ul>
         <div class="recapiti-foto">
-          <?= foto('img/pagine/contatti/assaggio.webp', "L'olio versato nei bicchieri da degustazione, all'aperto", 1200, 1600, 'Immagine facoltativa') ?>
+          <?= foto('img/pagine/contatti/olio-bicchieri-degustazione-aperto.webp', "L'olio versato nei bicchieri da degustazione, all'aperto", 1200, 1600, 'Immagine facoltativa') ?>
         </div>
       </aside>
     </div>

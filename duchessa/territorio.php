@@ -16,7 +16,7 @@ include 'partials/header.php';
   </div>
 
   <div class="banner copre">
-    <?= foto('img/pagine/territorio/panoramica.webp', 'Uliveti e campagna visti dall\'alto', 1920, 1440, 'Panoramica di Girifalco dall\'alto o da lontano', ['subito' => true]) ?>
+    <?= foto('img/pagine/territorio/uliveti-sentiero-dall-alto.webp', 'Uliveti e campagna visti dall\'alto', 1920, 1440, 'Panoramica di Girifalco dall\'alto o da lontano', ['subito' => true]) ?>
   </div>
 
   <div class="contenitore">
@@ -70,7 +70,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre">
-      <?= foto('img/pagine/territorio/luce.webp', "Un sentiero tra gli ulivi nella luce dell'alba", 1920, 1456, 'Dettaglio paesaggio, luce del mattino o del tramonto', ['mobile' => 'img/pagine/territorio/luce-mobile.webp']) ?>
+      <?= foto('img/pagine/territorio/sentiero-uliveto-alba.webp', "Un sentiero tra gli ulivi nella luce dell'alba", 1920, 1456, 'Dettaglio paesaggio, luce del mattino o del tramonto', ['mobile' => 'img/pagine/territorio/sentiero-uliveto-alba-verticale.webp']) ?>
     </div>
   </div>
 
