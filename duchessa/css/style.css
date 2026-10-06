@@ -594,3 +594,18 @@ h1, h2, h3 {
 .torna-su svg { margin-top: -2px; }
 body.menu-bloccato .torna-su { display: none; }
 @media (min-width: 900px) { .torna-su { width: 54px; height: 54px; right: 28px; bottom: 28px; } }
+
+/* Foto affiancate: stessa altezza su schermi larghi (ritaglio con object-fit) */
+@media (min-width: 860px) {
+  .passo-foto.doppia { align-items: stretch; }
+  .passo-foto.doppia > .foto,
+  .passo-foto.doppia > picture > .foto { height: clamp(300px, 28vw, 440px); object-fit: cover; }
+}
+@media (min-width: 760px) {
+  .coppia { align-items: stretch; }
+  .coppia > .foto,
+  .coppia > picture > .foto { height: clamp(380px, 40vw, 640px); object-fit: cover; }
+}
+@media (min-width: 860px) {
+  .passo-foto.impilata > .foto { height: clamp(200px, 19vw, 290px); object-fit: cover; }
+}
