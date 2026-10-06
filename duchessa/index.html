@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olio della Duchessa · Sito in preparazione</title>
+<meta name="description" content="Olio extravergine di oliva di Calabria. Il nuovo sito è in preparazione.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
+<style>
+  /* Pagina provvisoria: una sola schermata, fondo verde oliva, accento oro olio */
+  :root {
+    --oliva: #27301b;        /* fondo */
+    --oliva-chiaro: #3a4628; /* filetti */
+    --oro: #d4ae3a;          /* accento, colore dell'olio */
+    --crema: #f2eedf;        /* testo */
+    --salvia: #a9b48e;       /* testo secondario */
+    --font-titolo: "Cormorant", Garamond, Georgia, serif;
+    --font-testo: "Jost", "Segoe UI", Helvetica, Arial, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--oliva);
+    color: var(--crema);
+    font-family: var(--font-testo);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  .pagina {
+    min-height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-inline: 24px;
+    padding-block: max(40px, env(safe-area-inset-top)) max(32px, env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 40px;
+  }
+  .marchio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-titolo);
+    font-size: 1.3rem;
+    letter-spacing: .04em;
+  }
+  .marchio svg { width: 34px; height: 34px; flex: none; }
+
+  .centro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+  }
+  .occhiello {
+    margin: 0 0 18px;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--oro);
+  }
+  h1 {
+    margin: 0 0 24px;
+    font-family: var(--font-titolo);
+    font-weight: 500;
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: .95;
+    text-wrap: balance;
+  }
+  h1 em { color: var(--oro); font-weight: 500; }
+  .intro { margin: 0; max-width: 40ch; color: var(--salvia); }
+  .stato {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 10px 18px;
+    border: 1px solid var(--oliva-chiaro);
+    border-radius: 999px;
+    font-size: .9rem;
+  }
+  .stato::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--oro);
+    animation: pulsa 2.4s ease-in-out infinite;
+  }
+  @keyframes pulsa { 50% { opacity: .3; } }
+
+  /* Goccia d'olio con ramo d'ulivo, disegnata in SVG */
+  .goccia { width: min(100%, 320px); justify-self: center; }
+
+  .piede {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--oliva-chiaro);
+    font-size: .85rem;
+    color: var(--salvia);
+  }
+  .piede a { color: var(--crema); text-decoration-color: var(--oro); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--oro); outline-offset: 3px; }
+
+  @media (max-width: 720px) {
+    .pagina { padding-inline: 20px; gap: 32px; }
+    .centro { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+    .goccia { width: min(70%, 220px); order: -1; }
+    .piede { flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) { .stato::before { animation: none; } }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+  <header class="marchio">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M20 4 C 28 16, 32 22, 32 27 A 12 12 0 0 1 8 27 C 8 22, 12 16, 20 4 Z" fill="#d4ae3a"/>
+      <path d="M15 28 A 6 6 0 0 0 21 33" stroke="#27301b" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span>Olio della Duchessa</span>
+  </header>
+
+  <main class="centro">
+    <div>
+      <p class="occhiello">Olio extravergine di oliva · Calabria</p>
+      <h1>Il nuovo sito <em>sta maturando</em></h1>
+      <p class="intro">Come le olive sull'albero, ci serve ancora un po' di tempo. Stiamo preparando un sito dove raccontarvi i nostri uliveti, la raccolta e l'olio che ne nasce.</p>
+      <p class="stato">Sito in preparazione</p>
+    </div>
+
+    <svg class="goccia" viewBox="0 0 200 240" role="img" aria-label="Goccia d'olio con un rametto d'ulivo">
+      <path d="M100 12 C 140 76, 168 116, 168 152 A 68 68 0 0 1 32 152 C 32 116, 60 76, 100 12 Z" fill="#d4ae3a"/>
+      <path d="M100 12 C 140 76, 168 116, 168 152 A 68 68 0 0 1 100 220 C 132 200, 146 170, 140 140 C 134 106, 116 70, 100 12 Z" fill="#b8932a"/>
+      <path d="M62 160 A 40 40 0 0 0 96 196" stroke="#f2eedf" stroke-width="5" fill="none" stroke-linecap="round" opacity=".55"/>
+      <g fill="none" stroke="#a9b48e" stroke-width="3" stroke-linecap="round">
+        <path d="M40 236 C 70 214, 104 206, 150 214"/>
+      </g>
+      <g fill="#a9b48e">
+        <ellipse cx="64" cy="214" rx="15" ry="5" transform="rotate(-30 64 214)"/>
+        <ellipse cx="88" cy="221" rx="15" ry="5" transform="rotate(25 88 221)"/>
+        <ellipse cx="108" cy="204" rx="15" ry="5" transform="rotate(-20 108 204)"/>
+        <ellipse cx="130" cy="218" rx="15" ry="5" transform="rotate(15 130 218)"/>
+      </g>
+      <circle cx="120" cy="228" r="6" fill="#3a4628"/>
+    </svg>
+  </main>
+
+  <footer class="piede">
+    <span>Olio della Duchessa · Pagina provvisoria</span>
+    <a href="../">Tutti i progetti</a>
+  </footer>
+
+</div>
+</body>
+</html>
