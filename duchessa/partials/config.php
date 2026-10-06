@@ -16,9 +16,8 @@ $SITO = [
   'telefono'      => '',          // es. +39 000 000 0000
   'indirizzo'     => 'Girifalco (CZ) · Calabria',
 
-  // Social: lasciare '' quelli che non servono
-  'instagram'     => '',          // URL completo
-  'facebook'      => '',          // URL completo
+  // Social: solo Instagram
+  'instagram'     => 'https://www.instagram.com/olio_delladuchessa/',
 
   // Dati legali (footer)
   'ragione'       => 'Azienda Agricola Tolone',
