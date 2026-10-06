@@ -10,8 +10,8 @@
 <style>
   /* Layout: hero a due colonne con il gatto seduto, sezione "in salto" invertita, scheda finale. */
   :root {
-    --rosa: #f8e1dc;
-    --rosa-scuro: #efc9c1;
+    --fondo: #fbe58a;
+    --fondo-scuro: #ecc94b;
     --crema: #fdf3e7;
     --pesca: #e8935f;
     --salvia: #7f9a7c;
@@ -23,7 +23,7 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--rosa);
+    background: var(--fondo);
     color: var(--inchiostro);
     font-family: var(--font-testo);
     font-size: 1.06rem;
@@ -66,7 +66,7 @@
   h1 span { color: var(--pesca); }
   .intro { max-width: 34ch; font-size: 1.15rem; margin: 0; }
   .hero-img {
-    mix-blend-mode: multiply; /* fa sparire il fondo bianco dell'immagine sul rosa */
+    mix-blend-mode: multiply; /* fa sparire il fondo bianco dell'immagine sul giallo */
   }
 
   /* Sezione salto */
@@ -107,7 +107,7 @@
     margin: 0;
   }
   .dato {
-    border-top: 2px solid var(--rosa-scuro);
+    border-top: 2px solid var(--fondo-scuro);
     padding-top: 14px;
   }
   .dato dt {
@@ -130,8 +130,25 @@
     opacity: .75;
   }
 
+  /* Cuore finale */
+  .cuore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+  .cuore img { width: 170px; }
+  .cuore p {
+    font-family: var(--font-titolo);
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    margin: 0;
+    max-width: 24ch;
+    text-wrap: balance;
+  }
+
   footer {
-    border-top: 1px solid var(--rosa-scuro);
+    border-top: 1px solid var(--fondo-scuro);
     padding-top: 20px;
     font-size: .9rem;
     opacity: .8;
@@ -175,6 +192,11 @@
       <div class="dato"><dt>Sonno</dt><dd>15 <small>ore/giorno</small></dd></div>
       <div class="dato"><dt>Pasti</dt><dd>2 <small>+ spuntini</small></dd></div>
     </dl>
+  </section>
+
+  <section class="cuore">
+    <img src="img/gatto-cuore.png" width="341" height="373" alt="Gatto disegnato con una linea rosa a forma di cuore">
+    <p>Un gatto non si possiede: ti sceglie, e da quel giorno la casa ha un cuore in più.</p>
   </section>
 
   <footer>Pagina di prova · sito gatti</footer>
