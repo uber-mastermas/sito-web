@@ -188,7 +188,7 @@ include 'partials/header.php';
               <p>500 ml</p>
             </div>
             <div class="formato">
-              <?= foto('img/pagine/prodotto/latta-5l.webp', 'Latta da 5 litri', 1200, 1400, 'Latta 5 L, fondo trasparente') ?>
+              <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l.webp', "Latta da 5 litri de L'Olio della Duchessa", 827, 1600, 'Latta 5 L') ?>
               <h3>Latta</h3>
               <p>5 litri</p>
             </div>

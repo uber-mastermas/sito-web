@@ -104,8 +104,14 @@ include 'partials/header.php';
       <h2>Vuoi portarlo sulla tua tavola?</h2>
       <p>Scrivici indicando formato e quantità: ti risponderemo con disponibilità e modalità di acquisto.</p>
       <div class="formati">
-        <div class="formato"><h3>Bottiglia</h3><p>500 ml</p></div>
-        <div class="formato"><h3>Latta</h3><p>5 litri</p></div>
+        <div class="formato">
+          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 322, 1600, 'Bottiglia 500 ml') ?>
+          <h3>Bottiglia</h3><p>500 ml</p>
+        </div>
+        <div class="formato">
+          <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l.webp', 'Latta da 5 litri', 827, 1600, 'Latta 5 L') ?>
+          <h3>Latta</h3><p>5 litri</p>
+        </div>
       </div>
       <div class="azioni"><a class="bottone bottone-chiaro" href="#scrivici">Scrivici per acquistare</a></div>
     </div>
