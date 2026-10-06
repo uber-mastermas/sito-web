@@ -12,7 +12,7 @@ $SITO = [
   'luogo'         => 'Girifalco · Calabria · Italia',
 
   // Contatti
-  'email'         => '',          // es. info@oliodelladuchessa.com
+  'email'         => 'info@oliodelladuchessa.com',
   'telefono'      => '',          // es. +39 000 000 0000
   'indirizzo'     => 'Girifalco (CZ) · Calabria',
 
@@ -25,7 +25,7 @@ $SITO = [
   'piva'          => '',          // Partita IVA
 
   // Modulo contatti: dove arrivano i messaggi
-  'email_modulo'  => '',          // se vuoto il modulo mostra un avviso e non invia
+  'email_modulo'  => 'info@oliodelladuchessa.com',
 ];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
