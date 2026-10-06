@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Il mio gatto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
+<style>
+  /* Layout: hero a due colonne con il gatto seduto, sezione "in salto" invertita, scheda finale. */
+  :root {
+    --rosa: #f8e1dc;
+    --rosa-scuro: #efc9c1;
+    --crema: #fdf3e7;
+    --pesca: #e8935f;
+    --salvia: #7f9a7c;
+    --inchiostro: #4a2e2a;
+    --font-titolo: "Young Serif", Georgia, "Times New Roman", serif;
+    --font-testo: "Nunito Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--rosa);
+    color: var(--inchiostro);
+    font-family: var(--font-testo);
+    font-size: 1.06rem;
+    line-height: 1.65;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  .pagina {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 32px 56px;
+    display: grid;
+    gap: 72px;
+  }
+
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+  .occhiello {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--salvia);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-family: var(--font-titolo);
+    font-weight: 400;
+    font-size: clamp(3rem, 9vw, 6.2rem);
+    line-height: .95;
+    margin: 0 0 24px;
+    text-wrap: balance;
+    color: var(--inchiostro);
+  }
+  h1 span { color: var(--pesca); }
+  .intro { max-width: 34ch; font-size: 1.15rem; margin: 0; }
+  .hero-img {
+    mix-blend-mode: multiply; /* fa sparire il fondo bianco dell'immagine sul rosa */
+  }
+
+  /* Sezione salto */
+  .salto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    background: var(--crema);
+    border-radius: 28px;
+    padding: 40px;
+  }
+  .salto img { animation: balzo 4s ease-in-out infinite; }
+  @keyframes balzo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .salto img { animation: none; }
+  }
+  h2 {
+    font-family: var(--font-titolo);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+    line-height: 1.1;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .salto p { margin: 0 0 14px; max-width: 60ch; }
+  .salto > div { min-width: 0; }
+
+  /* Scheda */
+  .scheda h2 { margin-bottom: 24px; }
+  .dati {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 0;
+  }
+  .dato {
+    border-top: 2px solid var(--rosa-scuro);
+    padding-top: 14px;
+  }
+  .dato dt {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--salvia);
+  }
+  .dato dd {
+    margin: 4px 0 0;
+    font-family: var(--font-titolo);
+    font-size: 1.7rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .dato dd small {
+    font-family: var(--font-testo);
+    font-size: .9rem;
+    color: var(--inchiostro);
+    opacity: .75;
+  }
+
+  footer {
+    border-top: 1px solid var(--rosa-scuro);
+    padding-top: 20px;
+    font-size: .9rem;
+    opacity: .8;
+  }
+
+  @media (max-width: 760px) {
+    .hero, .salto { grid-template-columns: 1fr; }
+    .hero-img { max-width: 380px; margin: 0 auto; }
+    .salto { padding: 28px 20px; }
+    .dati { grid-template-columns: repeat(2, 1fr); }
+    .pagina { gap: 52px; }
+  }
+</style>
+</head>
+<body>
+<main class="pagina">
+
+  <section class="hero">
+    <div>
+      <p class="occhiello">Diario di casa</p>
+      <h1>IL MIO <span>GATTO</span></h1>
+      <p class="intro">Si chiama Biscotto, ha il pelo color albicocca e la convinzione profonda che la casa sia sua. Noi ci abitiamo per gentile concessione.</p>
+    </div>
+    <img class="hero-img" src="img/gatto-seduto.webp" width="900" height="900" alt="Illustrazione di un gatto arancione seduto, con la coda arrotolata a spirale">
+  </section>
+
+  <section class="salto">
+    <img src="img/gatto-salto.png" width="1200" height="1116" alt="Illustrazione di un gatto arancione che salta">
+    <div>
+      <h2>Dorme quindici ore, poi vola</h2>
+      <p>Passa la mattina al sole sul davanzale, immobile come un soprammobile. Poi, senza preavviso, attraversa il salotto in tre balzi e atterra sulla libreria.</p>
+      <p>Ha le sue regole: la ciotola deve essere piena a metà, il divano è suo dalle 15 alle 18 e le scatole di cartone vanno sempre controllate.</p>
+    </div>
+  </section>
+
+  <section class="scheda">
+    <h2>La sua scheda</h2>
+    <dl class="dati">
+      <div class="dato"><dt>Età</dt><dd>4 <small>anni</small></dd></div>
+      <div class="dato"><dt>Peso</dt><dd>4,8 <small>kg</small></dd></div>
+      <div class="dato"><dt>Sonno</dt><dd>15 <small>ore/giorno</small></dd></div>
+      <div class="dato"><dt>Pasti</dt><dd>2 <small>+ spuntini</small></dd></div>
+    </dl>
+  </section>
+
+  <footer>Pagina di prova · sito gatti</footer>
+
+</main>
+</body>
+</html>
