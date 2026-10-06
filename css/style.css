@@ -1,0 +1,258 @@
+/* ==========================================================
+   Sito gatti — foglio di stile comune a tutte le pagine
+   Palette: solo rosa, giallo, bianco, grigio
+   Layout: header fisso in alto, footer fisso in basso,
+           contenuto centrato a max 1080px
+   ========================================================== */
+
+:root {
+  /* Colori */
+  --giallo: #fbe58a;        /* fondo pagina */
+  --giallo-scuro: #ecc94b;  /* linee e separatori */
+  --rosa: #ed1e79;          /* colore del logo, accento */
+  --rosa-chiaro: #fbd3e4;   /* fondi leggeri, hover */
+  --bianco: #ffffff;
+  --grigio: #46424a;        /* testo */
+  --grigio-chiaro: #7d7880; /* etichette, testo secondario */
+
+  /* Font */
+  --font-titolo: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-testo: "Nunito Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Misure */
+  --altezza-footer: 52px;
+  --larghezza: 1080px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--giallo);
+  color: var(--grigio);
+  font-family: var(--font-testo);
+  font-size: 1.06rem;
+  line-height: 1.65;
+  /* spazio per il footer fisso */
+  padding-bottom: calc(var(--altezza-footer) + env(safe-area-inset-bottom, 0px));
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--rosa); }
+
+:focus-visible {
+  outline: 3px solid var(--rosa);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---------- HEADER FISSO ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bianco);
+  border-bottom: 3px solid var(--rosa);
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.site-header .barra {
+  max-width: var(--larghezza);
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--grigio);
+}
+.logo img { width: 40px; height: auto; }
+.logo span {
+  font-family: var(--font-titolo);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.menu {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu a {
+  display: block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: var(--grigio);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+}
+.menu a:hover { background: var(--rosa-chiaro); }
+.menu a[aria-current="page"] {
+  background: var(--rosa);
+  color: var(--bianco);
+}
+
+/* ---------- FOOTER FISSO ---------- */
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: var(--grigio);
+  color: var(--bianco);
+  border-top: 3px solid var(--rosa);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.site-footer .barra {
+  max-width: var(--larghezza);
+  margin: 0 auto;
+  min-height: var(--altezza-footer);
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: .85rem;
+}
+.site-footer a { color: var(--rosa-chiaro); }
+
+/* ---------- CONTENUTO ---------- */
+.pagina {
+  max-width: var(--larghezza);
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 40px 56px;
+  display: grid;
+  gap: 72px;
+}
+
+/* Margine per i link interni (#ancore) sotto l'header fisso */
+section[id] { scroll-margin-top: 90px; }
+
+.occhiello {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--grigio-chiaro);
+  margin: 0 0 12px;
+}
+h1 {
+  font-family: var(--font-titolo);
+  font-weight: 400;
+  font-size: clamp(3rem, 9vw, 6.2rem);
+  line-height: .95;
+  margin: 0 0 24px;
+  text-wrap: balance;
+}
+h1 span { color: var(--rosa); }
+h2 {
+  font-family: var(--font-titolo);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  line-height: 1.1;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+.intro { max-width: 34ch; font-size: 1.15rem; margin: 0; }
+.hero-img { mix-blend-mode: multiply; } /* fa sparire il fondo bianco dell'immagine */
+
+/* Box bianco */
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  background: var(--bianco);
+  border-radius: 28px;
+  padding: 40px;
+}
+.box > div { min-width: 0; }
+.box p { margin: 0 0 14px; max-width: 60ch; }
+.balzo { animation: balzo 4s ease-in-out infinite; }
+@keyframes balzo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Scheda dati */
+.dati {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 8px 0 0;
+}
+.dato { border-top: 3px solid var(--rosa); padding-top: 14px; }
+.dato dt {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--grigio-chiaro);
+}
+.dato dd {
+  margin: 4px 0 0;
+  font-family: var(--font-titolo);
+  font-size: 1.7rem;
+  font-variant-numeric: tabular-nums;
+}
+.dato dd small {
+  font-family: var(--font-testo);
+  font-size: .9rem;
+  color: var(--grigio-chiaro);
+}
+
+/* Chiusura con il cuore */
+.cuore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+.cuore img { width: 150px; }
+.cuore p {
+  font-family: var(--font-titolo);
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  margin: 0;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .balzo { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- TELEFONO ---------- */
+@media (max-width: 760px) {
+  .hero, .box { grid-template-columns: 1fr; }
+  .hero-img { max-width: 380px; margin: 0 auto; }
+  .box { padding: 28px 20px; }
+  .dati { grid-template-columns: repeat(2, 1fr); }
+  .pagina { gap: 52px; padding-block: 28px 40px; }
+  .site-header .barra { justify-content: center; padding-block: 8px; }
+  .site-footer .barra { justify-content: center; text-align: center; flex-wrap: wrap; }
+  .site-footer .secondario { display: none; }
+}
