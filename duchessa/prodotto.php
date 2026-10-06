@@ -163,7 +163,15 @@ include 'partials/header.php';
         </div>
       </div>
     </section>
+  </div>
 
+  <div class="foto-larga" data-appare>
+    <div class="copre alta">
+      <?= foto('img/pagine/prodotto/sala.webp', "Una bottiglia de L'Olio della Duchessa su un tavolo apparecchiato di un ristorante", 1920, 1456, 'Bottiglia in un contesto elegante', ['classe' => 'in-alto']) ?>
+    </div>
+  </div>
+
+  <div class="contenitore">
     <section class="capitolo" id="formati" data-appare>
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">

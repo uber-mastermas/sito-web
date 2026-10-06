@@ -520,3 +520,5 @@ h1, h2, h3 {
 }
 .recapiti-foto { margin-top: 36px; }
 .recapiti-foto .foto { width: min(100%, 420px); }
+.copre > .foto.in-alto, .copre > picture > .foto.in-alto { object-position: 50% 40%; }
+.foto-larga .copre.alta { height: clamp(360px, 60vw, 980px); }
