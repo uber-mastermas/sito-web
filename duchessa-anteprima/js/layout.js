@@ -36,6 +36,32 @@
     });
   }
 
+  // Banner privacy: "Ho capito e accetto" ricorda la scelta; "Non accetto" porta su Google.
+  // La mappa (unico servizio esterno) si carica solo dopo l'accettazione.
+  var CHIAVE = "duchessa-privacy-v1";
+  function leggi() { try { return localStorage.getItem(CHIAVE); } catch (e) { return null; } }
+  function caricaMappe() {
+    document.querySelectorAll("iframe[data-src]").forEach(function (f) { f.src = f.getAttribute("data-src"); f.removeAttribute("data-src"); });
+  }
+  var banner = document.querySelector(".banner-privacy");
+  if (leggi() === "ok") {
+    caricaMappe();
+  } else if (banner) {
+    banner.hidden = false;
+    document.body.classList.add("con-banner");
+    banner.addEventListener("click", function (e) {
+      var scelta = e.target.getAttribute && e.target.getAttribute("data-privacy");
+      if (scelta === "accetto") {
+        try { localStorage.setItem(CHIAVE, "ok"); } catch (err) {}
+        banner.hidden = true;
+        document.body.classList.remove("con-banner");
+        caricaMappe();
+      } else if (scelta === "rifiuto") {
+        window.location.href = "https://www.google.com/";
+      }
+    });
+  }
+
   // Pulsante "torna su": compare dopo un po' di scorrimento
   var su = document.querySelector(".torna-su");
   if (su) {

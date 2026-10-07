@@ -118,7 +118,7 @@ include 'partials/header.php';
   </section>
 
   <section class="mappa" aria-label="Mappa di Girifalco">
-    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=15.98000%2C38.64000%2C16.90000%2C39.00000&amp;layer=mapnik&amp;marker=38.82361%2C16.44028"
+    <iframe data-src="https://www.openstreetmap.org/export/embed.html?bbox=15.98000%2C38.64000%2C16.90000%2C39.00000&amp;layer=mapnik&amp;marker=38.82361%2C16.44028"
             title="Mappa di Girifalco, Calabria" loading="lazy" referrerpolicy="no-referrer"></iframe>
     <div class="mappa-etichetta">
       <p class="luogo">Girifalco · tra Tirreno e Ionio</p>

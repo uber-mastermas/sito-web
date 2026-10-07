@@ -51,6 +51,7 @@ include 'partials/header.php';
         <h2>Servizi esterni presenti nel sito</h2>
         <p>Il sito non usa cookie di profilazione né strumenti di statistica, e i caratteri tipografici sono ospitati sul sito stesso.</p>
         <p>L'unico servizio esterno è la mappa nella pagina Contatti, fornita da <strong>OpenStreetMap</strong> (OpenStreetMap Foundation): per mostrarla, il tuo browser si collega ai suoi server, che possono ricevere il tuo indirizzo IP.</p>
+        <p>La mappa si carica solo dopo che hai scelto "Ho capito e accetto" nel banner. La scelta viene ricordata nel tuo browser (memoria locale, non un cookie) e puoi cancellarla in qualsiasi momento dalle impostazioni del browser.</p>
       </section>
 
       <section>

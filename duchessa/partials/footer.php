@@ -43,6 +43,14 @@
   </div>
 </footer>
 
+<div class="banner-privacy" role="dialog" aria-live="polite" aria-label="Informativa privacy" hidden>
+  <p>Questo sito non usa cookie di profilazione. La mappa nella pagina Contatti è fornita da OpenStreetMap, un servizio esterno. <a href="privacy.php">Leggi l'informativa privacy</a>.</p>
+  <div class="banner-privacy-azioni">
+    <button class="bottone" type="button" data-privacy="accetto">Ho capito e accetto</button>
+    <button class="bottone bottone-linea" type="button" data-privacy="rifiuto">Non accetto</button>
+  </div>
+</div>
+
 <a class="torna-su" href="#contenuto" aria-label="Torna all'inizio della pagina">
   <svg viewBox="0 0 48 30" width="22" height="14" aria-hidden="true"><polyline points="4,26 24,6 44,26" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </a>
