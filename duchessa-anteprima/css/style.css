@@ -561,7 +561,8 @@ h1, h2, h3 {
 .passo-bottiglia .foto { width: auto; max-height: min(60svh, 520px); }
 .passo-silenzio img { width: clamp(90px, 12vw, 140px); opacity: .85; }
 .passo-foto.impilata { gap: 18px; }
-.passo-foto.impilata > .foto:last-child { width: 72%; justify-self: end; }
+/* foto impilate (molitura): stessa larghezza e stessa altezza */
+.passo-foto.impilata > .foto { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 
 /* ---------- MAPPA (Contatti) ---------- */
 .mappa { position: relative; height: clamp(360px, 62svh, 640px); background: var(--sabbia); }

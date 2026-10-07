@@ -38,4 +38,4 @@ $SITO = [
 ];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 13;
+$V = 14;

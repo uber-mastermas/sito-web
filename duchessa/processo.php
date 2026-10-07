@@ -37,8 +37,8 @@ include 'partials/header.php';
 
       <li class="passo" id="molitura" data-appare>
         <div class="passo-foto impilata">
-          <?= foto('img/pagine/processo/lavaggio-olive-frantoio.webp', 'Le olive appena arrivate al frantoio nella vasca di lavaggio', 1920, 1000, 'Arrivo delle olive al frantoio') ?>
           <?= foto('img/pagine/processo/secchio-olive-raccolte.webp', 'Un secchio di olive appena raccolte, pronte per il frantoio', 1920, 1434, 'Olive raccolte') ?>
+          <?= foto('img/pagine/processo/lavaggio-olive-frantoio.webp', 'Le olive appena arrivate al frantoio nella vasca di lavaggio', 1920, 1000, 'Arrivo delle olive al frantoio') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">02</span>
