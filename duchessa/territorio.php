@@ -98,13 +98,13 @@ include 'partials/header.php';
     <section class="capitolo" id="duchessa" data-appare>
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
-          <p class="occhiello">1812</p>
+          <p class="occhiello">Il Seicento</p>
           <h2>La Duchessa</h2>
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">La storia della Duchessa appartiene alla storia di Girifalco.</p>
-          <p>La duchessa Anna Maria Caracciolo, ultima discendente diretta della famiglia, morì nel 1812.</p>
-          <p>Sono passati più di due secoli, ma alcune storie rimangono nei luoghi, nei nomi e nella memoria.</p>
+          <p>Nel Seicento il feudo fu retto dalla duchessa Virginia Ravaschieri. Il suo matrimonio con la famiglia Caracciolo legò per sempre Girifalco a questo casato.</p>
+          <p>Sono passati secoli, ma alcune storie rimangono nei luoghi, nei nomi e nella memoria. A Girifalco c'è ancora chi chiama un angolo del paese "l'orto della Duchessa".</p>
           <p>Abbiamo scelto di chiamare questo olio L'Olio della Duchessa perché volevamo che anche una bottiglia potesse portare con sé un frammento di questa storia.</p>
         </div>
       </div>
