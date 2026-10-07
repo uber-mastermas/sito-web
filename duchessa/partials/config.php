@@ -21,9 +21,12 @@ $SITO = [
   // Social: solo Instagram
   'instagram'     => 'https://www.instagram.com/olio_delladuchessa/',
 
-  // Dati legali (footer)
+  // Dati legali (footer, Privacy e Note legali)
   'ragione'       => 'Azienda Agricola Tolone',
-  'piva'          => '',          // Partita IVA
+  'piva'          => '',          // Partita IVA (obbligatoria)
+  'sede'          => '',          // sede legale completa: via, numero, CAP, Girifalco (CZ)
+  'rea'           => '',          // iscrizione al Registro delle Imprese / REA, es. CZ-000000
+  'pec'           => '',          // PEC dell'azienda
 
   // Modulo contatti: dove arrivano i messaggi
   'email_modulo'  => 'info@oliodelladuchessa.com',

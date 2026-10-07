@@ -38,7 +38,7 @@
     </div>
     <div class="footer-fondo">
       <span>© <?= date('Y') ?> <?= e($SITO['ragione']) ?><?= $SITO['piva'] !== '' ? ' · P.IVA ' . e($SITO['piva']) : '' ?></span>
-      <span><a href="privacy.php">Privacy</a> · Girifalco (CZ)</span>
+      <span><a href="privacy.php">Privacy</a> · <a href="cookie.php">Cookie</a> · <a href="note-legali.php">Note legali</a> · Girifalco (CZ)</span>
     </div>
   </div>
 </footer>
