@@ -8,6 +8,8 @@
 
 $SITO = [
   'nome'          => "L'Olio della Duchessa",
+  'url'           => 'https://oliodelladuchessa.com',   // dominio, senza barra finale (serve per WhatsApp e social)
+  'immagine'      => 'img/logo/condivisione-olio-duchessa.jpg', // anteprima nei link condivisi, 1200×630
   'motto'         => 'Arte olearia per passione.',
   'luogo'         => 'Girifalco · Calabria · Italia',
 
