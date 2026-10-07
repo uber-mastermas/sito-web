@@ -106,7 +106,7 @@ include 'partials/header.php';
         <div class="capitolo-testo">
           <p class="testo-grande">Ogni bottiglia nasce da un'annata. E ogni annata è diversa.</p>
           <p>Non cerchiamo di cancellare le differenze della natura. Le accogliamo.</p>
-          <p>Perché sono proprio quelle differenze a rendere autentico un olio agricolo.</p>
+          <p>Perché sono proprio queste differenze a rendere autentico il nostro olio.</p>
         </div>
       </div>
     </section>
