@@ -1,6 +1,6 @@
 <?php
 $titolo = 'Home';
-$descrizione = "L'Olio della Duchessa: olio extra vergine d'oliva monocultivar Carolea da Girifalco, in Calabria. Arte olearia per passione.";
+$descrizione = "L'Olio della Duchessa: olio extravergine d'oliva monocultivar Carolea da Girifalco, in Calabria. Arte olearia per passione.";
 $pagina = 'index.php';
 include 'partials/header.php';
 ?>

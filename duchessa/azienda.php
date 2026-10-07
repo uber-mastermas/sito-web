@@ -24,8 +24,8 @@ include 'partials/header.php';
     <section class="capitolo" data-appare>
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
-          <p class="occhiello">Chi siamo</p>
-          <h2>La qualità comincia dalla conoscenza</h2>
+          <p class="occhiello">Le persone</p>
+          <h2>Seguire ogni passaggio</h2>
         </div>
         <div class="capitolo-testo">
           <p>A Girifalco abbiamo scelto di prenderci cura di una piccola produzione e di seguirne direttamente ogni passaggio.</p>
@@ -63,7 +63,7 @@ include 'partials/header.php';
         <div class="capitolo-testo">
           <p class="testo-grande">I nostri ulivi vivono sulle colline di Girifalco.</p>
           <p>Sono loro il punto di partenza di tutto.</p>
-          <p>Durante l'anno li accompagniamo nel loro naturale ciclo vegetativo, aspettando il momento in cui le olive hanno raggiunto il giusto equilibrio per essere raccolte.</p>
+          <p>Durante l'anno li accompagniamo nel loro naturale ciclo vegetativo, aspettando il momento in cui le olive raggiungono il giusto equilibrio per essere raccolte.</p>
           <p>Poi arriva il tempo più importante: la raccolta.</p>
           <p class="frase">Un momento breve, intenso, quasi rituale.</p>
         </div>
@@ -77,9 +77,9 @@ include 'partials/header.php';
           <h2>Il nostro modo di lavorare</h2>
         </div>
         <div class="capitolo-testo">
-          <p>La nostra idea è mantenere un rapporto diretto con la pianta e con il prodotto.</p>
-          <p>Le olive vengono raccolte nella prima metà di novembre, con modalità manuali e meccaniche, e portate rapidamente al frantoio.</p>
-          <p>Per noi il tempo è una parte della qualità.</p>
+          <p>Vogliamo mantenere un rapporto diretto con la pianta e con il prodotto.</p>
+          <p>Per questo seguiamo da vicino ogni fase, dalla raccolta al frantoio.</p>
+          <p>Per noi il tempo fa parte della qualità.</p>
           <p>Meno tempo passa tra la raccolta e la molitura, più possiamo preservare le caratteristiche delle olive appena raccolte.</p>
         </div>
       </div>
@@ -92,7 +92,7 @@ include 'partials/header.php';
           <h2>Un olio che segue la natura</h2>
         </div>
         <div class="capitolo-testo">
-          <p>La nostra idea di agricoltura guarda a un rapporto sempre più rispettoso con la terra.</p>
+          <p>Il nostro modo di coltivare guarda a un rapporto sempre più rispettoso con la terra.</p>
           <p>Il percorso verso la certificazione biologica nasce proprio da questa visione.</p>
           <p>È un cammino che stiamo intraprendendo con attenzione e consapevolezza.</p>
           <p class="frase">Non un'etichetta da aggiungere.<br>Ma una direzione.</p>
@@ -104,13 +104,12 @@ include 'partials/header.php';
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
           <p class="occhiello">La dimensione</p>
-          <h2>Piccolo, ma seguito da vicino</h2>
+          <h2>Una produzione piccola, seguita da vicino</h2>
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">La nostra produzione è contenuta.</p>
           <p>Ed è proprio questo che ci permette di seguire il prodotto con attenzione.</p>
           <p>Dall'ulivo al frantoio.<br>Dal frantoio alla bottiglia.</p>
-          <p>Ogni annata porta con sé qualcosa di irripetibile.</p>
         </div>
       </div>
     </section>
@@ -118,7 +117,7 @@ include 'partials/header.php';
 
   <section class="fascia" data-appare>
     <div class="contenitore">
-      <p class="frase">La terra non produce mai esattamente la stessa storia due volte.</p>
+      <p class="frase">La terra non racconta mai la stessa storia due volte.</p>
       <div class="azioni">
         <a class="bottone" href="processo.php">Scopri il processo</a>
       </div>

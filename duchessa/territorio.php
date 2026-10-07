@@ -12,7 +12,7 @@ include 'partials/header.php';
     </ol>
     <p class="occhiello">Dove nasce</p>
     <h1>Il Territorio</h1>
-    <p class="testo-grande">Ci sono luoghi che sembrano custodire qualcosa del loro carattere nella terra, nella luce, nel paesaggio.</p>
+    <p class="testo-grande">Ci sono luoghi che portano il proprio carattere nella terra, nella luce, nel paesaggio.</p>
   </div>
 
   <div class="banner copre">
@@ -24,14 +24,14 @@ include 'partials/header.php';
     <section class="capitolo" data-appare>
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
-          <p class="occhiello">Dove nasce</p>
+          <p class="occhiello">L'istmo</p>
           <h2>Tra due mari</h2>
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">L'Olio della Duchessa nasce a Girifalco, in Calabria, sulle colline dell'Istmo di Catanzaro, alle pendici del Monte Covello.</p>
           <p>È una terra sospesa tra il Mar Tirreno e il Mar Ionio, dove l'olivo appartiene da sempre al paesaggio e alla vita agricola del territorio.</p>
           <p>Qui l'Italia è più stretta che in ogni altro punto. Nelle giornate limpide, dalle colline di Girifalco lo sguardo raggiunge entrambi i mari.</p>
-          <p class="frase">Due mari, una sola terra.<br>Ed è lì che maturano le olive.</p>
+          <p class="frase">Due mari, una sola terra.<br>Ed è qui che maturano le nostre olive.</p>
         </div>
       </div>
     </section>
@@ -43,7 +43,7 @@ include 'partials/header.php';
           <h2>Girifalco</h2>
         </div>
         <div class="capitolo-testo">
-          <p>A circa 460 metri di altitudine, Girifalco occupa una posizione particolare nel cuore della Calabria.</p>
+          <p>A circa 460 metri di altitudine, Girifalco occupa una posizione privilegiata nel cuore della Calabria.</p>
           <p>Le colline e i terrazzamenti che circondano il paese raccontano una vocazione agricola antica, fatta di stagioni, coltivazioni e lavoro paziente.</p>
           <p class="frase">Qui l'ulivo non è soltanto parte del paesaggio.<br>È parte della storia.</p>
         </div>
@@ -59,12 +59,12 @@ include 'partials/header.php';
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
           <p class="occhiello">La terra</p>
-          <h2>Una terra agricola</h2>
+          <h2>La terra dell'olivo</h2>
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">Prima ancora di diventare un olio, tutto comincia dalla terra.</p>
           <p>La coltivazione dell'olivo è profondamente legata alla Calabria e la Carolea rappresenta una delle varietà più caratteristiche della regione.</p>
-          <p>Tra queste colline, l'agricoltura ha disegnato nel tempo un paesaggio che ancora oggi conserva il suo legame con la terra.</p>
+          <p>Tra queste colline, l'agricoltura ha disegnato nel tempo un paesaggio che ancora oggi vive del lavoro dei campi.</p>
         </div>
       </div>
     </section>
@@ -84,9 +84,9 @@ include 'partials/header.php';
           <h2>Il Ducato di Girifalco</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">Girifalco custodisce anche una storia più antica.</p>
+          <p class="testo-grande">Girifalco conserva anche un'altra storia.</p>
           <p>Il paese fu legato per secoli al Ducato di Girifalco e alla famiglia Caracciolo, importante famiglia nobiliare del Regno di Napoli.</p>
-          <p>Ancora oggi questa memoria vive nei luoghi, tra cui il Palazzo Ducale.</p>
+          <p>Ancora oggi questa memoria vive nei luoghi del paese, a cominciare dal Palazzo Ducale.</p>
         </div>
       </div>
     </section>
@@ -103,9 +103,9 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">La storia della Duchessa appartiene alla storia di Girifalco.</p>
-          <p>L'ultima discendente diretta dei Caracciolo, Anna Maria Caracciolo, morì nel 1812.</p>
+          <p>La duchessa Anna Maria Caracciolo, ultima discendente diretta della famiglia, morì nel 1812.</p>
           <p>Sono passati più di due secoli, ma alcune storie rimangono nei luoghi, nei nomi e nella memoria.</p>
-          <p>Abbiamo scelto di chiamare questo olio L'Olio della Duchessa perché volevamo che anche una bottiglia potesse custodire un frammento di questa storia.</p>
+          <p>Abbiamo scelto di chiamare questo olio L'Olio della Duchessa perché volevamo che anche una bottiglia potesse portare con sé un frammento di questa storia.</p>
         </div>
       </div>
     </section>

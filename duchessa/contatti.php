@@ -101,7 +101,7 @@ include 'partials/header.php';
   <section class="acquista-blocco" id="acquista">
     <div class="contenitore">
       <p class="occhiello centrato" style="justify-content:center">Acquista</p>
-      <h2>Vuoi portarlo sulla tua tavola?</h2>
+      <h2>Ordina il tuo olio</h2>
       <p>Scrivici indicando formato e quantità: ti risponderemo con disponibilità e modalità di acquisto.</p>
       <div class="formati">
         <div class="formato">

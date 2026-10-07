@@ -1,6 +1,6 @@
 <?php
 $titolo = 'Il Prodotto';
-$descrizione = "Olio extra vergine d'oliva monocultivar Carolea: profilo, dati analitici, abbinamenti, conservazione e formati. Annata 2025.";
+$descrizione = "Olio extravergine d'oliva monocultivar Carolea: profilo, dati analitici, abbinamenti, conservazione e formati. Annata 2025.";
 $pagina = 'prodotto.php';
 include 'partials/header.php';
 ?>
@@ -35,7 +35,7 @@ include 'partials/header.php';
           <h2>La Carolea</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">La Carolea è profondamente legata alla Calabria.</p>
+          <p class="testo-grande">La Carolea è la varietà simbolo della Calabria.</p>
           <p>Nel nostro olio si esprime attraverso un profilo armonioso, con note vegetali che ricordano l'erba fresca, la foglia d'ulivo e la mandorla verde.</p>
           <p>La sua personalità si completa con una piacevole sensazione amara e una nota piccante equilibrata.</p>
         </div>
@@ -50,7 +50,6 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">Al primo incontro è delicato.<br>Poi arriva la personalità.</p>
-          <p>Note verdi e vegetali, amaro e piccante in equilibrio, con una presenza persistente ma non aggressiva.</p>
           <p class="frase">Un olio elegante, capace di accompagnare il cibo senza coprirlo.</p>
         </div>
       </div>
@@ -72,7 +71,7 @@ include 'partials/header.php';
           <dl class="dati">
             <div>
               <dt>Acidità libera</dt>
-              <dd>0,12 % <small>· limite per l'extra vergine ≤ 0,80 %</small></dd>
+              <dd>0,12 % <small>· limite per l'extravergine ≤ 0,80 %</small></dd>
             </div>
             <div>
               <dt>Polifenoli totali</dt>
@@ -109,7 +108,7 @@ include 'partials/header.php';
           </ul>
           <p>E poi un filo d'olio.</p>
           <p>L'Olio della Duchessa nasce per essere assaggiato, non semplicemente utilizzato.</p>
-          <p>Su una bruschetta ancora calda può essere il primo sapore. Su una zuppa di legumi diventa profondità. Su un'insalata porta freschezza. Su un carpaccio di pesce accompagna senza nascondere.</p>
+          <p>Su una bruschetta ancora calda può essere il primo sapore. Su una zuppa di legumi dà profondità. Su un'insalata porta freschezza. Su un carpaccio di pesce accompagna senza nascondere.</p>
         </div>
       </div>
     </section>
@@ -141,10 +140,10 @@ include 'partials/header.php';
           <h2>Conservarlo bene</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">Un olio prezioso merita di essere custodito.</p>
+          <p class="testo-grande">Un olio prezioso merita cura.</p>
           <p>Conservare la bottiglia in un luogo fresco e asciutto, idealmente tra 12 e 18&nbsp;°C, lontano dalla luce e dalle fonti di calore.</p>
-          <p>Una naturale presenza di deposito può verificarsi nel tempo e non rappresenta necessariamente un difetto: può essere conseguenza della naturale decantazione.</p>
-          <p>Per apprezzarne al meglio le caratteristiche, consigliamo di consumarlo entro il periodo indicato in etichetta.</p>
+          <p>Con il tempo può formarsi un leggero deposito: di solito non è un difetto, ma l'effetto della decantazione naturale.</p>
+          <p>Per apprezzarne al meglio le caratteristiche, consigliamo di consumarlo entro la data indicata in etichetta.</p>
         </div>
       </div>
     </section>
@@ -157,7 +156,7 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">Ogni raccolto è diverso.</p>
-          <p>La bottiglia racconta una stagione precisa, una particolare raccolta, quelle olive e quel territorio in quel determinato momento.</p>
+          <p>La bottiglia racconta una stagione precisa: quelle olive, quella terra, quel momento.</p>
           <p class="frase">Annata 2025.<br>Un anno che non tornerà.</p>
           <p style="margin-top:1.2em">Ed è proprio questo, in fondo, il fascino di un olio che nasce dalla terra.</p>
         </div>
@@ -179,8 +178,7 @@ include 'partials/header.php';
           <h2>Portarlo a tavola</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">Non è soltanto un condimento. È il gesto finale.</p>
-          <p>Quello che arriva quando tutto il resto è pronto. Il filo d'olio sul pane. Sulla verdura. Sul pesce. Sulla zuppa.</p>
+          <p class="testo-grande">Non è soltanto un condimento. È il gesto finale, quello che arriva quando tutto il resto è pronto.</p>
           <div class="formati">
             <div class="formato">
               <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 322, 1600, 'Bottiglia 500 ml') ?>
