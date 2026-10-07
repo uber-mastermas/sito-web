@@ -6,7 +6,7 @@
     <div class="footer-griglia">
 
       <div class="footer-marchio">
-        <a class="logo logo-chiaro" href="index.php">
+        <a class="logo logo-chiaro" href="./">
           <img src="img/logo/logo-duchessa-chiaro.svg" width="263" height="351" alt="">
           <span>L'Olio della<br>Duchessa</span>
         </a>
@@ -19,7 +19,7 @@
         <ul>
           <li><?= dato('indirizzo') ?></li>
           <li><?php if ($SITO['email'] !== ''): ?><a href="mailto:<?= e($SITO['email']) ?>"><?= e($SITO['email']) ?></a><?php else: ?>Email: <?= dato('email') ?><?php endif; ?></li>
-          <li><?php if ($SITO['telefono'] !== ''): ?><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a><?php else: ?>Tel. <?= dato('telefono') ?><?php endif; ?></li>
+          <?php if ($SITO['telefono'] !== ''): ?><li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a></li><?php endif; ?>
         </ul>
       </div>
 
@@ -37,7 +37,7 @@
 
     </div>
     <div class="footer-fondo">
-      <span>© <?= date('Y') ?> <?= e($SITO['ragione']) ?> · P.IVA <?= dato('piva') ?></span>
+      <span>© <?= date('Y') ?> <?= e($SITO['ragione']) ?><?= $SITO['piva'] !== '' ? ' · P.IVA ' . e($SITO['piva']) : '' ?></span>
       <span><a href="privacy.php">Privacy</a> · Girifalco (CZ)</span>
     </div>
   </div>

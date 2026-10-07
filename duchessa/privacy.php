@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <div class="contenitore testata">
     <ol class="briciole">
-      <li><a href="index.php">Home</a></li>
+      <li><a href="./">Home</a></li>
       <li aria-current="page">Privacy</li>
     </ol>
     <p class="occhiello">Informativa</p>
@@ -22,7 +22,7 @@ include 'partials/header.php';
         <h2>Titolare del trattamento</h2>
         <p><?= e($SITO['ragione']) ?><br>
         <?= dato('indirizzo') ?><br>
-        P.IVA <?= dato('piva') ?><br>
+        <?php if ($SITO['piva'] !== ''): ?>P.IVA <?= e($SITO['piva']) ?><br><?php endif; ?>
         Email: <a href="mailto:<?= e($SITO['email']) ?>"><?= e($SITO['email']) ?></a></p>
       </section>
 
@@ -49,11 +49,8 @@ include 'partials/header.php';
 
       <section>
         <h2>Servizi esterni presenti nel sito</h2>
-        <p>Il sito non usa cookie di profilazione né strumenti di statistica. Per mostrare i caratteri tipografici e la mappa di Girifalco, il tuo browser si collega a due servizi esterni, che possono ricevere il tuo indirizzo IP:</p>
-        <ul>
-          <li><strong>Google Fonts</strong> (Google Ireland Ltd.), per i caratteri del sito;</li>
-          <li><strong>OpenStreetMap</strong> (OpenStreetMap Foundation), per la mappa nella pagina Contatti.</li>
-        </ul>
+        <p>Il sito non usa cookie di profilazione né strumenti di statistica, e i caratteri tipografici sono ospitati sul sito stesso.</p>
+        <p>L'unico servizio esterno è la mappa nella pagina Contatti, fornita da <strong>OpenStreetMap</strong> (OpenStreetMap Foundation): per mostrarla, il tuo browser si collega ai suoi server, che possono ricevere il tuo indirizzo IP.</p>
       </section>
 
       <section>

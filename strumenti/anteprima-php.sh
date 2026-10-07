@@ -7,7 +7,7 @@ set -e
 P="$1"; [ -d "$P" ] || { echo "Cartella $P non trovata"; exit 1; }
 OUT="$P-anteprima"; PORTA=8799
 rm -rf "$OUT"; mkdir -p "$OUT"
-(cd "$P" && tar --exclude='*.php' --exclude=partials --exclude=robots.txt --exclude=sitemap.xml --exclude='LEGGIMI-*' -cf - .) | tar -xf - -C "$OUT"
+(cd "$P" && tar --exclude='*.php' --exclude=partials --exclude=robots.txt --exclude=sitemap.xml --exclude='LEGGIMI-*' --exclude=.htaccess -cf - .) | tar -xf - -C "$OUT"
 php -S 127.0.0.1:$PORTA -t "$P" >/dev/null 2>&1 & SP=$!
 sleep 1
 for f in "$P"/*.php; do

@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <div class="contenitore testata">
     <ol class="briciole">
-      <li><a href="index.php">Home</a></li>
+      <li><a href="./">Home</a></li>
       <li aria-current="page">Il Processo</li>
     </ol>
     <p class="occhiello">Dalla pianta alla bottiglia</p>

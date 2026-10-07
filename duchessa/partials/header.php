@@ -12,7 +12,7 @@ $voci = [
   'contatti.php'   => 'Contatti',
 ];
 $pagina = $pagina ?? basename($_SERVER['PHP_SELF']);
-$titolo_completo = ($pagina === 'index.php') ? $SITO['nome'] . ' · Olio Extra Vergine d\'Oliva da Girifalco' : $titolo . ' · ' . $SITO['nome'];
+$titolo_completo = ($pagina === 'index.php') ? $SITO['nome'] . ' · Olio extravergine di Girifalco' : $titolo . ' · ' . $SITO['nome'];
 $indirizzo = $SITO['url'] . '/' . ($pagina === 'index.php' ? '' : $pagina);   // indirizzo completo della pagina
 $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 ?><!doctype html>
@@ -20,9 +20,10 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<?php if ($pagina === '404.php'): ?><base href="<?= e($SITO['url']) ?>/"><?php endif; ?>
 <title><?= e($titolo_completo) ?></title>
 <meta name="description" content="<?= e($descrizione) ?>">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="<?= $pagina === '404.php' ? 'noindex, follow' : 'index, follow' ?>">
 <link rel="canonical" href="<?= e($indirizzo) ?>">
 <meta name="theme-color" content="#3f472f">
 
@@ -60,13 +61,25 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 
 </script>
+<?php elseif ($pagina !== '404.php'): ?>
+<script type="application/ld+json">
+<?= json_encode([
+  '@context' => 'https://schema.org',
+  '@type' => 'BreadcrumbList',
+  'itemListElement' => [
+    ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $SITO['url'] . '/'],
+    ['@type' => 'ListItem', 'position' => 2, 'name' => $titolo, 'item' => $indirizzo],
+  ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>
+
+</script>
 <?php endif; ?>
-<link rel="icon" href="img/logo/favicon.png" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="img/logo/logo-duchessa.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="img/logo/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css?v=<?= $V ?>">
 <script src="js/layout.js?v=<?= $V ?>" defer></script>
 </head>
@@ -75,7 +88,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 
 <header class="site-header">
   <div class="barra">
-    <a class="logo" href="index.php" aria-label="<?= e($SITO['nome']) ?> — Home">
+    <a class="logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
       <img src="img/logo/logo-duchessa.svg" width="263" height="351" alt="">
       <span>L'Olio della<br>Duchessa</span>
     </a>
@@ -83,7 +96,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
     <nav id="menu-principale" class="nav" aria-label="Menu principale">
       <ul class="menu">
         <?php foreach ($voci as $file => $nome): ?>
-        <li><a href="<?= $file ?>"<?= $file === $pagina ? ' aria-current="page"' : '' ?>><?= e($nome) ?></a></li>
+        <li><a href="<?= $file === 'index.php' ? './' : $file ?>"<?= $file === $pagina ? ' aria-current="page"' : '' ?>><?= e($nome) ?></a></li>
         <?php endforeach; ?>
       </ul>
     </nav>

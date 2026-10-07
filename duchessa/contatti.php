@@ -1,6 +1,6 @@
 <?php
 $titolo = 'Contatti';
-$descrizione = "Scrivici per informazioni su L'Olio della Duchessa: annata, disponibilità, formati e acquisto.";
+$descrizione = "Scrivici per informazioni su L'Olio della Duchessa, olio extravergine di Girifalco: annata, disponibilità, formati da 500 ml e 5 litri, acquisto.";
 $pagina = 'contatti.php';
 require_once 'partials/funzioni.php';
 
@@ -42,7 +42,7 @@ include 'partials/header.php';
 
   <div class="contenitore testata">
     <ol class="briciole">
-      <li><a href="index.php">Home</a></li>
+      <li><a href="./">Home</a></li>
       <li aria-current="page">Contatti</li>
     </ol>
     <p class="occhiello">Contatti</p>
@@ -89,7 +89,7 @@ include 'partials/header.php';
         <p>Girifalco<br>Calabria · Italia</p>
         <ul>
           <li><?php if ($SITO['email'] !== ''): ?><a href="mailto:<?= e($SITO['email']) ?>"><?= e($SITO['email']) ?></a><?php else: ?>Email: <?= dato('email') ?><?php endif; ?></li>
-          <li><?php if ($SITO['telefono'] !== ''): ?><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a><?php else: ?>Tel. <?= dato('telefono') ?><?php endif; ?></li>
+          <?php if ($SITO['telefono'] !== ''): ?><li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a></li><?php endif; ?>
         </ul>
         <div class="recapiti-foto">
           <?= foto('img/pagine/contatti/olio-bicchieri-degustazione-aperto.webp', "L'olio versato nei bicchieri da degustazione, all'aperto", 1200, 1600, 'Immagine facoltativa') ?>

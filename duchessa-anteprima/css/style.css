@@ -4,6 +4,15 @@
    Colori e font si cambiano solo nei token qui sotto.
    ========================================================== */
 
+/* Caratteri ospitati sul sito (niente Google Fonts: più veloce e nessun dato a terzi) */
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 300; font-display: swap; src: url("../fonts/jost-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/jost-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/jost-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-style: italic; font-weight: 500; font-display: swap; src: url("../fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2"); }
+
 :root {
   /* Palette del cliente */
   --avorio: #f4ebdd;        /* base del sito */
@@ -617,3 +626,4 @@ body.menu-bloccato .torna-su { display: none; }
 .informativa ul { padding-left: 1.2em; margin: 0 0 1.1em; }
 .informativa li { margin-bottom: .4em; }
 .informativa .nota { padding-top: 24px; border-top: 1px solid var(--filetto); }
+.pagina-404 { min-height: 50svh; } .pagina-404 .azioni { display: flex; flex-wrap: wrap; gap: 14px; }
