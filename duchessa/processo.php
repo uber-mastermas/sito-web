@@ -52,9 +52,9 @@ include 'partials/header.php';
       </li>
 
       <li class="passo" id="estrazione" data-appare>
-        <div class="passo-foto doppia">
-          <?= foto('img/pagine/processo/olio-appena-estratto-frantoio.webp', "L'olio appena estratto a freddo che scende dal separatore del frantoio", 1920, 1434, 'Fase di estrazione a freddo') ?>
+        <div class="passo-foto doppia pari-mobile">
           <?= foto('img/pagine/processo/gramola-pasta-di-olive.webp', "La pasta di olive nella gramola, da cui affiora l'olio", 1920, 1920, 'Pasta di olive') ?>
+          <?= foto('img/pagine/processo/olio-appena-estratto-frantoio.webp', "L'olio appena estratto a freddo che scende dal separatore del frantoio", 1920, 1434, 'Fase di estrazione a freddo') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">03</span>

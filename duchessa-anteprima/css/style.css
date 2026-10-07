@@ -657,3 +657,7 @@ body.con-banner .torna-su { display: none; }
   position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center;
   color: var(--oliva-scuro); font-size: .9rem;
 }
+@media (max-width: 859px) {
+  .passo-foto.pari-mobile > .foto { aspect-ratio: 3 / 2; object-fit: cover; }
+}
+#estrazione .passo-foto > .foto:last-child { object-position: 72% 50%; }
