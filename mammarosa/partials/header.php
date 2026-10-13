@@ -92,7 +92,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 <header class="site-header">
   <div class="barra">
     <a class="logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
-      <img src="img/logo/logo-mammarosa-scuro.svg" width="779" height="248" alt="">
+      <img src="img/logo/logo-mammarosa-orizzontale.svg" width="479" height="90" alt="">
     </a>
 
     <nav id="menu-principale" class="nav" aria-label="Menu principale">
