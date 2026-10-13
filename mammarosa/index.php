@@ -87,7 +87,7 @@ include 'partials/header.php';
   <!-- 4 — Le due stagioni -->
   <section class="stagioni">
     <a class="stagione copre" href="inverno.php" style="--velo: 1.1">
-      <?= foto('img/home/albergo-rosa-panorama-neve-impianti.webp', "L'albergo rosa sulle piste innevate della Majelletta", 1000, 667, 'Inverno', ['classe' => 'pos-albergo', 'mobile' => 'img/home/scialpinista-cresta-cielo-blu.webp']) ?>
+      <?= foto('img/home/albergo-rosa-neve-vista-pianura.webp', "L'albergo rosa fra la neve, con la vista che scende fino alla pianura", 1024, 576, 'Inverno', ['classe' => 'pos-albergo', 'mobile' => 'img/home/scialpinista-cresta-cielo-blu.webp']) ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Inverno</span>
         <strong>Settimane bianche e weekend sulla neve</strong>

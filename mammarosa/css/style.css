@@ -553,7 +553,7 @@ body.con-banner .torna-su { display: none; }
 h1, h2, h3, .frase, .hero-sotto, .stagione-testo strong, .porta-testo strong { text-wrap: balance; }
 p, blockquote { text-wrap: pretty; }
 body.cerca-visibile .torna-su { opacity: 0; visibility: hidden; }
-.copre > .foto.pos-albergo, .copre > picture > .foto.pos-albergo { object-position: 72% 85%; }
+.copre > .foto.pos-albergo, .copre > picture > .foto.pos-albergo { object-position: 0% 40%; }
 @media (max-width: 700px) { .copre > picture > .foto.pos-albergo { object-position: 50% 40%; } }
 .solo-desktop { display: inline; }
 @media (max-width: 899px) {
