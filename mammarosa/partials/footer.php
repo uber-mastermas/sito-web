@@ -7,7 +7,7 @@
 
       <div class="footer-marchio">
         <a class="logo logo-chiaro" href="./">
-          <img src="img/logo/logo-mammarosa-chiaro.svg" width="512" height="351" alt="">
+          <img src="img/logo/logo-mammarosa-chiaro.svg" width="600" height="360" alt="">
         </a>
         <p class="motto"><?= e($SITO['motto']) ?></p>
         <p><?= e($SITO['luogo']) ?></p>
