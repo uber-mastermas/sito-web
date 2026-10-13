@@ -22,6 +22,8 @@ $SITO = [
   'lat'           => '42.17202195506561',   // posizione esatta dell'albergo (mappa OpenStreetMap e "Come arrivare")
   'lon'           => '14.116816921411244',
   'gmaps'         => 'https://www.google.com/maps?cid=3986936040827105957',   // scheda Google "Hotel Mamma Rosa" (recensioni, foto)
+  'recensioni'    => 'https://www.google.com/search?q=Hotel+Mamma+Rosa+Pretoro&lrd=0x133053fdddda7457:0x3754713497b3b2a5,1',   // apre le recensioni Google
+  'scrivi_recensione' => 'https://www.google.com/search?q=Hotel+Mamma+Rosa+Pretoro&lrd=0x133053fdddda7457:0x3754713497b3b2a5,3',   // apre "Scrivi una recensione"
   'percorso'      => 'https://www.google.com/maps/dir/?api=1&destination=42.1720077,14.1167959',   // "Come arrivare": apre il navigatore
 
   // Social
