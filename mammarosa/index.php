@@ -135,21 +135,40 @@ include 'partials/header.php';
       <div class="recensioni-testa" data-appare>
         <p class="occhiello">Cosa dicono di noi</p>
         <h2>Come tornare a casa</h2>
-        <p class="voto"><span class="stelle" aria-hidden="true">★</span> <strong>4,4</strong> su Google · oltre 1.100 recensioni</p>
+        <p class="voto"><strong>4,4</strong> <span class="stelle" style="--voto: 4.4" aria-hidden="true"><span>★★★★★</span></span> su Google · oltre 1.100 recensioni</p>
       </div>
-      <div class="recensioni-griglia">
-        <figure class="recensione" data-appare>
-          <blockquote>«Sono quasi quarant'anni che vado sulla Maielletta e l'Albergo Mamma Rosa è da sempre il riferimento della mia famiglia.»</blockquote>
-          <figcaption>Mascia M. · Google</figcaption>
-        </figure>
-        <figure class="recensione" data-appare>
-          <blockquote>«Ogni volta che torniamo all'Hotel Mamma Rosa è come tornare a casa. La cucina è semplicemente deliziosa con porzioni abbondanti, che ricordano i sapori genuini di una volta.»</blockquote>
-          <figcaption>Ilenia R. · Google</figcaption>
-        </figure>
-        <figure class="recensione" data-appare>
-          <blockquote>«La posizione è ottima, vicino agli impianti di risalita, il panorama è mozzafiato, la sensazione di stare proprio "sulle nuvole" è stata fantastica!»</blockquote>
-          <figcaption>Alessandra M. · Google</figcaption>
-        </figure>
+      <div class="carosello" data-carosello>
+        <div class="carosello-binario" tabindex="0" aria-label="Recensioni degli ospiti, scorri per leggerle tutte">
+          <figure class="recensione">
+            <blockquote>«Sono quasi quarant'anni che vado sulla Maielletta e l'Albergo Mamma Rosa è da sempre il riferimento della mia famiglia.»</blockquote>
+            <figcaption>Mascia M. · Google</figcaption>
+          </figure>
+          <figure class="recensione">
+            <blockquote>«Abbiamo passato una meravigliosa settimana bianca con i figli, a Mamma Rosa, classico albergo di montagna, a conduzione famigliare da più di 60 anni, un mix di autenticità, tradizione e passione.»</blockquote>
+            <figcaption>Andreea A. · Google</figcaption>
+          </figure>
+          <figure class="recensione">
+            <blockquote>«Ogni volta che torniamo all'Hotel Mamma Rosa è come tornare a casa. La cucina è semplicemente deliziosa con porzioni abbondanti, che ricordano i sapori genuini di una volta.»</blockquote>
+            <figcaption>Ilenia R. · Google</figcaption>
+          </figure>
+          <figure class="recensione">
+            <blockquote>«…abbiamo mangiato veramente bene! Superconsigliati: rintrocili alle 4 carni, arrosto misto e tiramisù.»</blockquote>
+            <figcaption>Will G. · Google</figcaption>
+          </figure>
+          <figure class="recensione">
+            <blockquote>«La posizione è ottima, vicino agli impianti di risalita, il panorama è mozzafiato, la sensazione di stare proprio "sulle nuvole" è stata fantastica!»</blockquote>
+            <figcaption>Alessandra M. · Google</figcaption>
+          </figure>
+          <figure class="recensione">
+            <blockquote>«Davvero buoni gli Spritz per l'aperitivo, bevuti fuori con vista monti, e oggi anche del mare, in lontananza.»</blockquote>
+            <figcaption>Nadia P. · Google</figcaption>
+          </figure>
+        </div>
+        <div class="carosello-comandi">
+          <button class="carosello-freccia" type="button" data-dir="-1" aria-label="Recensione precedente"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="15,4 7,12 15,20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="carosello-punti" aria-hidden="true"></div>
+          <button class="carosello-freccia" type="button" data-dir="1" aria-label="Recensione successiva"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="9,4 17,12 9,20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
       </div>
       <div class="azioni"><a class="bottone bottone-linea" href="<?= e($SITO['gmaps']) ?>" rel="noopener" target="_blank">Leggi le recensioni su Google</a></div>
     </div>

@@ -86,4 +86,27 @@
     }, { rootMargin: "0px 0px -8% 0px" });
     elementi.forEach(function (el) { oss.observe(el); });
   }
+  // Carosello (recensioni): frecce e puntini; si scorre anche col dito
+  document.querySelectorAll("[data-carosello]").forEach(function (c) {
+    var binario = c.querySelector(".carosello-binario");
+    var schede = binario.children;
+    var frecce = c.querySelectorAll(".carosello-freccia");
+    var punti = c.querySelector(".carosello-punti");
+    function passo() { return schede.length > 1 ? schede[1].offsetLeft - schede[0].offsetLeft : binario.clientWidth; }
+    function aggiorna() {
+      var max = binario.scrollWidth - binario.clientWidth;
+      frecce[0].disabled = binario.scrollLeft <= 4;
+      frecce[1].disabled = binario.scrollLeft >= max - 4;
+      var n = Math.max(1, Math.round(max / passo()) + 1);
+      if (punti.children.length !== n) { punti.innerHTML = new Array(n + 1).join("<span></span>"); }
+      var i = Math.round(binario.scrollLeft / passo());
+      Array.prototype.forEach.call(punti.children, function (p, j) { p.classList.toggle("attivo", j === i); });
+    }
+    frecce.forEach(function (f) {
+      f.addEventListener("click", function () { binario.scrollBy({ left: passo() * Number(f.getAttribute("data-dir")), behavior: lento ? "auto" : "smooth" }); });
+    });
+    binario.addEventListener("scroll", function () { window.requestAnimationFrame(aggiorna); }, { passive: true });
+    window.addEventListener("resize", aggiorna);
+    aggiorna();
+  });
 })();

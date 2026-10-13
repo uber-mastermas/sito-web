@@ -514,9 +514,35 @@ body.con-banner .torna-su { display: none; }
 .recensioni-testa h2 { font-size: clamp(2.2rem, 4.6vw, 3.25rem); }
 .voto { margin: 0; color: var(--salvia); }
 .voto strong { font-family: var(--font-titolo); font-size: 1.6rem; color: var(--bosco); }
-.stelle { color: var(--rame); letter-spacing: .12em; }
-.recensioni-griglia { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 860px) { .recensioni-griglia { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+/* stelle del voto riempite in proporzione (4,4 = 88%), come su Google */
+.stelle { position: relative; display: inline-block; color: var(--filetto); letter-spacing: .1em; font-size: 1.15rem; line-height: 1; vertical-align: -1px; }
+.stelle::before { content: "★★★★★"; }
+.stelle > span { position: absolute; inset: 0 auto 0 0; width: calc(var(--voto) / 5 * 100%); overflow: hidden; white-space: nowrap; color: var(--rame); }
+/* Carosello: scorre col dito (scroll-snap) e con le frecce; 1 scheda e un po' su telefono, 2 su tablet, 3 su desktop */
+.carosello { --gap: 20px; --per: 1.12; }
+@media (min-width: 700px) { .carosello { --per: 2; } }
+@media (min-width: 1000px) { .carosello { --per: 3; } }
+.carosello-binario {
+  display: flex; gap: var(--gap);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 6px 2px 18px;
+}
+.carosello-binario::-webkit-scrollbar { display: none; }
+.carosello-binario > * { flex: 0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per)); scroll-snap-align: start; }
+.carosello-comandi { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 8px; }
+.carosello-freccia {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  border: 1.5px solid var(--bosco); border-radius: 50%;
+  background: transparent; color: var(--bosco); cursor: pointer;
+  transition: background-color .25s, color .25s, opacity .25s;
+}
+.carosello-freccia:hover { background: var(--bosco); color: var(--avorio); }
+.carosello-freccia:disabled { opacity: .3; cursor: default; background: transparent; color: var(--bosco); }
+.carosello-punti { display: flex; gap: 8px; }
+.carosello-punti span { width: 8px; height: 8px; border-radius: 50%; background: var(--filetto); transition: background-color .25s, transform .25s; }
+.carosello-punti span.attivo { background: var(--rame); transform: scale(1.25); }
 .recensione { margin: 0; background: #fff; border-radius: 16px; padding: 28px 26px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; box-shadow: 0 6px 18px rgba(39, 36, 31, .06); }
 .recensione blockquote { margin: 0; font-family: var(--font-titolo); font-style: italic; font-weight: 500; font-size: 1.35rem; line-height: 1.35; color: var(--bosco); }
 .recensione figcaption { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--rame-scuro); }
