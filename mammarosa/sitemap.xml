@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mammarosa.it/</loc><priority>1.0</priority></url>
+  <url><loc>https://mammarosa.it/albergo.php</loc><priority>0.8</priority></url>
+  <url><loc>https://mammarosa.it/ristorante.php</loc><priority>0.8</priority></url>
+  <url><loc>https://mammarosa.it/inverno.php</loc><priority>0.8</priority></url>
+  <url><loc>https://mammarosa.it/estate.php</loc><priority>0.8</priority></url>
+  <url><loc>https://mammarosa.it/listino.php</loc><priority>0.8</priority></url>
+  <url><loc>https://mammarosa.it/gallery.php</loc><priority>0.6</priority></url>
+  <url><loc>https://mammarosa.it/contatti.php</loc><priority>0.7</priority></url>
+  <url><loc>https://mammarosa.it/privacy.php</loc><priority>0.3</priority></url>
+  <url><loc>https://mammarosa.it/cookie.php</loc><priority>0.3</priority></url>
+  <url><loc>https://mammarosa.it/note-legali.php</loc><priority>0.3</priority></url>
+</urlset>
