@@ -26,7 +26,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 <meta name="description" content="<?= e($descrizione) ?>">
 <meta name="robots" content="<?= $pagina === '404.php' ? 'noindex, follow' : 'index, follow' ?>">
 <link rel="canonical" href="<?= e($indirizzo) ?>">
-<meta name="theme-color" content="#24382f">
+<meta name="theme-color" content="#2c4536">
 
 <!-- Anteprima nei link condivisi (WhatsApp, Facebook, LinkedIn, X) -->
 <meta property="og:type" content="website">
@@ -81,8 +81,8 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 <link rel="icon" href="img/logo/marchio-mammarosa.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preload" href="fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css?v=<?= $V ?>">
 <script src="js/layout.js?v=<?= $V ?>" defer></script>
 </head>

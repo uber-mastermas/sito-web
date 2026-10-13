@@ -27,7 +27,7 @@ include 'partials/header.php';
         <div class="campo"><label for="bambini">Bambini</label>
           <select id="bambini" name="bambini"><option selected>0</option><option>1</option><option>2</option><option>3</option></select>
         </div>
-        <button class="bottone bottone-rosa" type="submit">Cerca</button>
+        <button class="bottone bottone-rame" type="submit">Cerca</button>
       </div>
       <p class="cerca-nota">Prenotazione diretta, senza intermediari · Nessuna tassa di soggiorno</p>
     </form>
@@ -135,7 +135,7 @@ include 'partials/header.php';
       <p class="occhiello centrato-occhiello">Prenota con noi</p>
       <p class="frase">Prenota direttamente: parli con noi, non con un portale.</p>
       <div class="azioni">
-        <a class="bottone bottone-rosa" href="prenota.php">Prenota online</a>
+        <a class="bottone bottone-rame" href="prenota.php">Prenota online</a>
         <a class="bottone bottone-linea" href="tel:+390871896143">Chiama 0871 896143</a>
         <a class="bottone bottone-linea" href="https://wa.me/393938838955" rel="noopener" target="_blank">WhatsApp</a>
       </div>
