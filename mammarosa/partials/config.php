@@ -21,6 +21,8 @@ $SITO = [
   'indirizzo'     => 'Via Majelletta 35 · 66010 Pretoro (CH)',   // indirizzo ufficiale confermato il 13/10
   'lat'           => '42.17202195506561',   // posizione esatta dell'albergo (mappa OpenStreetMap e "Come arrivare")
   'lon'           => '14.116816921411244',
+  'gmaps'         => 'https://www.google.com/maps?cid=3986936040827105957',   // scheda Google "Hotel Mamma Rosa" (recensioni, foto)
+  'percorso'      => 'https://www.google.com/maps/dir/?api=1&destination=42.1720077,14.1167959',   // "Come arrivare": apre il navigatore
 
   // Social
   'facebook'      => 'https://www.facebook.com/p/Hotel-Mamma-Rosa-100063589719403/',
