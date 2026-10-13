@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <!-- 1 — Hero + ricerca disponibilità -->
   <section class="hero copre">
-    <?= foto('img/home/albergo-rosa-neve-majelletta.webp', "L'albergo rosa sulla Majelletta, sommerso dalla neve", 1000, 667, "L'albergo con la neve", ['subito' => true]) ?>
+    <?= foto('img/home/albergo-rosa-tramonto-neve.webp', "L'albergo rosa sulla Majelletta innevata, al tramonto", 1672, 941, "L'albergo con la neve", ['subito' => true]) ?>
     <div class="hero-testo">
       <p class="luogo">Majelletta · Abruzzo</p>
       <h1>Hotel Mamma Rosa</h1>
@@ -66,7 +66,7 @@ include 'partials/header.php';
         </span>
       </a>
       <a class="porta" href="ristorante.php" data-appare>
-        <?= foto('img/home/spaghetti-funghi-porcini.webp', 'Spaghetti ai funghi porcini del ristorante', 1254, 1254, 'Piatto tipico') ?>
+        <?= foto('img/home/arrosticini-pane-abbrustolito.webp', 'Arrosticini con pane abbrustolito', 1448, 1086, 'Piatto tipico') ?>
         <span class="porta-testo">
           <span class="occhiello">Il ristorante</span>
           <strong>La cucina di casa</strong>
@@ -74,7 +74,7 @@ include 'partials/header.php';
         </span>
       </a>
       <a class="porta" href="inverno.php" data-appare>
-        <?= foto('img/home/noleggio-scarponi-sci.webp', 'Scarponi da sci del noleggio, in fila sugli scaffali', 667, 1000, 'Sci', ['classe' => 'in-alto']) ?>
+        <?= foto('img/home/albergo-rosa-neve-majelletta.webp', "L'albergo rosa sommerso dalla neve", 1000, 667, 'Neve') ?>
         <span class="porta-testo">
           <span class="occhiello">Sulla neve</span>
           <strong>Vicino agli impianti</strong>
@@ -87,7 +87,7 @@ include 'partials/header.php';
   <!-- 4 — Le due stagioni -->
   <section class="stagioni">
     <a class="stagione copre" href="inverno.php" style="--velo: 1.1">
-      <?= foto('img/home/facciata-albergo-ghiaccio-inverno.webp', "La facciata dell'albergo con i ghiaccioli, in pieno inverno", 1000, 667, 'Inverno') ?>
+      <?= foto('img/home/albergo-rosa-panorama-neve-impianti.webp', "L'albergo rosa sulle piste innevate della Majelletta", 1000, 667, 'Inverno', ['classe' => 'pos-destra']) ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Inverno</span>
         <strong>Settimane bianche e weekend sulla neve</strong>

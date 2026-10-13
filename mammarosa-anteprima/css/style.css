@@ -481,3 +481,6 @@ body.con-banner .torna-su { display: none; }
 .capitolo-foto .foto { border-radius: 16px; }
 .porta > .foto.in-alto { object-position: 50% 30%; }
 .hero { --velo: 1.25; }
+.copre > .foto.pos-destra { object-position: 75% 50%; }
+.hero > .foto { object-position: 70% 50%; }
+@media (max-width: 700px) { .hero > .foto { object-position: 80% 50%; } }
