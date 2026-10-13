@@ -78,7 +78,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 </script>
 <?php endif; ?>
 <link rel="icon" href="favicon.ico" sizes="32x32">
-<link rel="icon" href="img/logo/logo-mamma-rosa.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo/marchio-mammarosa.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -92,8 +92,7 @@ $immagine  = $SITO['url'] . '/' . $SITO['immagine'];
 <header class="site-header">
   <div class="barra">
     <a class="logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
-      <img src="img/logo/logo-mamma-rosa.svg" width="48" height="48" alt="">
-      <span>Mamma Rosa<small>Hotel · dal 1966</small></span>
+      <img src="img/logo/logo-mammarosa-scuro.svg" width="779" height="248" alt="">
     </a>
 
     <nav id="menu-principale" class="nav" aria-label="Menu principale">

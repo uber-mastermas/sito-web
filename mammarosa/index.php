@@ -7,7 +7,7 @@ include 'partials/header.php';
 
   <!-- 1 — Hero + ricerca disponibilità -->
   <section class="hero copre">
-    <?= foto('img/home/albergo-neve-majelletta.webp', "L'Hotel Mamma Rosa sulla Majelletta innevata", 1920, 1280, "L'albergo con la neve, esterno, luce del giorno o tramonto", ['subito' => true]) ?>
+    <?= foto('img/home/albergo-rosa-neve-majelletta.webp', "L'albergo rosa sulla Majelletta, sommerso dalla neve", 1000, 667, "L'albergo con la neve", ['subito' => true]) ?>
     <div class="hero-testo">
       <p class="luogo">Majelletta · Abruzzo</p>
       <h1>Hotel Mamma Rosa</h1>
@@ -39,6 +39,7 @@ include 'partials/header.php';
       <div class="capitolo-titolo" data-appare>
         <p class="occhiello">Dal 1966</p>
         <h2>Un albergo di famiglia, in quota</h2>
+        <div class="capitolo-foto"><?= foto('img/home/salone-camino-poltrone-rosse.webp', 'Il salone con il camino acceso e le poltrone rosse', 1537, 1023, 'Salone') ?></div>
       </div>
       <div class="capitolo-testo" data-appare>
         <p class="testo-grande">Sulla Majelletta, nel territorio di Pretoro, accogliamo dal 1966 famiglie, coppie e gruppi che cercano la montagna vera: neve, aria buona e una tavola apparecchiata come a casa.</p>
@@ -65,7 +66,7 @@ include 'partials/header.php';
         </span>
       </a>
       <a class="porta" href="ristorante.php" data-appare>
-        <?= foto('img/home/arrosticini-piatto-tipico.webp', 'Arrosticini abruzzesi del ristorante', 1600, 1067, 'Un piatto tipico: arrosticini, sagne e fagioli, pasta alla chitarra') ?>
+        <?= foto('img/home/spaghetti-funghi-porcini.webp', 'Spaghetti ai funghi porcini del ristorante', 1254, 1254, 'Piatto tipico') ?>
         <span class="porta-testo">
           <span class="occhiello">Il ristorante</span>
           <strong>La cucina di casa</strong>
@@ -73,7 +74,7 @@ include 'partials/header.php';
         </span>
       </a>
       <a class="porta" href="inverno.php" data-appare>
-        <?= foto('img/home/pista-sci-majelletta.webp', 'Pista da sci sulla Majelletta', 1600, 1067, 'Pista da sci o impianti sulla Majelletta, con sciatori') ?>
+        <?= foto('img/home/noleggio-scarponi-sci.webp', 'Scarponi da sci del noleggio, in fila sugli scaffali', 667, 1000, 'Sci', ['classe' => 'in-alto']) ?>
         <span class="porta-testo">
           <span class="occhiello">Sulla neve</span>
           <strong>Vicino agli impianti</strong>
@@ -86,7 +87,7 @@ include 'partials/header.php';
   <!-- 4 — Le due stagioni -->
   <section class="stagioni">
     <a class="stagione copre" href="inverno.php" style="--velo: 1.1">
-      <?= foto('img/home/inverno-neve-panorama.webp', 'Panorama innevato della Majelletta', 1600, 1200, 'Inverno: panorama di neve, magari con il mare sullo sfondo') ?>
+      <?= foto('img/home/facciata-albergo-ghiaccio-inverno.webp', "La facciata dell'albergo con i ghiaccioli, in pieno inverno", 1000, 667, 'Inverno') ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Inverno</span>
         <strong>Settimane bianche e weekend sulla neve</strong>

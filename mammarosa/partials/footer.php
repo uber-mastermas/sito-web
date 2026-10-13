@@ -7,8 +7,7 @@
 
       <div class="footer-marchio">
         <a class="logo logo-chiaro" href="./">
-          <img src="img/logo/logo-mamma-rosa-chiaro.svg" width="48" height="48" alt="">
-          <span>Mamma Rosa<small>Hotel · dal 1966</small></span>
+          <img src="img/logo/logo-mammarosa-chiaro.svg" width="779" height="248" alt="">
         </a>
         <p class="motto"><?= e($SITO['motto']) ?></p>
         <p><?= e($SITO['luogo']) ?></p>
