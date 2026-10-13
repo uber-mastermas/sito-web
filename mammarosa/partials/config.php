@@ -18,7 +18,7 @@ $SITO = [
   'telefono'      => '0871 896143',
   'cellulare'     => '393 883 8955',          // anche WhatsApp
   'whatsapp'      => '393938838955',          // numero per wa.me, con prefisso internazionale
-  'indirizzo'     => 'Via Majelletta 35 · 66010 Pretoro (CH)',
+  'indirizzo'     => 'Via Majelletta 35 · 66010 Pretoro (CH)',   // indirizzo ufficiale confermato il 13/10
 
   // Social
   'facebook'      => 'https://www.facebook.com/p/Hotel-Mamma-Rosa-100063589719403/',
@@ -43,4 +43,4 @@ $SITO = [
 ];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 4;
+$V = 5;

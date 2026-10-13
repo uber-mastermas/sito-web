@@ -39,16 +39,16 @@ include 'partials/header.php';
       <div class="capitolo-titolo" data-appare>
         <p class="occhiello">Dal 1966</p>
         <h2>Un albergo di famiglia, in quota</h2>
-        <div class="capitolo-foto"><?= foto('img/home/salone-camino-poltrone-rosse.webp', 'Il salone con il camino acceso e le poltrone rosse', 1537, 1023, 'Salone') ?></div>
+        <div class="capitolo-foto"><?= foto('img/home/cucina-anni-sessanta-famiglia.webp', 'La famiglia e il personale nella cucina dell\'albergo, anni Sessanta', 1440, 1081, 'Foto storica') ?></div>
       </div>
       <div class="capitolo-testo" data-appare>
-        <p class="testo-grande">Sulla Majelletta, nel territorio di Pretoro, accogliamo dal 1966 famiglie, coppie e gruppi che cercano la montagna vera: neve, aria buona e una tavola apparecchiata come a casa.</p>
-        <p>Camere semplici e calde, da una a cinque persone, tutte con bagno privato; due ampie sale da pranzo; gli impianti sciistici vicini e, nelle giornate limpide, la vista che arriva fino al mare.</p>
+        <p class="testo-grande">Il nome viene da nonna Rosalinda, che accoglieva chiunque arrivasse con il calore di una madre. Dal 1966, sulla Majelletta, accogliamo così famiglie, coppie e gruppi che cercano la montagna vera: neve, aria buona e una tavola apparecchiata come a casa.</p>
+        <p>Oltre 40 camere da una a cinque persone, tutte con bagno privato; il ristorante con due ampie sale, il bar, la sauna affacciata sulle piste e il noleggio sci dentro l'albergo. Gli impianti sono a 100 metri e, nelle giornate limpide, la vista arriva fino al mare.</p>
         <dl class="numeri">
           <div><dt>Dal</dt><dd>1966</dd></div>
-          <div><dt>Camere fino a</dt><dd>5 posti</dd></div>
-          <div><dt>Impianti fino a</dt><dd>2000 m</dd></div>
-          <div><dt>Piste</dt><dd>20 km</dd></div>
+          <div><dt>Camere</dt><dd>Oltre 40</dd></div>
+          <div><dt>Impianti a</dt><dd>100 m</dd></div>
+          <div><dt>Piste fino a</dt><dd>2000 m</dd></div>
         </dl>
       </div>
     </div>
@@ -77,8 +77,8 @@ include 'partials/header.php';
         <?= foto('img/home/albergo-rosa-neve-majelletta.webp', "L'albergo rosa sommerso dalla neve", 1000, 667, 'Neve') ?>
         <span class="porta-testo">
           <span class="occhiello">Sulla neve</span>
-          <strong>Vicino agli impianti</strong>
-          <span>Sciovie per tutti i livelli, fino a quota 2000 metri.</span>
+          <strong>Impianti a 100 metri</strong>
+          <span>Noleggio sci dentro l'albergo e sciovie per tutti i livelli.</span>
         </span>
       </a>
     </div>
@@ -95,7 +95,7 @@ include 'partials/header.php';
       </span>
     </a>
     <a class="stagione copre" href="estate.php" style="--velo: 1.1">
-      <?= foto('img/home/estate-prati-majella.webp', 'Prati e boschi della Majelletta in estate', 1600, 1200, 'Estate: prati verdi, sentieri, cielo aperto') ?>
+      <?= foto('img/home/gregge-pecore-pastore-sentiero.webp', 'Un gregge e il pastore sui prati della Majelletta in estate', 720, 900, 'Estate') ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Estate</span>
         <strong>Il fresco della montagna abruzzese</strong>
