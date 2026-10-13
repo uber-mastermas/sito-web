@@ -484,3 +484,13 @@ body.con-banner .torna-su { display: none; }
 .copre > .foto.pos-destra { object-position: 75% 50%; }
 .hero > .foto { object-position: 70% 50%; }
 @media (max-width: 700px) { .hero > .foto { object-position: 80% 50%; } }
+
+/* ---------- PAGINE DI SERVIZIO (privacy, cookie, note legali) ---------- */
+.testata:has(+ .contenitore .informativa) { padding-bottom: clamp(32px, 5vw, 56px); }
+.informativa { max-width: 760px; padding-bottom: var(--respiro); }
+.informativa section { padding: 30px 0; border-top: 1px solid var(--filetto); }
+.informativa h2 { font-size: clamp(1.7rem, 3.2vw, 2.2rem); font-weight: 600; margin-bottom: .5em; }
+.informativa p { max-width: 68ch; }
+.informativa ul { padding-left: 1.2em; margin: 0 0 1.1em; }
+.informativa li { margin-bottom: .4em; }
+.informativa .nota { padding-top: 24px; border-top: 1px solid var(--filetto); font-size: .9rem; color: var(--salvia); }
