@@ -29,7 +29,7 @@ include 'partials/header.php';
         </div>
         <button class="bottone bottone-rame" type="submit">Cerca</button>
       </div>
-      <p class="cerca-nota">Prenotazione diretta, senza intermediari · Nessuna tassa di soggiorno</p>
+      <p class="cerca-nota">Prenoti con noi, senza costi aggiuntivi · Nessuna tassa di soggiorno</p>
     </form>
   </div>
 
@@ -129,11 +129,11 @@ include 'partials/header.php';
     </div>
   </section>
 
-  <!-- 6 — Prenota direttamente -->
+  <!-- 6 — Prenota con noi -->
   <section class="fascia">
     <div class="contenitore">
       <p class="occhiello centrato-occhiello">Prenota con noi</p>
-      <p class="frase">Prenota direttamente: parli con noi, non con un portale.</p>
+      <p class="frase">Per prenotare, parla con chi ti accoglierà.</p>
       <div class="azioni">
         <a class="bottone bottone-rame" href="prenota.php">Prenota online</a>
         <a class="bottone bottone-linea" href="tel:+390871896143">Chiama 0871 896143</a>

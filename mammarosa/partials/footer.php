@@ -32,7 +32,7 @@
       </div>
 
       <div class="footer-colonna footer-acquista">
-        <h2>Prenota direttamente, senza intermediari</h2>
+        <h2>Ti aspettiamo sulla Majelletta</h2>
         <a class="bottone bottone-chiaro" href="prenota.php">Prenota</a>
       </div>
 
