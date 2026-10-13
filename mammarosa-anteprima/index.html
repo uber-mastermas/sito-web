@@ -59,8 +59,8 @@
 <link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=13">
-<script src="js/layout.js?v=13" defer></script>
+<link rel="stylesheet" href="css/style.css?v=16">
+<script src="js/layout.js?v=16" defer></script>
 </head>
 <body class="pagina-index">
 <a class="salta" href="#contenuto">Vai al contenuto</a>
@@ -172,13 +172,13 @@
   <!-- 4 — Le due stagioni -->
   <section class="stagioni">
     <a class="stagione copre" href="inverno.html" style="--velo: 1.1">
-      <img class="foto pos-destra" src="img/home/albergo-rosa-panorama-neve-impianti.webp?v=1791903038" width="1000" height="667" alt="L&#039;albergo rosa sulle piste innevate della Majelletta" loading="lazy" decoding="async">      <span class="stagione-testo" data-appare>
+      <picture><source media="(max-width: 700px)" srcset="img/home/scialpinista-cresta-cielo-blu.webp?v=1791906126"><img class="foto pos-albergo" src="img/home/albergo-rosa-panorama-neve-impianti.webp?v=1791903038" width="1000" height="667" alt="L&#039;albergo rosa sulle piste innevate della Majelletta" loading="lazy" decoding="async"></picture>      <span class="stagione-testo" data-appare>
         <span class="occhiello">Inverno</span>
         <strong>Settimane bianche e weekend sulla neve</strong>
         <span>Da inizio dicembre al giorno dopo Pasquetta.</span>
       </span>
     </a>
-    <a class="stagione copre" href="estate.html" style="--velo: 1.1">
+    <a class="stagione copre" href="estate.html" style="--velo: 1.45">
       <img class="foto" src="img/home/gregge-pecore-pastore-sentiero.webp?v=1791906125" width="720" height="900" alt="Un gregge e il pastore sui prati della Majelletta in estate" loading="lazy" decoding="async">      <span class="stagione-testo" data-appare>
         <span class="occhiello">Estate</span>
         <strong>Il fresco della montagna abruzzese</strong>
@@ -202,7 +202,7 @@
           <li>Pasta alla chitarra</li>
           <li>Gnocchi di patate</li>
           <li>Tagliatelle alla pecorara</li>
-          <li>Polenta alla Mamma Rosa</li>
+          <li>Polenta alla Mamma&nbsp;Rosa</li>
           <li>Tagliolini al tartufo</li>
           <li>Funghi porcini</li>
         </ul>
@@ -217,7 +217,7 @@
       <div class="recensioni-testa" data-appare>
         <p class="occhiello">Cosa dicono di noi</p>
         <h2>Come tornare a casa</h2>
-        <p class="voto"><strong>4,4</strong> <span class="stelle" style="--voto: 4.4" aria-hidden="true"><span>★★★★★</span></span> su Google · oltre 1.100 recensioni</p>
+        <p class="voto"><strong>4,4</strong> <span class="stelle" style="--voto: 4.4" aria-hidden="true"><span>★★★★★</span></span> <span class="voto-testo">su Google · oltre 1.100 recensioni</span></p>
       </div>
       <div class="carosello" data-carosello>
         <div class="carosello-binario" tabindex="0" aria-label="Recensioni degli ospiti, scorri per leggerle tutte">
@@ -263,7 +263,7 @@
       <p class="frase">Per prenotare, parla con chi ti accoglierà.</p>
       <div class="azioni">
         <a class="bottone bottone-rame" href="prenota.html">Prenota online</a>
-        <a class="bottone bottone-linea" href="tel:+390871896143">Chiama 0871 896143</a>
+        <a class="bottone bottone-linea" href="tel:+390871896143">Chiama<span class="solo-desktop">&nbsp;0871 896143</span></a>
         <a class="bottone bottone-linea" href="https://wa.me/393938838955" rel="noopener" target="_blank">WhatsApp</a>
       </div>
       <p class="fascia-link"><a href="listino.html">Guarda il listino inverno 2026/27</a></p>
@@ -278,7 +278,10 @@
 
       <div class="footer-marchio">
         <a class="logo logo-chiaro" href="./">
-          <img src="img/logo/logo-mammarosa-chiaro.svg" width="600" height="360" alt="">
+          <picture>
+            <source media="(max-width: 699px)" srcset="img/logo/logo-mammarosa-orizzontale-chiaro.svg">
+            <img src="img/logo/logo-mammarosa-chiaro.svg" width="600" height="360" alt="">
+          </picture>
         </a>
         <p class="motto">Dal 1966 sulla Majelletta.</p>
         <p>Majelletta · Pretoro · Abruzzo</p>

@@ -109,4 +109,11 @@
     window.addEventListener("resize", aggiorna);
     aggiorna();
   });
+  // Il pulsante "torna su" resta nascosto mentre il riquadro di ricerca è sullo schermo
+  var cerca = document.querySelector(".cerca");
+  if (cerca && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (v) {
+      document.body.classList.toggle("cerca-visibile", v[0].isIntersecting);
+    }).observe(cerca);
+  }
 })();

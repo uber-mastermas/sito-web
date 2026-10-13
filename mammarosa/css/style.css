@@ -352,7 +352,7 @@ h1, h2, h3 {
   min-height: clamp(380px, 62svh, 620px);
   color: #fff; text-decoration: none;
 }
-.stagione-testo { position: relative; z-index: 1; display: grid; gap: 6px; padding: clamp(28px, 4vw, 52px); max-width: 520px; }
+.stagione-testo { text-shadow: 0 1px 12px rgba(10, 18, 14, .45); position: relative; z-index: 1; display: grid; gap: 6px; padding: clamp(28px, 4vw, 52px); max-width: 520px; }
 .stagione-testo .occhiello { color: var(--rame-chiaro); margin: 0; }
 .stagione-testo strong { font-family: var(--font-titolo); font-weight: 600; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.12; }
 .stagione > .foto { transition: transform 1.2s ease; }
@@ -547,3 +547,30 @@ body.con-banner .torna-su { display: none; }
 .recensione blockquote { margin: 0; font-family: var(--font-titolo); font-style: italic; font-weight: 500; font-size: 1.35rem; line-height: 1.35; color: var(--bosco); }
 .recensione figcaption { font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--rame-scuro); }
 .recensioni .azioni { justify-content: center; }
+
+/* ---------- RITOCCHI PER IL TELEFONO (controllo del 13/10) ---------- */
+/* titoli e frasi: righe bilanciate, niente parola sola sull'ultima riga */
+h1, h2, h3, .frase, .hero-sotto, .stagione-testo strong, .porta-testo strong { text-wrap: balance; }
+p, blockquote { text-wrap: pretty; }
+body.cerca-visibile .torna-su { opacity: 0; visibility: hidden; }
+.copre > .foto.pos-albergo, .copre > picture > .foto.pos-albergo { object-position: 72% 85%; }
+@media (max-width: 700px) { .copre > picture > .foto.pos-albergo { object-position: 50% 40%; } }
+.solo-desktop { display: inline; }
+@media (max-width: 899px) {
+  .cerca-campi > .campo:nth-child(-n+2) { grid-column: 1 / -1; }
+}
+@media (max-width: 699px) {
+  .torna-su { width: 42px; height: 42px; }
+  .stagione { min-height: 340px; }
+  .stagione-testo { padding: 24px var(--margine); }
+  .cucina-foto .foto { aspect-ratio: 4 / 3; }
+  .piatti { gap: 0 14px; }
+  .piatti li { font-size: 1.08rem; letter-spacing: -.005em; }
+  .voto-testo { display: block; margin-top: 6px; }
+  .carosello-binario { align-items: flex-start; }
+  .fascia .azioni .bottone { flex: 1 1 calc(50% - 6px); }
+  .fascia .azioni .bottone:first-child { flex-basis: 100%; }
+  .solo-desktop { display: none; }
+  .logo-chiaro img { width: min(100%, 240px); }
+}
+@media print { .torna-su, .banner-privacy { display: none !important; } }

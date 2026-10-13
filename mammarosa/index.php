@@ -87,14 +87,14 @@ include 'partials/header.php';
   <!-- 4 — Le due stagioni -->
   <section class="stagioni">
     <a class="stagione copre" href="inverno.php" style="--velo: 1.1">
-      <?= foto('img/home/albergo-rosa-panorama-neve-impianti.webp', "L'albergo rosa sulle piste innevate della Majelletta", 1000, 667, 'Inverno', ['classe' => 'pos-destra']) ?>
+      <?= foto('img/home/albergo-rosa-panorama-neve-impianti.webp', "L'albergo rosa sulle piste innevate della Majelletta", 1000, 667, 'Inverno', ['classe' => 'pos-albergo', 'mobile' => 'img/home/scialpinista-cresta-cielo-blu.webp']) ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Inverno</span>
         <strong>Settimane bianche e weekend sulla neve</strong>
         <span>Da inizio dicembre al giorno dopo Pasquetta.</span>
       </span>
     </a>
-    <a class="stagione copre" href="estate.php" style="--velo: 1.1">
+    <a class="stagione copre" href="estate.php" style="--velo: 1.45">
       <?= foto('img/home/gregge-pecore-pastore-sentiero.webp', 'Un gregge e il pastore sui prati della Majelletta in estate', 720, 900, 'Estate') ?>
       <span class="stagione-testo" data-appare>
         <span class="occhiello">Estate</span>
@@ -120,7 +120,7 @@ include 'partials/header.php';
           <li>Pasta alla chitarra</li>
           <li>Gnocchi di patate</li>
           <li>Tagliatelle alla pecorara</li>
-          <li>Polenta alla Mamma Rosa</li>
+          <li>Polenta alla Mamma&nbsp;Rosa</li>
           <li>Tagliolini al tartufo</li>
           <li>Funghi porcini</li>
         </ul>
@@ -135,7 +135,7 @@ include 'partials/header.php';
       <div class="recensioni-testa" data-appare>
         <p class="occhiello">Cosa dicono di noi</p>
         <h2>Come tornare a casa</h2>
-        <p class="voto"><strong>4,4</strong> <span class="stelle" style="--voto: 4.4" aria-hidden="true"><span>★★★★★</span></span> su Google · oltre 1.100 recensioni</p>
+        <p class="voto"><strong>4,4</strong> <span class="stelle" style="--voto: 4.4" aria-hidden="true"><span>★★★★★</span></span> <span class="voto-testo">su Google · oltre 1.100 recensioni</span></p>
       </div>
       <div class="carosello" data-carosello>
         <div class="carosello-binario" tabindex="0" aria-label="Recensioni degli ospiti, scorri per leggerle tutte">
@@ -181,7 +181,7 @@ include 'partials/header.php';
       <p class="frase">Per prenotare, parla con chi ti accoglierà.</p>
       <div class="azioni">
         <a class="bottone bottone-rame" href="prenota.php">Prenota online</a>
-        <a class="bottone bottone-linea" href="tel:+390871896143">Chiama 0871 896143</a>
+        <a class="bottone bottone-linea" href="tel:+390871896143">Chiama<span class="solo-desktop">&nbsp;0871 896143</span></a>
         <a class="bottone bottone-linea" href="https://wa.me/393938838955" rel="noopener" target="_blank">WhatsApp</a>
       </div>
       <p class="fascia-link"><a href="listino.php">Guarda il listino inverno 2026/27</a></p>
