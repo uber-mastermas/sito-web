@@ -129,7 +129,33 @@ include 'partials/header.php';
     </div>
   </section>
 
-  <!-- 6 — Prenota con noi -->
+  <!-- 6 — Cosa dicono di noi (recensioni Google, testi originali degli ospiti) -->
+  <section class="recensioni">
+    <div class="contenitore">
+      <div class="recensioni-testa" data-appare>
+        <p class="occhiello">Cosa dicono di noi</p>
+        <h2>Come tornare a casa</h2>
+        <p class="voto"><span class="stelle" aria-hidden="true">★</span> <strong>4,4</strong> su Google · oltre 1.100 recensioni</p>
+      </div>
+      <div class="recensioni-griglia">
+        <figure class="recensione" data-appare>
+          <blockquote>«Sono quasi quarant'anni che vado sulla Maielletta e l'Albergo Mamma Rosa è da sempre il riferimento della mia famiglia.»</blockquote>
+          <figcaption>Mascia M. · Google</figcaption>
+        </figure>
+        <figure class="recensione" data-appare>
+          <blockquote>«Ogni volta che torniamo all'Hotel Mamma Rosa è come tornare a casa. La cucina è semplicemente deliziosa con porzioni abbondanti, che ricordano i sapori genuini di una volta.»</blockquote>
+          <figcaption>Ilenia R. · Google</figcaption>
+        </figure>
+        <figure class="recensione" data-appare>
+          <blockquote>«La posizione è ottima, vicino agli impianti di risalita, il panorama è mozzafiato, la sensazione di stare proprio "sulle nuvole" è stata fantastica!»</blockquote>
+          <figcaption>Alessandra M. · Google</figcaption>
+        </figure>
+      </div>
+      <div class="azioni"><a class="bottone bottone-linea" href="<?= e($SITO['gmaps']) ?>" rel="noopener" target="_blank">Leggi le recensioni su Google</a></div>
+    </div>
+  </section>
+
+  <!-- 7 — Prenota con noi -->
   <section class="fascia">
     <div class="contenitore">
       <p class="occhiello centrato-occhiello">Prenota con noi</p>
