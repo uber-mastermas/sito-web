@@ -6,17 +6,16 @@
     <div class="footer-testa">
       <a class="footer-logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
         <img src="img/logo/simbolo-sanctuary-chiaro.svg" width="206" height="326" alt="">
-        <img src="img/logo/logo-sanctuary-chiaro.svg" width="643" height="133" alt="">
       </a>
       <p class="footer-motto">A family of living sanctuaries where nature, design, food, wellness and music come together.</p>
     </div>
 
     <div class="footer-sedi">
-      <?php foreach ($SEDI as $s): ?>
+      <?php foreach ($SEDI as $k => $s): ?>
       <details class="footer-sede">
         <summary>
-          <span class="footer-sede-nome"><?= e($s['nome']) ?></span>
-          <?php if ($s['stato'] !== ''): ?><span class="footer-sede-stato">July 2027</span><?php endif; ?>
+          <img class="footer-sede-marchio" src="img/logo/marchio-<?= e($k) ?>-chiaro.svg" width="643" height="136" alt="The Sanctuary <?= e($s['nome']) ?>">
+          <?php if ($s['stato'] !== ''): ?><span class="footer-sede-stato"><?= e($s['stato']) ?></span><?php endif; ?>
         </summary>
         <div class="footer-sede-corpo">
           <ul>
