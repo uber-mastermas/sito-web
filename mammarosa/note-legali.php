@@ -12,7 +12,7 @@ include 'partials/header.php';
     </ol>
     <p class="occhiello">Informazioni legali</p>
     <h1>Note legali</h1>
-    <p class="testo-grande">Chi siamo, per la legge: i dati della società che gestisce l'albergo e questo sito, come previsto dall'art. 7 del D.Lgs. 70/2003 sul commercio elettronico.</p>
+    <p class="testo-grande">I dati della società che gestisce l'albergo e questo sito, come previsto dall'art. 7 del D.Lgs. 70/2003 sul commercio elettronico.</p>
   </div>
 
   <div class="contenitore">
@@ -36,7 +36,7 @@ include 'partials/header.php';
 
       <section>
         <h2>Prezzi e prenotazioni</h2>
-        <p>Le tariffe sono a persona e comprendono l'IVA; non c'è tassa di soggiorno. Il prezzo che vale è quello indicato al momento della prenotazione.</p>
+        <p>Le tariffe sono a persona e comprendono l'IVA; non c'è tassa di soggiorno. Vale il prezzo indicato al momento della prenotazione.</p>
         <p>Le regole per prenotare, cambiare data o annullare sono nelle Condizioni di prenotazione, che trovi nella pagina Prenota.</p>
       </section>
 

@@ -59,7 +59,7 @@ include 'partials/header.php';
 
       <section>
         <h2>Chi può vederli</h2>
-        <p>Noi e il nostro personale, per quello che serve al suo lavoro. Poi alcuni fornitori, che trattano i dati per nostro conto e solo per il servizio che ci danno:</p>
+        <p>Il nostro personale, solo per quanto serve al suo lavoro, e alcuni fornitori, che trattano i dati per nostro conto e solo per il servizio che ci offrono:</p>
         <ul>
           <li>chi gestisce il sito, la prenotazione online e la posta elettronica;</li>
           <li><strong>Stripe</strong>, per i pagamenti con carta;</li>
