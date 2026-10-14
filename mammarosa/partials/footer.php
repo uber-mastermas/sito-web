@@ -48,7 +48,7 @@
 </footer>
 
 <div class="banner-privacy" role="dialog" aria-live="polite" aria-label="Informativa privacy" hidden>
-  <p>Questo sito non usa cookie di profilazione. La mappa nella pagina Contatti è fornita da OpenStreetMap, un servizio esterno. <a href="privacy.php">Leggi l'informativa privacy</a>.</p>
+  <p>Noi di Mamma Rosa abbiamo a cuore la tua privacy: non usiamo cookie di profilazione. Con il tuo consenso usiamo solo cookie di statistica, per capire come migliorare il sito, e mostriamo la mappa nella pagina Contatti. <a href="cookie.php">Leggi la Cookie policy</a>.</p>
   <div class="banner-privacy-azioni">
     <button class="bottone" type="button" data-privacy="accetto">Ho capito e accetto</button>
     <button class="bottone bottone-linea" type="button" data-privacy="rifiuto">Non accetto</button>
