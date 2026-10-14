@@ -34,7 +34,7 @@ $SITO = [
   'ragione'       => 'Mamma Rosa 2000 S.r.l.',
   'piva'          => '01202760698',
   'sede'          => 'Via Majelletta 35, 66010 Pretoro (CH)',
-  'rea'           => '',          // iscrizione al Registro delle Imprese / REA, es. CH-000000
+  'rea'           => 'CH-75620',  // iscrizione al REA (Camera di Commercio Chieti Pescara)
   'pec'           => 'mammarosa2000@pec.it',
 
   // Modulo contatti: dove arrivano i messaggi
