@@ -656,3 +656,8 @@ body.menu-bloccato .torna-su, body.con-banner .torna-su { display: none; }
 .pos-basso { object-position: 50% 75%; }
 
 @media print { .torna-su, .banner-privacy, .reserve, .hero-video { display: none !important; } }
+
+/* Pagine delle sedi: le ancore scendono sotto la barra delle sezioni e
+   nascondono il fondo della sezione precedente (richiesta del 14/10).
+   Ogni sezione ha almeno 80px di spazio vuoto in alto, che finisce sotto la barra. */
+body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6px); }

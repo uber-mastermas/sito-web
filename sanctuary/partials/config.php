@@ -111,4 +111,4 @@ $PROGRAMMA = [
 ];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 1;
+$V = 2;
