@@ -86,27 +86,39 @@ $SEDI = [
     'nome'       => 'Porto Cervo',
     'paese'      => 'Sardinia',
     'pagina'     => 'porto-cervo.php',
+    'modulo'     => true,
     'stato'      => 'Opening July 2027',
     'indirizzo'  => 'SP59, Golfo Pevero · 07021 Sassari',
+    'lat'        => '41.1057391',   // DA CONFERMARE: dalla scheda Google del vecchio sito
+    'lon'        => '9.5313797',
     'telefono'   => '+39 0789 173306',   // DA CONFERMARE: il vecchio sito riporta 0789 1733063
     'email'      => 'portocervo@thesanctuaryecoretreat.com',
+    'email_prenotazioni' => 'portocervo@thesanctuaryecoretreat.com',
+    'email_eventi'       => 'portocervo@thesanctuaryecoretreat.com',
+    'instagram'  => 'https://www.instagram.com/thesanctuaryecoretreat/',
     'orari'      => [],
-    'foto'       => 'img/home/porto-cervo-bar-pergolato.webp',
+    'foto'       => 'img/home/porto-cervo-folla-notte-palme.webp',
     'frase'      => "Sardinia's coastline meets the pulse of the night.",
-    'spazi'      => ['info' => 'Summer 2027 · Info'],
+    'spazi'      => ['info' => 'Summer 2027 · Information'],
   ],
   'itria' => [
     'nome'       => 'Itria Valley',
     'paese'      => 'Apulia',
     'pagina'     => 'itria-valley.php',
+    'modulo'     => true,
     'stato'      => 'Opening July 2027',
     'indirizzo'  => 'SP 90, Savelletri · 72015 Torre Canne (BR)',
+    'lat'        => '40.8480115',   // DA CONFERMARE: dalla scheda Google del sito .it
+    'lon'        => '17.4550772',
     'telefono'   => '+39 0831 1530016',
     'email'      => 'itriavalley@thesanctuaryecoretreat.com',
+    'email_prenotazioni' => 'itriavalley@thesanctuaryecoretreat.com',
+    'email_eventi'       => 'itriavalley@thesanctuaryecoretreat.com',
+    'instagram'  => 'https://www.instagram.com/thesanctuaryecoretreat/',
     'orari'      => [],
     'foto'       => 'img/home/itria-tenda-lanterna-tramonto.webp',
     'frase'      => 'Music under the starry sky, by the sea.',
-    'spazi'      => ['info' => 'Summer 2027 · Info'],
+    'spazi'      => ['info' => 'Summer 2027 · Information'],
   ],
 ];
 
@@ -122,4 +134,4 @@ $PROGRAMMA = [
 $ARTISTI = ['Âme', 'Acid Pauli', 'Acid Arab', 'Ben Klock', 'Bonobo', 'Bedouin', 'Blond:ish', 'Black Coffee', 'Brina Knauss', 'Carlita', 'Chet Faker', 'Damian Lazarus', 'Dixon', 'DJ Tennis', 'Fatboy Slim', 'Guy Gerber', 'Jackmaster', 'Jayda G', 'Måneskin', 'Marcel Dettmann', 'Marcelo Burlon', 'Monolink', 'Negramaro', 'Nina Kraviz', 'Polo & Pan', 'Peggy Gou', 'Red Axes', 'RY X', 'Salmo', 'Satori live', 'Seth Troxler', 'Stavroz live', 'Sven Väth', 'Travis Scott', 'Venerus', 'WhoMadeWho'];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 2;
+$V = 4;

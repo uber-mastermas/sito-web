@@ -349,6 +349,11 @@ body.reserve-aperto { overflow: hidden; }
   text-wrap: balance;
 }
 .manifesto .kicker { margin-bottom: 28px; }
+.manifesto p.manifesto-nota {
+  margin-top: 28px; max-width: 46ch;
+  font-family: var(--font-testo); font-size: 1rem; line-height: 1.6;
+  text-transform: none; letter-spacing: 0; color: var(--fumo);
+}
 
 /* ---------- TESTATA DI SEZIONE ---------- */
 .sezione { padding-top: var(--respiro); }
@@ -442,6 +447,17 @@ body.reserve-aperto { overflow: hidden; }
   border: 1px solid currentColor; padding: 4px 10px;
 }
 
+/* ---------- DUE PORTE (home): eventi privati e membership ---------- */
+.porte { display: grid; gap: 4px; grid-template-columns: minmax(0, 1fr); margin-top: var(--respiro); }
+@media (min-width: 760px) { .porte { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+.porta { display: flex; align-items: flex-end; min-height: clamp(360px, 52svh, 520px); color: #fff; text-decoration: none; }
+.porta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 17, 15, .05) 30%, rgba(20, 17, 15, .72)); pointer-events: none; }
+.porta > .foto { transition: transform 1.4s ease; }
+.porta:hover > .foto { transform: scale(1.04); }
+.porta-testo { position: relative; z-index: 1; display: grid; gap: 6px; padding: 26px 24px; max-width: 460px; }
+.porta-testo .kicker { color: var(--pesca); margin: 0; }
+.porta-testo strong { font-family: var(--font-titolo); font-weight: 400; font-size: clamp(2rem, 3.2vw, 2.7rem); line-height: 1.04; }
+
 /* ---------- FASCIA SCURA (eventi, club) ---------- */
 .scura { background: var(--notte); color: var(--pesca); }
 .scura .kicker { color: #d9a77f; }
@@ -521,7 +537,7 @@ body.reserve-aperto { overflow: hidden; }
 .recapiti .kicker { margin-top: 28px; }
 .modulo { display: grid; gap: 18px; }
 .modulo-riga { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
-@media (min-width: 600px) { .modulo-riga { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 600px) { .modulo-riga { grid-template-columns: repeat(2, minmax(0, 1fr)); } .modulo-riga:has(> .campo:only-of-type) { grid-template-columns: minmax(0, 1fr); } }
 .campo label { display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fumo); }
 .campo input, .campo select, .campo textarea {
   width: 100%; min-height: 50px;
@@ -588,13 +604,29 @@ body:not(.con-hero) main > .testata:first-child { padding-top: clamp(48px, 9vw, 
 .footer-motto { font-family: var(--font-titolo); font-size: clamp(1.4rem, 2.4vw, 1.9rem); line-height: 1.25; max-width: 30ch; margin: 0; }
 @media (min-width: 900px) { .footer-testa { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; } }
 @media (max-width: 420px) { .footer-logo img:last-child { height: 30px; } .footer-logo img:first-child { height: 48px; } }
-.footer-sedi { display: grid; gap: 36px; grid-template-columns: minmax(0, 1fr); padding-block: 44px; }
-@media (min-width: 640px) { .footer-sedi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1100px) { .footer-sedi { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.footer-sede h2 { font-size: 2rem; margin-bottom: 12px; }
-.footer-sede h2 a { text-decoration: none; }
+/* Sedi nel footer: righe a fisarmonica (<details>), chiuse; affiancate su desktop */
+.footer-sedi { display: grid; gap: 0 32px; grid-template-columns: minmax(0, 1fr); padding-block: 28px 36px; }
+@media (min-width: 1100px) { .footer-sedi { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; } }
+.footer-sede { border-bottom: 1px solid var(--filetto-chiaro); }
+.footer-sede summary {
+  display: flex; align-items: baseline; gap: 12px;
+  min-height: 60px; padding: 14px 0; cursor: pointer; list-style: none;
+}
+.footer-sede summary::-webkit-details-marker { display: none; }
+.footer-sede summary::after {
+  content: ""; margin-left: auto; align-self: center; flex: none;
+  width: 8px; height: 8px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: translateY(-3px) rotate(45deg); transition: transform .2s;
+}
+.footer-sede[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.footer-sede-nome { font-family: var(--font-titolo); font-size: 1.9rem; line-height: 1; }
+.footer-sede-stato { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: #d9a77f; }
+.footer-sede-corpo { padding: 0 0 22px; }
 .footer-sede ul { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 4px; color: rgba(253, 230, 212, .8); }
 .footer-sede ul a { text-decoration-color: rgba(253, 230, 212, .35); overflow-wrap: anywhere; }
+.footer-sede-link { display: inline-block; margin-top: 14px; font-size: .74rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; }
+.footer-sede-link:hover { text-decoration: underline; }
 .site-footer .kicker { color: #d9a77f; margin: 0; }
 .orari { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 2px 16px; margin: 0; font-family: var(--font-mono); font-size: .78rem; color: rgba(253, 230, 212, .8); }
 .orari dt { text-transform: uppercase; letter-spacing: .06em; }

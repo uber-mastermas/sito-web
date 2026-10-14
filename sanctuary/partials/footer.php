@@ -13,23 +13,29 @@
 
     <div class="footer-sedi">
       <?php foreach ($SEDI as $s): ?>
-      <section class="footer-sede">
-        <h2><a href="<?= e($s['pagina']) ?>"><?= e($s['nome']) ?></a></h2>
-        <ul>
-          <li><?= e($s['indirizzo']) ?></li>
-          <li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $s['telefono'])) ?>"><?= e($s['telefono']) ?></a></li>
-          <li><a href="mailto:<?= e($s['email']) ?>"><?= e($s['email']) ?></a></li>
-        </ul>
-        <?php if ($s['orari']): ?>
-        <dl class="orari">
-          <?php foreach ($s['orari'] as $giorni => $ore): ?>
-          <dt><?= e($giorni) ?></dt><dd><?= e($ore) ?></dd>
-          <?php endforeach; ?>
-        </dl>
-        <?php else: ?>
-        <p class="kicker"><?= e($s['stato']) ?></p>
-        <?php endif; ?>
-      </section>
+      <details class="footer-sede">
+        <summary>
+          <span class="footer-sede-nome"><?= e($s['nome']) ?></span>
+          <?php if ($s['stato'] !== ''): ?><span class="footer-sede-stato">July 2027</span><?php endif; ?>
+        </summary>
+        <div class="footer-sede-corpo">
+          <ul>
+            <li><?= e($s['indirizzo']) ?></li>
+            <li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $s['telefono'])) ?>"><?= e($s['telefono']) ?></a></li>
+            <li><a href="mailto:<?= e($s['email']) ?>"><?= e($s['email']) ?></a></li>
+          </ul>
+          <?php if ($s['orari']): ?>
+          <dl class="orari">
+            <?php foreach ($s['orari'] as $giorni => $ore): ?>
+            <dt><?= e($giorni) ?></dt><dd><?= e($ore) ?></dd>
+            <?php endforeach; ?>
+          </dl>
+          <?php else: ?>
+          <p class="kicker"><?= e($s['stato']) ?></p>
+          <?php endif; ?>
+          <a class="footer-sede-link" href="<?= e($s['pagina']) ?>">The Sanctuary <?= e($s['nome']) ?> →</a>
+        </div>
+      </details>
       <?php endforeach; ?>
     </div>
 
