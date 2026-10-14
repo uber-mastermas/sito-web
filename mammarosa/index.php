@@ -58,10 +58,10 @@ include 'partials/header.php';
   <section class="porte">
     <div class="contenitore porte-griglia">
       <a class="porta" href="albergo.php" data-appare>
-        <?= foto('img/home/camera-matrimoniale-legno-albergo.webp', 'Camera matrimoniale con arredi in legno di pino', 1920, 1280, 'Camera') ?>
+        <?= foto('img/home/camera-matrimoniale-legno-albergo.webp', 'Camera matrimoniale comoda e accogliente', 1920, 1280, 'Camera') ?>
         <span class="porta-testo">
           <span class="occhiello">L'albergo</span>
-          <strong>Camere calde, in legno</strong>
+          <strong>Camere comode e accoglienti</strong>
           <span>Matrimoniali, triple, quadruple e quintuple, alcune con vista mare.</span>
         </span>
       </a>
