@@ -63,8 +63,8 @@ $SEDI = [
     'stato'      => '',
     // DA CONFERMARE: footer del sito .it = Via Valenza 2, 20144; blocco contatti = Via Valenza 16, 20142
     'indirizzo'  => 'Via Valenza, 16 · 20142 Milano',
-    'lat'        => '45.4528',      // DA VERIFICARE: posizione approssimativa di Via Valenza (Porta Genova)
-    'lon'        => '9.1690',
+    'lat'        => '45.45129338393012',   // posizione esatta indicata da Umberto (14/10)
+    'lon'        => '9.169177460185509',
     'telefono'   => '+39 02 5004 1511',
     'email'      => 'milan@thesanctuaryecoretreat.com',
     'email_prenotazioni' => 'booking.milan@thesanctuaryecoretreat.com',
