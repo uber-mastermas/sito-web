@@ -1,0 +1,114 @@
+<?php
+/* ==========================================================
+   The Sanctuary Eco Retreat — DATI DEL SITO
+   Unico punto da modificare per contatti, sedi, social e dati legali.
+   Un campo lasciato vuoto ('') compare sul sito come
+   "da inserire", così si vede subito cosa manca.
+   ========================================================== */
+
+$SITO = [
+  'nome'          => 'The Sanctuary Eco Retreat',
+  'nome_breve'    => 'The Sanctuary',
+  'url'           => 'https://thesanctuaryecoretreat.it',   // dominio, senza barra finale
+  'immagine'      => 'img/logo/condivisione-sanctuary.jpg', // anteprima nei link condivisi, 1200×630
+  'motto'         => 'A timeless place to live, know and share.',
+  'luogo'         => 'Rome · Milan · Porto Cervo · Itria Valley',
+
+  // Contatti generali
+  'email'         => '',          // indirizzo generale (info@…), da confermare
+  'instagram'     => 'https://www.instagram.com/thesanctuaryecoretreat/',
+
+  // Siti collegati (link esterni)
+  'membership'    => 'https://membership.thesanctuaryecoretreat.com/register',
+  'membership_login' => 'https://membership.thesanctuaryecoretreat.com/login',
+  'urban'         => 'https://www.thesanctuaryurban.com/',
+
+  // Dati legali (footer, Privacy e Note legali)
+  'ragione'       => '',          // ragione sociale
+  'piva'          => '',          // Partita IVA (obbligatoria)
+  'sede'          => '',          // sede legale completa
+  'rea'           => '',          // Registro delle Imprese / REA
+  'pec'           => '',
+
+  // Invio della posta: la PASSWORD NON va qui (repository pubblico),
+  // ma in smtp-password.php sopra la root del sito (vedi LEGGIMI-POSTA.txt).
+  'mittente'      => '',          // es. noreply@thesanctuaryecoretreat.it
+  'smtp_host'     => '',
+  'smtp_porta'    => 465,
+  'smtp_utente'   => '',
+];
+
+/* ---------- LE QUATTRO SEDI ----------
+   'pagina' vuota = pagina non ancora pronta (porta alla pagina provvisoria).
+   'spazi' = voci del pannello Reserve e del modulo di prenotazione. */
+$SEDI = [
+  'roma' => [
+    'nome'       => 'Rome',
+    'paese'      => 'Italy',
+    'pagina'     => 'rome.php',
+    'stato'      => '',
+    'indirizzo'  => 'Via delle Terme di Traiano, 4a · 00184 Roma',
+    'telefono'   => '+39 06 8379 6820',
+    'email'      => 'roma@thesanctuaryecoretreat.com',
+    'orari'      => ['Tue · Wed · Sun' => '11:00 – 02:00', 'Thu · Fri · Sat' => '11:00 – 04:00'],
+    'foto'       => 'img/home/roma-serra-piscina-ombrelloni.webp',
+    'frase'      => 'A hidden garden steps away from the Colosseum.',
+    'spazi'      => ['restaurant' => 'Restaurant', 'pool' => 'Pool Area', 'wellness' => 'Yoga & Massage', 'club' => 'Club', 'event' => 'Private event'],
+  ],
+  'milano' => [
+    'nome'       => 'Milan',
+    'paese'      => 'Italy',
+    'pagina'     => 'milan.php',
+    'modulo'     => true,       // la pagina ha il modulo di prenotazione (#book)
+    'stato'      => '',
+    // DA CONFERMARE: footer del sito .it = Via Valenza 2, 20144; blocco contatti = Via Valenza 16, 20142
+    'indirizzo'  => 'Via Valenza, 16 · 20142 Milano',
+    'lat'        => '45.4528',      // DA VERIFICARE: posizione approssimativa di Via Valenza (Porta Genova)
+    'lon'        => '9.1690',
+    'telefono'   => '+39 02 5004 1511',
+    'email'      => 'milan@thesanctuaryecoretreat.com',
+    'email_prenotazioni' => 'booking.milan@thesanctuaryecoretreat.com',
+    'email_eventi'       => 'events.milan@thesanctuaryecoretreat.com',
+    'instagram'  => 'https://www.instagram.com/thesanctuarymilan/',
+    'orari'      => ['Lunch · Tue – Sun' => '12:00 – 15:00', 'Evening · Tue – Sun' => '18:00 – 02:00'],
+    'foto'       => 'img/home/milano-piscina-bagnante.webp',
+    'frase'      => 'An industrial space reimagined as a living sanctuary.',
+    'spazi'      => ['restaurant' => 'Restaurant', 'pool' => 'Pool Area', 'wellness' => 'Yoga & Pilates', 'club' => 'Club', 'event' => 'Private event'],
+  ],
+  'porto-cervo' => [
+    'nome'       => 'Porto Cervo',
+    'paese'      => 'Sardinia',
+    'pagina'     => 'porto-cervo.php',
+    'stato'      => 'Opening July 2027',
+    'indirizzo'  => 'SP59, Golfo Pevero · 07021 Sassari',
+    'telefono'   => '+39 0789 173306',   // DA CONFERMARE: il vecchio sito riporta 0789 1733063
+    'email'      => 'portocervo@thesanctuaryecoretreat.com',
+    'orari'      => [],
+    'foto'       => 'img/home/porto-cervo-bar-pergolato.webp',
+    'frase'      => "Sardinia's coastline meets the pulse of the night.",
+    'spazi'      => ['info' => 'Summer 2027 · Info'],
+  ],
+  'itria' => [
+    'nome'       => 'Itria Valley',
+    'paese'      => 'Apulia',
+    'pagina'     => 'itria-valley.php',
+    'stato'      => 'Opening July 2027',
+    'indirizzo'  => 'SP 90, Savelletri · 72015 Torre Canne (BR)',
+    'telefono'   => '+39 0831 1530016',
+    'email'      => 'itriavalley@thesanctuaryecoretreat.com',
+    'orari'      => [],
+    'foto'       => 'img/home/itria-tenda-lanterna-tramonto.webp',
+    'frase'      => 'Music under the starry sky, by the sea.',
+    'spazi'      => ['info' => 'Summer 2027 · Info'],
+  ],
+];
+
+/* ---------- PROGRAMMA MUSICALE ----------
+   Una riga per serata: ['data' => 'THU 05/11', 'ora' => '22:00', 'titolo' => '…', 'artisti' => '…'].
+   Se l'elenco è vuoto, la pagina rimanda a Instagram. */
+$PROGRAMMA = [
+  'milano' => [],
+];
+
+// Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
+$V = 1;

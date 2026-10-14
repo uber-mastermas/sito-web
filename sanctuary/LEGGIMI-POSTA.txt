@@ -1,0 +1,22 @@
+INVIO DELLA POSTA DAL MODULO DI PRENOTAZIONE
+============================================
+
+Le richieste del modulo arrivano agli indirizzi della sede
+(prenotazioni o eventi privati, impostati in partials/config.php, $SEDI)
+e partono dall'account indicato in 'mittente' (da creare sul dominio,
+es. noreply@thesanctuaryecoretreat.it).
+
+Per inviare tramite il server di posta del dominio (consigliato,
+evita lo spam) serve la password dell'account mittente. NON scriverla in config.php.
+
+1. Crea un file di nome   smtp-password.php
+2. Mettilo UNA CARTELLA SOPRA la root del sito
+   (su SiteGround: accanto a public_html, NON dentro).
+3. Contenuto del file, una sola riga:
+
+   <?php return 'LA-PASSWORD-DELL-ACCOUNT-MITTENTE';
+
+Se il file non c'è, il sito invia comunque con la funzione mail() del server.
+
+Porta usata: 465 (SSL). Se il server richiede 587, cambia 'smtp_porta' in config.php.
+Eventuali errori finiscono nel log degli errori PHP del sito (prefisso "SMTP:").
