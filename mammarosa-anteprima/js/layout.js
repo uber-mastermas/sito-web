@@ -36,31 +36,34 @@
     });
   }
 
-  // Banner privacy: "Ho capito e accetto" ricorda la scelta; "Non accetto" porta su Google.
-  // La mappa (unico servizio esterno) si carica solo dopo l'accettazione.
+  // Banner privacy: "Ho capito e accetto" attiva mappa e statistiche; "Non accetto" chiude il banner
+  // e il sito resta navigabile senza servizi esterni. La scelta si ricorda nella memoria del browser.
   var CHIAVE = "mammarosa-privacy-v1";
   function leggi() { try { return localStorage.getItem(CHIAVE); } catch (e) { return null; } }
+  function scrivi(v) { try { if (v) { localStorage.setItem(CHIAVE, v); } else { localStorage.removeItem(CHIAVE); } } catch (e) {} }
   function caricaMappe() {
     document.querySelectorAll("iframe[data-src]").forEach(function (f) { f.src = f.getAttribute("data-src"); f.removeAttribute("data-src"); });
   }
   var banner = document.querySelector(".banner-privacy");
-  if (leggi() === "ok") {
+  var scelta0 = leggi();
+  if (scelta0 === "ok") {
     caricaMappe();
-  } else if (banner) {
+  } else if (scelta0 !== "no" && banner) {
     banner.hidden = false;
     document.body.classList.add("con-banner");
     banner.addEventListener("click", function (e) {
       var scelta = e.target.getAttribute && e.target.getAttribute("data-privacy");
-      if (scelta === "accetto") {
-        try { localStorage.setItem(CHIAVE, "ok"); } catch (err) {}
-        banner.hidden = true;
-        document.body.classList.remove("con-banner");
-        caricaMappe();
-      } else if (scelta === "rifiuto") {
-        window.location.href = "https://www.google.com/";
-      }
+      if (scelta !== "accetto" && scelta !== "rifiuto") { return; }
+      scrivi(scelta === "accetto" ? "ok" : "no");
+      banner.hidden = true;
+      document.body.classList.remove("con-banner");
+      if (scelta === "accetto") { caricaMappe(); }
     });
   }
+  // Pagina Cookie policy: "Rivedi le tue scelte" cancella la scelta e mostra di nuovo il banner
+  document.querySelectorAll("[data-rivedi-privacy]").forEach(function (b) {
+    b.addEventListener("click", function () { scrivi(null); window.location.reload(); });
+  });
 
   // Pulsante "torna su": compare dopo un po' di scorrimento
   var su = document.querySelector(".torna-su");
