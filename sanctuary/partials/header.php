@@ -7,6 +7,7 @@ require_once __DIR__ . '/funzioni.php';
 
 /* Sezioni interne delle pagine delle sedi (ancore). Le sedi senza pagina completa non hanno sottomenu. */
 $SEZIONI = [
+  'roma'   => ['restaurant' => 'Restaurant', 'pool' => 'Pool Area', 'wellness' => 'Yoga & Massage', 'club' => 'Club & Music', 'venue' => 'Private events', 'book' => 'Contact & booking'],
   'milano' => ['restaurant' => 'Restaurant', 'pool' => 'Pool Area', 'wellness' => 'Yoga & Pilates', 'club' => 'Club & Music', 'book' => 'Contact & booking'],
 ];
 

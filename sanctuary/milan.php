@@ -4,43 +4,12 @@ $descrizione = 'The Sanctuary Milan, Porta Genova: an industrial space reimagine
 $pagina = 'milan.php';
 $con_hero = true;
 require_once 'partials/funzioni.php';
-$sede = $SEDI['milano'];
+$chiave_sede = 'milano';
+$sede = $SEDI[$chiave_sede];
+$club_foto = 'img/pagine/milano/milano-club-luci-rosse.webp';
+$club_alt = 'The Club under red lights, the crowd facing the stage';
 
-/* ---------- Invio del modulo di prenotazione ----------
-   Funziona sul server. Le richieste di eventi privati vanno all'indirizzo eventi,
-   tutte le altre all'indirizzo prenotazioni (vedi partials/config.php). */
-$esito = null; $errore = false;
-$valori = ['nome' => '', 'email' => '', 'telefono' => '', 'data' => '', 'persone' => '', 'spazio' => '', 'messaggio' => ''];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  foreach ($valori as $k => $_) { $valori[$k] = trim((string)($_POST[$k] ?? '')); }
-  $trappola = trim((string)($_POST['sito'] ?? ''));          // campo nascosto contro lo spam
-  $consenso = isset($_POST['consenso']);
-  $spazio_ok = isset($sede['spazi'][$valori['spazio']]);
-
-  if ($trappola !== '') {
-    $esito = 'Thank you, your request has been sent.';         // lo spam riceve un finto ok
-  } elseif ($valori['nome'] === '' || !filter_var($valori['email'], FILTER_VALIDATE_EMAIL) || !$spazio_ok || !$consenso) {
-    $esito = 'Please check the form: name, a valid email, the space and your consent are required.';
-    $errore = true;
-  } else {
-    $a = $valori['spazio'] === 'event' ? $sede['email_eventi'] : $sede['email_prenotazioni'];
-    $nome = str_replace(["\r", "\n"], ' ', $valori['nome']);
-    $oggetto = 'Booking request · ' . $sede['spazi'][$valori['spazio']] . ' · ' . $nome;
-    $corpo = "Location: The Sanctuary {$sede['nome']}\n"
-           . "Space: {$sede['spazi'][$valori['spazio']]}\n"
-           . "Name: {$nome}\nEmail: {$valori['email']}\nPhone: {$valori['telefono']}\n"
-           . "Date: {$valori['data']}\nGuests: {$valori['persone']}\n\nMessage:\n{$valori['messaggio']}\n";
-    if ($a !== '' && invia_email($a, $oggetto, $corpo, $valori['email'])) {
-      $esito = 'Thank you, your request has been sent. Our staff will contact you to confirm.';
-      $valori = array_map(function () { return ''; }, $valori);
-    } else {
-      $esito = 'We could not send your request. Please try again later, or call us.';
-      $errore = true;
-    }
-  }
-}
-if ($valori['spazio'] === '' && isset($_GET['space'], $sede['spazi'][$_GET['space']])) { $valori['spazio'] = $_GET['space']; }
+require 'partials/prenotazione-invio.php';
 
 include 'partials/header.php';
 ?>
@@ -177,128 +146,8 @@ include 'partials/header.php';
     </div>
   </div>
 
-  <section class="fascia scura" id="club" aria-labelledby="titolo-club">
-    <div class="contenitore">
-      <div class="spazio-griglia inversa">
-        <div class="spazio-foto" data-appare><?= foto('img/pagine/milano/milano-club-luci-rosse.webp', 'The Club under red lights, the crowd facing the stage', 1920, 1920, 'Club con luci rosse') ?></div>
-        <div class="spazio-testo" data-appare>
-          <p class="kicker">Club · Thursday to Sunday</p>
-          <h2 id="titolo-club">Internationally renowned artists, who meet in one magical place.</h2>
-          <p>The Sanctuary Music is a mission that aims to reveal the confluence of various cultural traditions, stretching the boundaries of the music field. The Sanctuary Sound is evidence of just how music is the most beautiful language in the world.</p>
-          <div class="azioni"><a class="bottone" href="?space=club#book">Book a table</a></div>
-        </div>
-      </div>
+<?php include 'partials/club.php'; ?>
 
-      <div class="sezione" data-appare>
-        <p class="kicker">Artists hosted</p>
-        <ul class="artisti">
-          <?php foreach (['Âme', 'Acid Pauli', 'Acid Arab', 'Ben Klock', 'Bonobo', 'Bedouin', 'Blond:ish', 'Black Coffee', 'Brina Knauss', 'Carlita', 'Chet Faker', 'Damian Lazarus', 'Dixon', 'DJ Tennis', 'Fatboy Slim', 'Guy Gerber', 'Jackmaster', 'Jayda G', 'Måneskin', 'Marcel Dettmann', 'Marcelo Burlon', 'Monolink', 'Negramaro', 'Nina Kraviz', 'Polo &amp; Pan', 'Peggy Gou', 'Red Axes', 'RY X', 'Salmo', 'Satori live', 'Seth Troxler', 'Stavroz live', 'Sven Väth', 'Travis Scott', 'Venerus', 'WhoMadeWho'] as $a): ?>
-          <li><?= $a ?></li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
-
-      <div class="sezione" id="music" data-appare>
-        <div class="sezione-testa affiancata">
-          <h2>This week in Milan</h2>
-          <p>Our team of DJs and producers creates unique sonic atmospheres: from the warm nuances of vinyl to the hypnotic rhythms of electronic music, every show is an immersive experience.</p>
-        </div>
-        <?php if ($PROGRAMMA['milano']): ?>
-        <ul class="programma">
-          <?php foreach ($PROGRAMMA['milano'] as $serata): ?>
-          <li><time><?= e($serata['data']) ?> · <?= e($serata['ora']) ?></time><strong><?= e($serata['titolo']) ?></strong><span><?= e($serata['artisti']) ?></span></li>
-          <?php endforeach; ?>
-        </ul>
-        <?php else: ?>
-        <p class="programma-vuoto">The weekly program is announced on Instagram · <a href="<?= e($sede['instagram']) ?>" rel="noopener" target="_blank">@thesanctuarymilan</a></p>
-        <?php endif; ?>
-      </div>
-    </div>
-  </section>
-
-  <section class="sezione contenitore" id="book" aria-labelledby="titolo-prenota">
-    <div class="contatti-griglia">
-      <div class="recapiti" data-appare>
-        <p class="kicker">Booking, info &amp; where to find us</p>
-        <h2 id="titolo-prenota">Contact &amp; booking</h2>
-        <ul>
-          <li><?= e($sede['indirizzo']) ?></li>
-          <li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $sede['telefono'])) ?>"><?= e($sede['telefono']) ?></a></li>
-          <li><a href="<?= e($sede['instagram']) ?>" rel="noopener" target="_blank">@thesanctuarymilan</a></li>
-        </ul>
-        <p class="kicker">Restaurant bookings</p>
-        <p><a href="mailto:<?= e($sede['email_prenotazioni']) ?>"><?= e($sede['email_prenotazioni']) ?></a></p>
-        <p class="kicker">Private events</p>
-        <p><a href="mailto:<?= e($sede['email_eventi']) ?>"><?= e($sede['email_eventi']) ?></a></p>
-        <dl class="orari-blocco">
-          <?php foreach ($sede['orari'] as $giorni => $ore): ?>
-          <div><dt><?= e($giorni) ?></dt><dd><?= e($ore) ?></dd></div>
-          <?php endforeach; ?>
-        </dl>
-      </div>
-
-      <form class="modulo" method="post" action="milan.php#book" data-appare>
-        <?php if ($esito): ?>
-        <p class="esito<?= $errore ? ' errore' : '' ?>" role="status"><?= e($esito) ?></p>
-        <?php endif; ?>
-        <div class="modulo-riga">
-          <div class="campo">
-            <label for="nome">Name and surname</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required value="<?= e($valori['nome']) ?>">
-          </div>
-          <div class="campo">
-            <label for="spazio">Space</label>
-            <select id="spazio" name="spazio" required>
-              <option value="">Choose</option>
-              <?php foreach ($sede['spazi'] as $chiave => $nome): ?>
-              <option value="<?= e($chiave) ?>"<?= $valori['spazio'] === $chiave ? ' selected' : '' ?>><?= e($nome) ?></option>
-              <?php endforeach; ?>
-            </select>
-          </div>
-        </div>
-        <div class="modulo-riga">
-          <div class="campo">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required value="<?= e($valori['email']) ?>">
-          </div>
-          <div class="campo">
-            <label for="telefono">Phone</label>
-            <input id="telefono" name="telefono" type="tel" autocomplete="tel" value="<?= e($valori['telefono']) ?>">
-          </div>
-        </div>
-        <div class="modulo-riga">
-          <div class="campo">
-            <label for="data">Date</label>
-            <input id="data" name="data" type="date" value="<?= e($valori['data']) ?>">
-          </div>
-          <div class="campo">
-            <label for="persone">Guests</label>
-            <input id="persone" name="persone" type="number" min="1" max="500" inputmode="numeric" value="<?= e($valori['persone']) ?>">
-          </div>
-        </div>
-        <div class="campo">
-          <label for="messaggio">Message</label>
-          <textarea id="messaggio" name="messaggio"><?= e($valori['messaggio']) ?></textarea>
-        </div>
-        <div class="trappola" aria-hidden="true">
-          <label for="sito">Leave empty</label>
-          <input id="sito" name="sito" type="text" tabindex="-1" autocomplete="off">
-        </div>
-        <label class="consenso">
-          <input type="checkbox" name="consenso" required>
-          <span>I have read the <a href="privacy.php" target="_blank">privacy notice</a> and agree to the processing of my data to receive a reply.</span>
-        </label>
-        <div><button class="bottone" type="submit">Send request</button></div>
-        <p class="modulo-nota">Your booking is confirmed only when our staff contacts you.</p>
-      </form>
-    </div>
-  </section>
-
-  <section class="mappa" aria-label="Map of The Sanctuary Milan">
-    <iframe data-src="https://www.openstreetmap.org/export/embed.html?bbox=<?= e((float)$sede['lon'] - 0.012) ?>%2C<?= e((float)$sede['lat'] - 0.005) ?>%2C<?= e((float)$sede['lon'] + 0.012) ?>%2C<?= e((float)$sede['lat'] + 0.005) ?>&amp;layer=mapnik&amp;marker=<?= e($sede['lat']) ?>%2C<?= e($sede['lon']) ?>"
-            title="Map of The Sanctuary Milan, Via Valenza" loading="lazy" referrerpolicy="no-referrer"></iframe>
-    <button class="mappa-attesa" type="button" data-mostra-banner><span>The map is shown after you accept the privacy notice</span></button>
-    <a class="mappa-link" href="https://www.openstreetmap.org/?mlat=<?= e($sede['lat']) ?>&amp;mlon=<?= e($sede['lon']) ?>#map=17/<?= e($sede['lat']) ?>/<?= e($sede['lon']) ?>" target="_blank" rel="noopener">Open the map ↗</a>
-  </section>
+<?php include 'partials/prenotazione-modulo.php'; ?>
 
 <?php include 'partials/footer.php'; ?>

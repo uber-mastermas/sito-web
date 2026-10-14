@@ -50,8 +50,18 @@
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">
       <ul class="menu">
-                <li>
+                <li class="ha-sottomenu">
           <a href="rome.html">Rome</a>
+                    <button class="chevron" type="button" aria-expanded="false" aria-label="Show Rome sections"></button>
+          <ul class="sottomenu">
+            <li><a href="rome.html">Overview</a></li>
+                        <li><a href="rome.html#restaurant">Restaurant</a></li>
+                        <li><a href="rome.html#pool">Pool Area</a></li>
+                        <li><a href="rome.html#wellness">Yoga &amp; Massage</a></li>
+                        <li><a href="rome.html#club">Club &amp; Music</a></li>
+                        <li><a href="rome.html#venue">Private events</a></li>
+                        <li><a href="rome.html#book">Contact &amp; booking</a></li>
+                      </ul>
                   </li>
                 <li class="ha-sottomenu">
           <a href="milan.html" aria-current="page">Milan</a>
@@ -102,11 +112,11 @@
             <section class="reserve-sede">
         <h3>Rome</h3>
         <ul>
-                    <li><a href="rome.html#contact">Restaurant<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Pool Area<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Club<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Private event<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=restaurant#book">Restaurant<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=pool#book">Pool Area<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=wellness#book">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=club#book">Club<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=event#book">Private event<span aria-hidden="true">→</span></a></li>
                   </ul>
         <p class="reserve-tel"><a href="tel:+390683796820">+39 06 8379 6820</a></p>
       </section>
@@ -328,11 +338,11 @@
           <li><a href="tel:+390250041511">+39 02 5004 1511</a></li>
           <li><a href="https://www.instagram.com/thesanctuarymilan/" rel="noopener" target="_blank">@thesanctuarymilan</a></li>
         </ul>
-        <p class="kicker">Restaurant bookings</p>
+        <p class="kicker">Bookings</p>
         <p><a href="mailto:booking.milan@thesanctuaryecoretreat.com">booking.milan@thesanctuaryecoretreat.com</a></p>
-        <p class="kicker">Private events</p>
+                <p class="kicker">Private events</p>
         <p><a href="mailto:events.milan@thesanctuaryecoretreat.com">events.milan@thesanctuaryecoretreat.com</a></p>
-        <dl class="orari-blocco">
+                <dl class="orari-blocco">
                     <div><dt>Lunch · Tue – Sun</dt><dd>12:00 – 15:00</dd></div>
                     <div><dt>Evening · Tue – Sun</dt><dd>18:00 – 02:00</dd></div>
                   </dl>
@@ -396,7 +406,7 @@
 
   <section class="mappa" aria-label="Map of The Sanctuary Milan">
     <iframe data-src="https://www.openstreetmap.org/export/embed.html?bbox=9.1571774601855%2C45.44629338393%2C9.1811774601855%2C45.45629338393&amp;layer=mapnik&amp;marker=45.45129338393012%2C9.169177460185509"
-            title="Map of The Sanctuary Milan, Via Valenza" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            title="Map of The Sanctuary Milan" loading="lazy" referrerpolicy="no-referrer"></iframe>
     <button class="mappa-attesa" type="button" data-mostra-banner><span>The map is shown after you accept the privacy notice</span></button>
     <a class="mappa-link" href="https://www.openstreetmap.org/?mlat=45.45129338393012&amp;mlon=9.169177460185509#map=17/45.45129338393012/9.169177460185509" target="_blank" rel="noopener">Open the map ↗</a>
   </section>

@@ -50,8 +50,18 @@
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">
       <ul class="menu">
-                <li>
+                <li class="ha-sottomenu">
           <a href="rome.html">Rome</a>
+                    <button class="chevron" type="button" aria-expanded="false" aria-label="Show Rome sections"></button>
+          <ul class="sottomenu">
+            <li><a href="rome.html">Overview</a></li>
+                        <li><a href="rome.html#restaurant">Restaurant</a></li>
+                        <li><a href="rome.html#pool">Pool Area</a></li>
+                        <li><a href="rome.html#wellness">Yoga &amp; Massage</a></li>
+                        <li><a href="rome.html#club">Club &amp; Music</a></li>
+                        <li><a href="rome.html#venue">Private events</a></li>
+                        <li><a href="rome.html#book">Contact &amp; booking</a></li>
+                      </ul>
                   </li>
                 <li class="ha-sottomenu">
           <a href="milan.html">Milan</a>
@@ -102,11 +112,11 @@
             <section class="reserve-sede">
         <h3>Rome</h3>
         <ul>
-                    <li><a href="rome.html#contact">Restaurant<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Pool Area<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Club<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Private event<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=restaurant#book">Restaurant<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=pool#book">Pool Area<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=wellness#book">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=club#book">Club<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=event#book">Private event<span aria-hidden="true">→</span></a></li>
                   </ul>
         <p class="reserve-tel"><a href="tel:+390683796820">+39 06 8379 6820</a></p>
       </section>

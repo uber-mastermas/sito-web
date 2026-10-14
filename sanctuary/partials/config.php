@@ -46,11 +46,18 @@ $SEDI = [
     'nome'       => 'Rome',
     'paese'      => 'Italy',
     'pagina'     => 'rome.php',
+    'modulo'     => true,       // la pagina ha il modulo di prenotazione (#book)
     'stato'      => '',
     'indirizzo'  => 'Via delle Terme di Traiano, 4a · 00184 Roma',
+    'lat'        => '41.8934119',   // DA CONFERMARE: dalla scheda Google "The Sanctuary" del vecchio sito
+    'lon'        => '12.4983917',
     'telefono'   => '+39 06 8379 6820',
     'email'      => 'roma@thesanctuaryecoretreat.com',
+    'email_prenotazioni' => 'roma@thesanctuaryecoretreat.com',   // DA CONFERMARE: esistono indirizzi dedicati come a Milano?
+    'email_eventi'       => 'roma@thesanctuaryecoretreat.com',
+    'instagram'  => 'https://www.instagram.com/thesanctuaryecoretreat/',
     'orari'      => ['Tue · Wed · Sun' => '11:00 – 02:00', 'Thu · Fri · Sat' => '11:00 – 04:00'],
+    'orari_ristorante' => ['Dinner · Tue – Sun' => '18:00 – 00:00'],
     'foto'       => 'img/home/roma-serra-piscina-ombrelloni.webp',
     'frase'      => 'A hidden garden steps away from the Colosseum.',
     'spazi'      => ['restaurant' => 'Restaurant', 'pool' => 'Pool Area', 'wellness' => 'Yoga & Massage', 'club' => 'Club', 'event' => 'Private event'],
@@ -107,8 +114,12 @@ $SEDI = [
    Una riga per serata: ['data' => 'THU 05/11', 'ora' => '22:00', 'titolo' => '…', 'artisti' => '…'].
    Se l'elenco è vuoto, la pagina rimanda a Instagram. */
 $PROGRAMMA = [
+  'roma'   => [],
   'milano' => [],
 ];
+
+/* ---------- ARTISTI OSPITATI (Club di Roma e Milano) ---------- */
+$ARTISTI = ['Âme', 'Acid Pauli', 'Acid Arab', 'Ben Klock', 'Bonobo', 'Bedouin', 'Blond:ish', 'Black Coffee', 'Brina Knauss', 'Carlita', 'Chet Faker', 'Damian Lazarus', 'Dixon', 'DJ Tennis', 'Fatboy Slim', 'Guy Gerber', 'Jackmaster', 'Jayda G', 'Måneskin', 'Marcel Dettmann', 'Marcelo Burlon', 'Monolink', 'Negramaro', 'Nina Kraviz', 'Polo & Pan', 'Peggy Gou', 'Red Axes', 'RY X', 'Salmo', 'Satori live', 'Seth Troxler', 'Stavroz live', 'Sven Väth', 'Travis Scott', 'Venerus', 'WhoMadeWho'];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
 $V = 2;

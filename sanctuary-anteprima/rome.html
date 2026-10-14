@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rome · The Sanctuary</title>
-<meta name="description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, pool area, yoga and massage, club.">
+<meta name="description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, garden and pool area, yoga and massage, club and private events.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://thesanctuaryecoretreat.it/rome.php">
 <meta name="theme-color" content="#211e1c">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="The Sanctuary Eco Retreat">
 <meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Rome · The Sanctuary">
-<meta property="og:description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, pool area, yoga and massage, club.">
+<meta property="og:description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, garden and pool area, yoga and massage, club and private events.">
 <meta property="og:url" content="https://thesanctuaryecoretreat.it/rome.php">
 <meta property="og:image" content="https://uber-mastermas.github.io/sito-web/sanctuary-anteprima/img/logo/condivisione-sanctuary.jpg">
 <meta property="og:image:secure_url" content="https://uber-mastermas.github.io/sito-web/sanctuary-anteprima/img/logo/condivisione-sanctuary.jpg">
@@ -24,7 +24,7 @@
 <meta property="og:image:alt" content="The Sanctuary Eco Retreat · A timeless place to live, know and share.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rome · The Sanctuary">
-<meta name="twitter:description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, pool area, yoga and massage, club.">
+<meta name="twitter:description" content="The Sanctuary Rome: a hidden garden steps away from the Colosseum, in the Monti district. Restaurant, garden and pool area, yoga and massage, club and private events.">
 <meta name="twitter:image" content="https://uber-mastermas.github.io/sito-web/sanctuary-anteprima/img/logo/condivisione-sanctuary.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thesanctuaryecoretreat.it/"},{"@type":"ListItem","position":2,"name":"Rome","item":"https://thesanctuaryecoretreat.it/rome.php"}]}
@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="css/style.css?v=2">
 <script src="js/layout.js?v=2" defer></script>
 </head>
-<body class="pagina-rome">
+<body class="pagina-rome con-hero">
 <a class="salta" href="#contenuto">Skip to content</a>
 
 <header class="site-header">
@@ -50,8 +50,18 @@
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">
       <ul class="menu">
-                <li>
+                <li class="ha-sottomenu">
           <a href="rome.html" aria-current="page">Rome</a>
+                    <button class="chevron" type="button" aria-expanded="false" aria-label="Show Rome sections"></button>
+          <ul class="sottomenu">
+            <li><a href="rome.html">Overview</a></li>
+                        <li><a href="rome.html#restaurant">Restaurant</a></li>
+                        <li><a href="rome.html#pool">Pool Area</a></li>
+                        <li><a href="rome.html#wellness">Yoga &amp; Massage</a></li>
+                        <li><a href="rome.html#club">Club &amp; Music</a></li>
+                        <li><a href="rome.html#venue">Private events</a></li>
+                        <li><a href="rome.html#book">Contact &amp; booking</a></li>
+                      </ul>
                   </li>
                 <li class="ha-sottomenu">
           <a href="milan.html">Milan</a>
@@ -102,11 +112,11 @@
             <section class="reserve-sede">
         <h3>Rome</h3>
         <ul>
-                    <li><a href="rome.html#contact">Restaurant<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Pool Area<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Club<span aria-hidden="true">→</span></a></li>
-                    <li><a href="rome.html#contact">Private event<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=restaurant#book">Restaurant<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=pool#book">Pool Area<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=wellness#book">Yoga &amp; Massage<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=club#book">Club<span aria-hidden="true">→</span></a></li>
+                    <li><a href="rome.html?space=event#book">Private event<span aria-hidden="true">→</span></a></li>
                   </ul>
         <p class="reserve-tel"><a href="tel:+390683796820">+39 06 8379 6820</a></p>
       </section>
@@ -140,22 +150,294 @@
 </div>
 
 <main id="contenuto">
-  <div class="contenitore testata">
-    <ol class="briciole"><li><a href="./">Home</a></li><li aria-current="page">Rome</li></ol>
-    <p class="kicker">Page in preparation</p>
-    <h1>Rome</h1>
-    <p class="testo-grande">A hidden garden steps away from the Colosseum. This page is being prepared. For information and bookings, call or write to us.</p>
+
+  <section class="hero copre" style="--velo: 1.2">
+    <picture class="hero-attesa"><source media="(max-width: 700px)" srcset="img/video/famiglia-sanctuary-verticale-attesa.webp?v=1791992864"><img class="foto" src="img/pagine/roma/roma-colosseo-palme.webp?v=1791997046" alt="The Colosseum seen through palm leaves, a few steps from The Sanctuary Rome" fetchpriority="high"></picture><video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-mobile="img/video/famiglia-sanctuary-verticale.mp4?v=1791992844"></video>    <div class="hero-testo">
+      <p class="kicker">The Sanctuary · Monti</p>
+      <h1>Rome</h1>
+      <p class="hero-sotto">A hidden garden steps away from the Colosseum.</p>
+      <div class="azioni">
+        <a class="bottone bottone-chiaro" href="#book">Book a table</a>
+        <a class="bottone bottone-chiaro-linea" href="#restaurant">Discover</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="sezioni-nav" aria-label="Sections of the page">
+    <ul>
+      <li><a href="#restaurant">Restaurant</a></li>
+      <li><a href="#pool">Garden &amp; Pool</a></li>
+      <li><a href="#wellness">Yoga &amp; Massage</a></li>
+      <li><a href="#club">Club</a></li>
+      <li><a href="#music">Music program</a></li>
+      <li><a href="#venue">Private events</a></li>
+      <li><a href="#book">Contact &amp; booking</a></li>
+    </ul>
+  </nav>
+
+  <section class="intro contenitore" data-appare>
+    <p class="kicker">The Sanctuary Rome</p>
+    <h2>Located in the <em>heart of Rome</em>, just steps away from the Colosseum.</h2>
+    <p class="testo-grande">In the historic area of Colle Oppio and the Baths of Titus and Trajan, nestled in the Monti district, famous for its art galleries, wine bars, artisan shops and gourmet restaurants: the go-to destination for a young, trend-savvy crowd.</p>
+  </section>
+
+  <div class="galleria" data-galleria data-appare>
+    <div class="galleria-binario">
+      <img class="foto" src="img/pagine/roma/roma-sala-legno-lanterne.webp?v=1791997046" width="1440" height="1800" alt="The dining room with wooden chairs and woven lamps" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-salotto-bambu-giardino.webp?v=1791997046" width="1440" height="1800" alt="A lounge under bamboo and thatch, among tropical plants" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-arco-moresco-piante.webp?v=1791997047" width="1920" height="1920" alt="A carved Moorish wall among the plants of the garden" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-giardino-tavoli-palme.webp?v=1791997047" width="1440" height="1800" alt="Tables in the garden under the palm trees" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-porta-antica-cuscini.webp?v=1791997047" width="1440" height="1800" alt="An antique door and cushions in a corner of the garden" loading="lazy" decoding="async">    </div>
+    <div class="contenitore galleria-comandi">
+      <button class="galleria-freccia" type="button" data-dir="-1" aria-label="Previous">←</button>
+      <button class="galleria-freccia" type="button" data-dir="1" aria-label="Next">→</button>
+    </div>
   </div>
-  <div class="contenitore provvisoria">
-        <ul class="elenco-punti">
-      <li><strong>Address</strong><span>Via delle Terme di Traiano, 4a · 00184 Roma</span></li>
-      <li><strong>Phone</strong><span><a href="tel:+390683796820">+39 06 8379 6820</a></span></li>
-      <li id="contact"><strong>Email</strong><span><a href="mailto:roma@thesanctuaryecoretreat.com">roma@thesanctuaryecoretreat.com</a></span></li>
-            <li><strong>Tue · Wed · Sun</strong><span>11:00 – 02:00</span></li>
-            <li><strong>Thu · Fri · Sat</strong><span>11:00 – 04:00</span></li>
-          </ul>
-        <div class="azioni"><a class="bottone" href="./">Back to Home</a></div>
+
+  <section class="spazio contenitore" id="restaurant" aria-labelledby="titolo-ristorante">
+    <div class="spazio-griglia">
+      <div class="spazio-foto" data-appare><img class="foto" src="img/pagine/roma/roma-ciotole-tavolo-luce.webp?v=1791997047" width="1440" height="1440" alt="Bowls on a table in soft, warm light" loading="lazy" decoding="async"></div>
+      <div class="spazio-testo" data-appare>
+        <p class="kicker">Restaurant &amp; bar</p>
+        <h2 id="titolo-ristorante">Restaurant</h2>
+        <p class="sottotitolo">Rooted in Mediterranean tradition and local ingredients, every dish evolves into a sensory journey spanning distant cultures.</p>
+        <p>A culinary exploration that harmoniously blends tropical and Asian influences, creating a unique gastronomic ritual.</p>
+        <p>Every ingredient is carefully selected, every flavor evokes faraway lands, creating an experience that transcends borders and celebrates the fusion of different cultures in a boundless cuisine.</p>
+        <dl class="orari-blocco">
+                    <div><dt>Dinner · Tue – Sun</dt><dd>18:00 – 00:00</dd></div>
+                  </dl>
+        <div class="azioni">
+          <a class="bottone" href="?space=restaurant#book">Book a table</a>
+          <a class="bottone bottone-linea" href="#book" aria-disabled="true" title="Menu PDF da inserire">View menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="galleria" data-galleria data-appare>
+    <div class="galleria-binario">
+      <img class="foto" src="img/pagine/roma/roma-chef-impiatta-piastrelle.webp?v=1791997047" width="1440" height="1800" alt="The chef plating a dish on green tiles" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-piatto-fiori-frutta.webp?v=1791997047" width="1440" height="1800" alt="A plate with flowers and fruit" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-erbe-pane-tavola.webp?v=1791997047" width="1440" height="1800" alt="Fresh herbs and bread on the table" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-carne-cruda-mani.webp?v=1791997047" width="1440" height="1800" alt="Hands preparing raw meat on a wooden board" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-lamponi-ciotola.webp?v=1791997047" width="1440" height="1800" alt="A bowl of raspberries in the sun" loading="lazy" decoding="async">    </div>
+    <div class="contenitore galleria-comandi">
+      <button class="galleria-freccia" type="button" data-dir="-1" aria-label="Previous">←</button>
+      <button class="galleria-freccia" type="button" data-dir="1" aria-label="Next">→</button>
+    </div>
   </div>
+
+  <section class="spazio contenitore" id="pool" aria-labelledby="titolo-piscina">
+    <div class="spazio-griglia inversa">
+      <div class="spazio-foto" data-appare><img class="foto" src="img/pagine/roma/roma-serra-piscina-tende.webp?v=1791997049" width="1920" height="1920" alt="The pool under the greenhouse, among palm trees and thatched parasols" loading="lazy" decoding="async"></div>
+      <div class="spazio-testo" data-appare>
+        <p class="kicker">Garden &amp; Pool Area · Summer &amp; winter season</p>
+        <h2 id="titolo-piscina">Escape to serenity</h2>
+        <p class="sottotitolo">Our haven offers swimming pool sunbeds, healthy lunches and refreshing cocktails.</p>
+        <p>Boost productivity with smart working spaces, or unwind with healing massages and yoga.</p>
+        <div class="azioni"><a class="bottone" href="?space=pool#book">Reserve a sunbed</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="galleria" data-galleria data-appare>
+    <div class="galleria-binario">
+      <img class="foto" src="img/pagine/roma/roma-piscina-lettini-serra.webp?v=1791997049" width="1440" height="1800" alt="Sunbeds along the pool under the greenhouse" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-amiche-bordo-piscina.webp?v=1791997049" width="1440" height="1800" alt="Friends talking at the edge of the pool" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-frutta-bordo-piscina.webp?v=1791997049" width="1440" height="1800" alt="Fresh fruit served by the pool" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-piscina-sott-acqua.webp?v=1791997049" width="1440" height="1800" alt="Floating in the water of the pool" loading="lazy" decoding="async">    </div>
+    <div class="contenitore galleria-comandi">
+      <button class="galleria-freccia" type="button" data-dir="-1" aria-label="Previous">←</button>
+      <button class="galleria-freccia" type="button" data-dir="1" aria-label="Next">→</button>
+    </div>
+  </div>
+
+  <section class="spazio contenitore" id="wellness" aria-labelledby="titolo-benessere">
+    <div class="spazio-griglia">
+      <div class="spazio-foto" data-appare><img class="foto" src="img/pagine/roma/roma-meditazione-pergolato.webp?v=1791997049" width="1440" height="1800" alt="A meditation class under the pergola, on woven rugs" loading="lazy" decoding="async"></div>
+      <div class="spazio-testo" data-appare>
+        <p class="kicker">Yoga &amp; Massage</p>
+        <h2 id="titolo-benessere">Where wellness begins</h2>
+        <p class="sottotitolo">Wellness is a fundamental part of our project, with dedicated spaces where mind, body and soul come together in perfect harmony.</p>
+        <p>From yoga to massages, from relaxation areas to the spa, every space is a haven of peace and serenity, where every detail nourishes both body and mind, completing the essence of a total experience.</p>
+        <div class="azioni"><a class="bottone" href="?space=wellness#book">Book a treatment</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="galleria" data-galleria data-appare>
+    <div class="galleria-binario">
+      <img class="foto" src="img/pagine/roma/roma-massaggio-giardino.webp?v=1791997049" width="1440" height="1800" alt="A massage in the garden, among the plants" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-rituale-salvia.webp?v=1791997049" width="1440" height="1800" alt="A ritual with burning sage" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-massaggio-schiena.webp?v=1791997049" width="1440" height="1800" alt="A back massage" loading="lazy" decoding="async">      <img class="foto" src="img/pagine/roma/roma-trattamento-viso.webp?v=1791997049" width="1440" height="1800" alt="A face treatment in the shade" loading="lazy" decoding="async">    </div>
+    <div class="contenitore galleria-comandi">
+      <button class="galleria-freccia" type="button" data-dir="-1" aria-label="Previous">←</button>
+      <button class="galleria-freccia" type="button" data-dir="1" aria-label="Next">→</button>
+    </div>
+  </div>
+
+  <section class="fascia scura" id="club" aria-labelledby="titolo-club">
+    <div class="contenitore">
+      <div class="spazio-griglia inversa">
+        <div class="spazio-foto" data-appare><img class="foto" src="img/pagine/roma/roma-club-folla-luci.webp?v=1791997049" width="1920" height="1920" alt="The Club crowded under the lights, hands raised" loading="lazy" decoding="async"></div>
+        <div class="spazio-testo" data-appare>
+          <p class="kicker">Club · Thursday to Sunday</p>
+          <h2 id="titolo-club">Internationally renowned artists, who meet in one magical place.</h2>
+          <p>The Sanctuary Music is a mission that aims to reveal the confluence of various cultural traditions, stretching the boundaries of the music field. The Sanctuary Sound is evidence of just how music is the most beautiful language in the world.</p>
+          <div class="azioni"><a class="bottone" href="?space=club#book">Book a table</a></div>
+        </div>
+      </div>
+
+      <div class="sezione" data-appare>
+        <p class="kicker">Artists hosted</p>
+        <ul class="artisti">
+                    <li>Âme</li>
+                    <li>Acid Pauli</li>
+                    <li>Acid Arab</li>
+                    <li>Ben Klock</li>
+                    <li>Bonobo</li>
+                    <li>Bedouin</li>
+                    <li>Blond:ish</li>
+                    <li>Black Coffee</li>
+                    <li>Brina Knauss</li>
+                    <li>Carlita</li>
+                    <li>Chet Faker</li>
+                    <li>Damian Lazarus</li>
+                    <li>Dixon</li>
+                    <li>DJ Tennis</li>
+                    <li>Fatboy Slim</li>
+                    <li>Guy Gerber</li>
+                    <li>Jackmaster</li>
+                    <li>Jayda G</li>
+                    <li>Måneskin</li>
+                    <li>Marcel Dettmann</li>
+                    <li>Marcelo Burlon</li>
+                    <li>Monolink</li>
+                    <li>Negramaro</li>
+                    <li>Nina Kraviz</li>
+                    <li>Polo &amp; Pan</li>
+                    <li>Peggy Gou</li>
+                    <li>Red Axes</li>
+                    <li>RY X</li>
+                    <li>Salmo</li>
+                    <li>Satori live</li>
+                    <li>Seth Troxler</li>
+                    <li>Stavroz live</li>
+                    <li>Sven Väth</li>
+                    <li>Travis Scott</li>
+                    <li>Venerus</li>
+                    <li>WhoMadeWho</li>
+                  </ul>
+      </div>
+
+      <div class="sezione" id="music" data-appare>
+        <div class="sezione-testa affiancata">
+          <h2>This week in Rome</h2>
+          <p>Our team of DJs and producers creates unique sonic atmospheres: from the warm nuances of vinyl to the hypnotic rhythms of electronic music, every show is an immersive experience.</p>
+        </div>
+                <p class="programma-vuoto">The weekly program is announced on Instagram · <a href="https://www.instagram.com/thesanctuaryecoretreat/" rel="noopener" target="_blank">@thesanctuaryecoretreat</a></p>
+              </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="venue" aria-labelledby="titolo-venue">
+    <div class="contenitore">
+      <div class="sezione-testa affiancata" data-appare>
+        <div>
+          <p class="kicker">Venue hire &amp; private events</p>
+          <h2 id="titolo-venue">The spaces</h2>
+        </div>
+        <p>Rooms and spaces of different sizes and configurations, for private events, weddings, conferences, team building, corporate parties, birthdays, film and photo shoots. Each space has its own bar, which can be made exclusive for your guests.</p>
+      </div>
+    </div>
+    <div class="galleria" data-galleria data-appare>
+      <div class="galleria-binario">
+        <figure class="tema"><img class="foto" src="img/home/roma-serra-piscina-ombrelloni.webp?v=1791992786" width="1440" height="1800" alt="The Green House with the pool and thatched parasols" loading="lazy" decoding="async"><figcaption><h3>Green House &amp; Pool Area</h3><p>A wooden terrace surrounding the pools, an iconic Sanctuary location: perfect for private events, pre- and after-wedding parties, sunset aperitifs and brand activations.</p></figcaption></figure>
+        <figure class="tema"><img class="foto" src="img/pagine/roma/roma-giardino-divani-legno.webp?v=1791997049" width="1440" height="1440" alt="Wooden sofas in the tropical garden" loading="lazy" decoding="async"><figcaption><h3>Garden</h3><p>A tropical garden where majestic palm trees frame wooden sofas with a free-spirited, authentic style: a warm, dreamlike atmosphere.</p></figcaption></figure>
+        <figure class="tema"><img class="foto" src="img/pagine/roma/roma-veranda-coperta.webp?v=1791997049" width="1440" height="1440" alt="The covered Veranda with tables and sofas" loading="lazy" decoding="async"><figcaption><h3>Veranda</h3><p>A covered, welcoming space with flexible furnishings, for meetings, presentations and exclusive receptions, even in bad weather.</p></figcaption></figure>
+        <figure class="tema"><img class="foto" src="img/pagine/roma/roma-club-palco.webp?v=1791997049" width="1440" height="1440" alt="The Club room with its stage" loading="lazy" decoding="async"><figcaption><h3>Club</h3><p>Unique sound atmospheres created by our DJs and producers, with a sound that has become a recognizable identity.</p></figcaption></figure>
+      </div>
+      <div class="contenitore galleria-comandi">
+        <button class="galleria-freccia" type="button" data-dir="-1" aria-label="Previous">←</button>
+        <button class="galleria-freccia" type="button" data-dir="1" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div class="contenitore">
+      <div class="azioni" data-appare>
+        <a class="bottone" href="?space=event#book">Send a request</a>
+        <a class="bottone bottone-linea" href="private-events.html">All private events</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione contenitore" id="book" aria-labelledby="titolo-prenota">
+    <div class="contatti-griglia">
+      <div class="recapiti" data-appare>
+        <p class="kicker">Booking, info &amp; where to find us</p>
+        <h2 id="titolo-prenota">Contact &amp; booking</h2>
+        <ul>
+          <li>Via delle Terme di Traiano, 4a · 00184 Roma</li>
+          <li><a href="tel:+390683796820">+39 06 8379 6820</a></li>
+          <li><a href="https://www.instagram.com/thesanctuaryecoretreat/" rel="noopener" target="_blank">@thesanctuaryecoretreat</a></li>
+        </ul>
+        <p class="kicker">Bookings</p>
+        <p><a href="mailto:roma@thesanctuaryecoretreat.com">roma@thesanctuaryecoretreat.com</a></p>
+                <dl class="orari-blocco">
+                    <div><dt>Tue · Wed · Sun</dt><dd>11:00 – 02:00</dd></div>
+                    <div><dt>Thu · Fri · Sat</dt><dd>11:00 – 04:00</dd></div>
+                  </dl>
+      </div>
+
+      <form class="modulo" method="get" onsubmit="alert('Anteprima: il modulo funziona solo sul sito PHP.');return false" action="rome.html#book" data-appare>
+                <div class="modulo-riga">
+          <div class="campo">
+            <label for="nome">Name and surname</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required value="">
+          </div>
+          <div class="campo">
+            <label for="spazio">Space</label>
+            <select id="spazio" name="spazio" required>
+              <option value="">Choose</option>
+                            <option value="restaurant">Restaurant</option>
+                            <option value="pool">Pool Area</option>
+                            <option value="wellness">Yoga &amp; Massage</option>
+                            <option value="club">Club</option>
+                            <option value="event">Private event</option>
+                          </select>
+          </div>
+        </div>
+        <div class="modulo-riga">
+          <div class="campo">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required value="">
+          </div>
+          <div class="campo">
+            <label for="telefono">Phone</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" value="">
+          </div>
+        </div>
+        <div class="modulo-riga">
+          <div class="campo">
+            <label for="data">Date</label>
+            <input id="data" name="data" type="date" value="">
+          </div>
+          <div class="campo">
+            <label for="persone">Guests</label>
+            <input id="persone" name="persone" type="number" min="1" max="500" inputmode="numeric" value="">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="messaggio">Message</label>
+          <textarea id="messaggio" name="messaggio"></textarea>
+        </div>
+        <div class="trappola" aria-hidden="true">
+          <label for="sito">Leave empty</label>
+          <input id="sito" name="sito" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <label class="consenso">
+          <input type="checkbox" name="consenso" required>
+          <span>I have read the <a href="privacy.html" target="_blank">privacy notice</a> and agree to the processing of my data to receive a reply.</span>
+        </label>
+        <div><button class="bottone" type="submit">Send request</button></div>
+        <p class="modulo-nota">Your booking is confirmed only when our staff contacts you.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="mappa" aria-label="Map of The Sanctuary Rome">
+    <iframe data-src="https://www.openstreetmap.org/export/embed.html?bbox=12.4863917%2C41.8884119%2C12.5103917%2C41.8984119&amp;layer=mapnik&amp;marker=41.8934119%2C12.4983917"
+            title="Map of The Sanctuary Rome" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    <button class="mappa-attesa" type="button" data-mostra-banner><span>The map is shown after you accept the privacy notice</span></button>
+    <a class="mappa-link" href="https://www.openstreetmap.org/?mlat=41.8934119&amp;mlon=12.4983917#map=17/41.8934119/12.4983917" target="_blank" rel="noopener">Open the map ↗</a>
+  </section>
+
 </main>
 
 <footer class="site-footer">
