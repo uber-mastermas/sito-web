@@ -532,7 +532,10 @@ body.reserve-aperto { overflow: hidden; }
 }
 .sezioni-nav a:hover { border-bottom-color: currentColor; }
 .sezioni-nav small { margin-left: 6px; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; opacity: .6; }
-.pagina-index .sezioni-nav ul { justify-content: center; gap: clamp(20px, 5vw, 56px); }
+/* centrata senza tagliare l'inizio quando su telefono la barra scorre (margini automatici al posto di justify-content) */
+.pagina-index .sezioni-nav ul { gap: clamp(20px, 5vw, 56px); }
+.pagina-index .sezioni-nav li:first-child { margin-left: auto; }
+.pagina-index .sezioni-nav li:last-child { margin-right: auto; }
 .intro { padding-block: var(--respiro) clamp(40px, 6vw, 72px); }
 .intro h2 { font-size: clamp(2.4rem, 6.4vw, 5.2rem); max-width: 16ch; margin-bottom: 24px; }
 .intro p { max-width: 54ch; }
