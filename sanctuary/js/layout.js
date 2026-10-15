@@ -193,6 +193,21 @@
     aggiorna();
   });
 
+  /* ---------- Barre a scorrimento orizzontale: segnala che c'è altro a destra o a sinistra ---------- */
+  document.querySelectorAll(".sezioni-nav").forEach(function (nav) {
+    var lista = nav.querySelector("ul");
+    if (!lista) return;
+    function segnala() {
+      var max = lista.scrollWidth - lista.clientWidth;
+      nav.classList.toggle("scorre-sinistra", lista.scrollLeft > 4);
+      nav.classList.toggle("scorre-destra", max > 4 && lista.scrollLeft < max - 4);
+    }
+    lista.addEventListener("scroll", function () { window.requestAnimationFrame(segnala); }, { passive: true });
+    window.addEventListener("resize", segnala);
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(segnala); }
+    segnala();
+  });
+
   /* ---------- Modulo: spazio scelto dal pannello Reserve (?space=restaurant) ---------- */
   var spazio = new URLSearchParams(window.location.search).get("space");
   var sel = document.querySelector("select[name=spazio]");

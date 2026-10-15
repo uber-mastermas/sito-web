@@ -759,3 +759,16 @@ body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6p
 .evento-foto .foto { aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
 .evento-testo .orari-blocco dd { white-space: normal; text-align: right; }
 @media (min-width: 900px) { .evento-griglia { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(56px, 7vw, 120px); } }
+
+/* Barre a scorrimento orizzontale: sfumatura e mini freccia sul lato dove c'è altro da vedere
+   (le classi scorre-destra / scorre-sinistra le mette layout.js) */
+.sezioni-nav::before, .sezioni-nav::after {
+  content: ""; position: absolute; top: 0; bottom: 1px; width: 56px; z-index: 2;
+  display: flex; align-items: center; pointer-events: none;
+  font-size: .9rem; line-height: 1; color: var(--inchiostro);
+  opacity: 0; transition: opacity .25s;
+}
+.sezioni-nav::before { content: "‹"; left: 0; justify-content: flex-start; padding-left: 12px; background: linear-gradient(90deg, var(--crema) 58%, rgba(243, 236, 226, 0)); }
+.sezioni-nav::after  { content: "›"; right: 0; justify-content: flex-end; padding-right: 12px; background: linear-gradient(270deg, var(--crema) 58%, rgba(243, 236, 226, 0)); }
+.sezioni-nav ul { position: relative; z-index: 1; }
+.sezioni-nav.scorre-sinistra::before, .sezioni-nav.scorre-destra::after { opacity: 1; }
