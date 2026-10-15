@@ -28,12 +28,17 @@
         </div>
         <?php $serate = $PROGRAMMA[$chiave_sede] ?? []; if ($serate): ?>
         <ul class="programma">
-          <?php foreach ($serate as $serata): ?>
-          <li><time><?= e($serata['data']) ?> · <?= e($serata['ora']) ?></time><strong><?= e($serata['titolo']) ?></strong><span><?= e($serata['artisti']) ?></span></li>
+          <?php foreach ($serate as $serata): $d = strtotime($serata['data']); ?>
+          <li>
+            <a href="evento.php?e=<?= e($serata['slug']) ?>">
+              <time datetime="<?= e($serata['data']) ?>"><span><?= e($serata['giorno']) ?></span> <?= date('d.m', $d) ?></time>
+              <strong><?= e($serata['titolo']) ?></strong>
+              <span class="programma-artisti"><?= e($serata['artisti']) ?></span>
+              <span class="programma-ora"><?= e($serata['ora']) ?></span>
+            </a>
+          </li>
           <?php endforeach; ?>
         </ul>
-        <?php else: ?>
-        <p class="programma-vuoto">The weekly program is announced on Instagram · <a href="<?= e($sede['instagram']) ?>" rel="noopener" target="_blank">@<?= e(basename(rtrim($sede['instagram'], '/'))) ?></a></p>
         <?php endif; ?>
       </div>
     </div>

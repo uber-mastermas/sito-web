@@ -125,15 +125,26 @@ $SEDI = [
 ];
 
 /* ---------- PROGRAMMA MUSICALE ----------
-   Una riga per serata: ['data' => 'THU 05/11', 'ora' => '22:00', 'titolo' => '…', 'artisti' => '…'].
-   Se l'elenco è vuoto, la pagina rimanda a Instagram. */
+   EVENTI DI ESEMPIO (nomi inventati) per l'anteprima. In WordPress ogni evento sarà un articolo:
+   titolo, data, ora, artisti, immagine in evidenza, testo; questi campi ne ricalcano la struttura.
+   'slug' = indirizzo della pagina dell'evento (evento.php?e=slug, in WordPress /events/slug/). */
 $PROGRAMMA = [
-  'roma'   => [],
-  'milano' => [],
+  'roma' => [
+    ['slug' => 'roma-garden-session', 'giorno' => 'Thu', 'data' => '2026-10-22', 'ora' => '19:00 – 02:00', 'titolo' => 'Garden Session', 'artisti' => 'Resident DJs · vinyl only', 'foto' => 'img/home/giradischi-vinile-luce-calda.webp', 'testo' => 'An evening of warm grooves in the garden: our resident DJs play vinyl only, from sunset until late, among palm trees and lanterns.'],
+    ['slug' => 'roma-organic-nights', 'giorno' => 'Fri', 'data' => '2026-10-23', 'ora' => '22:00 – 04:00', 'titolo' => 'Organic Nights', 'artisti' => 'Lunar Tide · Mirèl', 'foto' => 'img/pagine/roma/roma-club-folla-luci.webp', 'testo' => 'Organic house and hypnotic rhythms in the Club: two guest artists take turns behind the booth for a night of slow build and deep sound.'],
+    ['slug' => 'roma-ritual-live', 'giorno' => 'Sat', 'data' => '2026-10-24', 'ora' => '22:00 – 04:00', 'titolo' => 'Ritual · Live', 'artisti' => 'Saffron Ensemble live · Kaio', 'foto' => 'img/home/roma-club-folla-luci-rosse.webp', 'testo' => 'A live set with percussion, strings and electronics, followed by a long DJ set: the Sanctuary sound at its most immersive.'],
+    ['slug' => 'roma-sunday-healing', 'giorno' => 'Sun', 'data' => '2026-10-25', 'ora' => '18:00 – 01:00', 'titolo' => 'Sunday Healing', 'artisti' => 'Handpan & downtempo · Nadia Sole', 'foto' => 'img/pagine/roma/roma-meditazione-pergolato.webp', 'testo' => 'Handpan, downtempo and gentle electronic music to close the week: a slow Sunday between the garden and the Veranda.'],
+  ],
+  'milano' => [
+    ['slug' => 'milano-after-dinner', 'giorno' => 'Thu', 'data' => '2026-10-22', 'ora' => '23:00 – 03:00', 'titolo' => 'After Dinner Club', 'artisti' => 'Resident DJs', 'foto' => 'img/pagine/milano/milano-club-mani-cuore.webp', 'testo' => 'After dinner the music rises: our resident DJs open the Club with an eclectic set, from disco edits to melodic house.'],
+    ['slug' => 'milano-deep-forest', 'giorno' => 'Fri', 'data' => '2026-10-23', 'ora' => '23:00 – 04:00', 'titolo' => 'Deep Forest', 'artisti' => 'Oren Vale · Lisa Marrow', 'foto' => 'img/pagine/milano/milano-club-luci-rosse.webp', 'testo' => 'Deep and organic sounds under the red lights of the Club, with two guest DJs and a long night ahead.'],
+    ['slug' => 'milano-afro-sanctuary', 'giorno' => 'Sat', 'data' => '2026-10-24', 'ora' => '23:00 – 04:00', 'titolo' => 'Afro Sanctuary', 'artisti' => 'Kalu Mensah · Sami Arrow', 'foto' => 'img/pagine/milano/milano-giardino-notte-piscina.webp', 'testo' => 'Afro house and percussive grooves: a night that brings together different cultural traditions, in the spirit of The Sanctuary Sound.'],
+    ['slug' => 'milano-slow-sunday', 'giorno' => 'Sun', 'data' => '2026-10-25', 'ora' => '19:00 – 00:00', 'titolo' => 'Slow Sunday', 'artisti' => 'Vinyl selectors', 'foto' => 'img/home/giradischi-vinile-luce-calda.webp', 'testo' => 'An early, relaxed Sunday: selected vinyl, cocktails at the bar and a quieter pace to end the weekend.'],
+  ],
 ];
 
 /* ---------- ARTISTI OSPITATI (Club di Roma e Milano) ---------- */
 $ARTISTI = ['Âme', 'Acid Pauli', 'Acid Arab', 'Ben Klock', 'Bonobo', 'Bedouin', 'Blond:ish', 'Black Coffee', 'Brina Knauss', 'Carlita', 'Chet Faker', 'Damian Lazarus', 'Dixon', 'DJ Tennis', 'Fatboy Slim', 'Guy Gerber', 'Jackmaster', 'Jayda G', 'Måneskin', 'Marcel Dettmann', 'Marcelo Burlon', 'Monolink', 'Negramaro', 'Nina Kraviz', 'Polo & Pan', 'Peggy Gou', 'Red Axes', 'RY X', 'Salmo', 'Satori live', 'Seth Troxler', 'Stavroz live', 'Sven Väth', 'Travis Scott', 'Venerus', 'WhoMadeWho'];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 9;
+$V = 10;

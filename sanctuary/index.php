@@ -21,6 +21,14 @@ include 'partials/header.php';
     </div>
   </section>
 
+  <nav class="sezioni-nav" aria-label="Our places">
+    <ul>
+      <?php foreach ($SEDI as $s): ?>
+      <li><a href="<?= e($s['pagina']) ?>"><?= e($s['nome']) ?><?php if ($s['stato'] !== ''): ?> <small>2027</small><?php endif; ?></a></li>
+      <?php endforeach; ?>
+    </ul>
+  </nav>
+
   <section class="manifesto contenitore" data-appare>
     <p class="kicker">The Sanctuary</p>
     <p>Where the energies of the night mix with those of the day, and everyone can do what they like best.</p>

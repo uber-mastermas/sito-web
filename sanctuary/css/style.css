@@ -531,6 +531,8 @@ body.reserve-aperto { overflow: hidden; }
   border-bottom: 1px solid transparent;
 }
 .sezioni-nav a:hover { border-bottom-color: currentColor; }
+.sezioni-nav small { margin-left: 6px; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; opacity: .6; }
+.pagina-index .sezioni-nav ul { justify-content: center; gap: clamp(20px, 5vw, 56px); }
 .intro { padding-block: var(--respiro) clamp(40px, 6vw, 72px); }
 .intro h2 { font-size: clamp(2.4rem, 6.4vw, 5.2rem); max-width: 16ch; margin-bottom: 24px; }
 .intro p { max-width: 54ch; }
@@ -562,11 +564,24 @@ body.reserve-aperto { overflow: hidden; }
 
 /* Programma musicale */
 .programma { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--filetto-chiaro); }
-.programma li { display: grid; gap: 4px 24px; grid-template-columns: minmax(0, 1fr); padding: 20px 0; border-bottom: 1px solid var(--filetto-chiaro); }
-.programma time { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: #d9a77f; }
-.programma strong { font-family: var(--font-titolo); font-weight: 400; font-size: 1.8rem; line-height: 1.1; }
-@media (min-width: 760px) { .programma li { grid-template-columns: 180px minmax(0, 1fr) auto; align-items: baseline; } }
-.programma-vuoto { padding: 24px 0; border-block: 1px solid var(--filetto-chiaro); font-family: var(--font-mono); font-size: .86rem; letter-spacing: .06em; }
+.programma li { border-bottom: 1px solid var(--filetto-chiaro); }
+.programma a {
+  display: grid; gap: 6px 28px; grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "data data" "titolo freccia" "artisti freccia" "ora freccia";
+  align-items: center; padding: 22px 0; text-decoration: none; color: inherit;
+  transition: padding-left .3s, background-color .3s;
+}
+.programma a::after { content: "→"; grid-area: freccia; font-size: 1.2rem; opacity: .5; transition: transform .3s, opacity .3s; }
+.programma a:hover { padding-left: 12px; }
+.programma a:hover::after { transform: translateX(4px); opacity: 1; }
+.programma time { grid-area: data; font-family: var(--font-mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: #d9a77f; }
+.programma strong { grid-area: titolo; font-family: var(--font-titolo); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.05; }
+.programma-artisti { grid-area: artisti; opacity: .85; }
+.programma-ora { grid-area: ora; font-family: var(--font-mono); font-size: .8rem; letter-spacing: .08em; opacity: .7; }
+@media (min-width: 900px) {
+  .programma a { grid-template-columns: 130px minmax(0, 1.4fr) minmax(0, 1fr) 150px 24px; grid-template-areas: "data titolo artisti ora freccia"; }
+  .programma-ora { text-align: right; }
+}
 
 /* ---------- CONTATTI E PRENOTAZIONE ---------- */
 .contatti-griglia { display: grid; gap: 48px; grid-template-columns: minmax(0, 1fr); }
@@ -733,3 +748,11 @@ body.menu-bloccato .torna-su, body.con-banner .torna-su { display: none; }
    nascondono il fondo della sezione precedente (richiesta del 14/10).
    Ogni sezione ha almeno 80px di spazio vuoto in alto, che finisce sotto la barra. */
 body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6px); }
+
+/* ---------- PAGINA DELL'EVENTO (in WordPress: articolo singolo) ---------- */
+.evento > .testata:first-child { padding-top: clamp(48px, 9vw, 112px); }
+.evento .testata h1 { margin-bottom: .2em; }
+.evento-griglia { display: grid; gap: 36px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.evento-foto .foto { aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
+.evento-testo .orari-blocco dd { white-space: normal; text-align: right; }
+@media (min-width: 900px) { .evento-griglia { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(56px, 7vw, 120px); } }

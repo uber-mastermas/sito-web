@@ -30,7 +30,7 @@ function link_spazio($sede, $chiave) {
 <?php if ($pagina === '404.php'): ?><base href="<?= e($SITO['url']) ?>/"><?php endif; ?>
 <title><?= e($titolo_completo) ?></title>
 <meta name="description" content="<?= e($descrizione) ?>">
-<meta name="robots" content="<?= $pagina === '404.php' ? 'noindex, follow' : 'index, follow' ?>">
+<meta name="robots" content="<?= ($pagina === '404.php' || !empty($noindex)) ? 'noindex, follow' : 'index, follow' ?>">
 <link rel="canonical" href="<?= e($indirizzo) ?>">
 <meta name="theme-color" content="#211e1c">
 
