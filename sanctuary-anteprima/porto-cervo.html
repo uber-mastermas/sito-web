@@ -33,10 +33,11 @@
 <link rel="icon" href="img/logo/simbolo-sanctuary.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/im-fell-dw-pica-sc-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=5">
-<script src="js/layout.js?v=5" defer></script>
+<link rel="stylesheet" href="css/style.css?v=7">
+<script src="js/layout.js?v=7" defer></script>
 </head>
 <body class="pagina-porto-cervo con-hero">
 <a class="salta" href="#contenuto">Skip to content</a>
@@ -45,8 +46,7 @@
   <div class="barra">
     <a class="logo" href="./" aria-label="The Sanctuary Eco Retreat — Home">
       <img class="logo-simbolo" src="img/logo/simbolo-sanctuary.svg" width="206" height="326" alt="">
-      <img class="logo-scritta" src="img/logo/logo-sanctuary.svg" width="643" height="133" alt="">
-    </a>
+      <span class="firma logo-firma"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Eco Retreat</span></span>    </a>
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">
       <ul class="menu">
@@ -151,12 +151,10 @@
 
 <main id="contenuto">
 
-  <section class="hero copre" style="--velo: 1.15">
+  <section class="hero hero-centro copre" style="--velo: 1.15">
     <picture class="hero-attesa"><source media="(max-width: 700px)" srcset="img/video/porto-cervo-verticale-attesa.webp?v=1791998158"><img class="foto" src="img/pagine/porto-cervo/porto-cervo-piscina-notte.webp?v=1791997955" alt="Night by the pool at The Sanctuary Porto Cervo" fetchpriority="high"></picture><video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" data-desktop="img/video/famiglia-sanctuary-orizzontale.mp4?v=1791992830" data-mobile="img/video/porto-cervo-verticale.mp4?v=1791997916"></video>    <div class="hero-testo">
       <p class="kicker">The Sanctuary · Sardinia</p>
-      <h1>Porto Cervo</h1>
-      <p class="hero-sotto">Summer season 2027 · Opening in July</p>
-      <div class="azioni">
+      <h1 class="firma firma-hero"><span class="firma-titolo">Porto Cervo</span><span class="firma-sotto">Opening in July 2027</span></h1>      <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Stay in touch</a>
         <a class="bottone bottone-chiaro-linea" href="#summer">Discover</a>
       </div>
@@ -264,8 +262,7 @@
     <div class="footer-sedi">
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-roma-chiaro.svg" width="643" height="136" alt="The Sanctuary Rome">
-                  </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Roma</span></span>                  </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>Via delle Terme di Traiano, 4a · 00184 Roma</li>
@@ -281,8 +278,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-milano-chiaro.svg" width="643" height="136" alt="The Sanctuary Milan">
-                  </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Milano</span></span>                  </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>Via Valenza, 16 · 20142 Milano</li>
@@ -298,8 +294,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-porto-cervo-chiaro.svg" width="643" height="136" alt="The Sanctuary Porto Cervo">
-          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Porto Cervo</span></span>          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>SP59, Golfo Pevero · 07021 Sassari</li>
@@ -312,8 +307,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-itria-chiaro.svg" width="643" height="136" alt="The Sanctuary Itria Valley">
-          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Itria Valley</span></span>          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>SP 90, Savelletri · 72015 Torre Canne (BR)</li>

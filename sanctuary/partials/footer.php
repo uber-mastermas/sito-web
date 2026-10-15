@@ -14,7 +14,7 @@
       <?php foreach ($SEDI as $k => $s): ?>
       <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-<?= e($k) ?>-chiaro.svg" width="643" height="136" alt="The Sanctuary <?= e($s['nome']) ?>">
+          <?= firma('The Sanctuary', $s['nome_locale'] ?? $s['nome'], 'span', 'footer-sede-marchio') ?>
           <?php if ($s['stato'] !== ''): ?><span class="footer-sede-stato"><?= e($s['stato']) ?></span><?php endif; ?>
         </summary>
         <div class="footer-sede-corpo">

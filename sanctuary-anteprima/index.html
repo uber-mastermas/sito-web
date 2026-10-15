@@ -74,10 +74,11 @@
 <link rel="icon" href="img/logo/simbolo-sanctuary.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/im-fell-dw-pica-sc-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=5">
-<script src="js/layout.js?v=5" defer></script>
+<link rel="stylesheet" href="css/style.css?v=7">
+<script src="js/layout.js?v=7" defer></script>
 </head>
 <body class="pagina-index con-hero">
 <a class="salta" href="#contenuto">Skip to content</a>
@@ -86,8 +87,7 @@
   <div class="barra">
     <a class="logo" href="./" aria-label="The Sanctuary Eco Retreat — Home">
       <img class="logo-simbolo" src="img/logo/simbolo-sanctuary.svg" width="206" height="326" alt="">
-      <img class="logo-scritta" src="img/logo/logo-sanctuary.svg" width="643" height="133" alt="">
-    </a>
+      <span class="firma logo-firma"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Eco Retreat</span></span>    </a>
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">
       <ul class="menu">
@@ -215,33 +215,25 @@
     <div class="sedi">
             <a class="sede copre" href="rome.html" data-appare>
         <img class="foto" src="img/home/roma-serra-piscina-ombrelloni.webp?v=1791992786" width="1440" height="1800" alt="The Sanctuary Rome" loading="lazy" decoding="async">        <span class="sede-testo">
-          <span class="kicker">Italy</span>
-          <strong>Rome</strong>
-          <span>A hidden garden steps away from the Colosseum.</span>
+          <span class="firma sede-firma"><span class="firma-titolo">Rome</span><span class="firma-sotto">Italy</span></span>          <span>A hidden garden steps away from the Colosseum.</span>
           <span class="etichetta">Discover</span>
         </span>
       </a>
             <a class="sede copre" href="milan.html" data-appare>
         <img class="foto" src="img/home/milano-piscina-bagnante.webp?v=1791992786" width="1440" height="1800" alt="The Sanctuary Milan" loading="lazy" decoding="async">        <span class="sede-testo">
-          <span class="kicker">Italy</span>
-          <strong>Milan</strong>
-          <span>An industrial space reimagined as a living sanctuary.</span>
+          <span class="firma sede-firma"><span class="firma-titolo">Milan</span><span class="firma-sotto">Italy</span></span>          <span>An industrial space reimagined as a living sanctuary.</span>
           <span class="etichetta">Discover</span>
         </span>
       </a>
             <a class="sede copre" href="porto-cervo.html" data-appare>
         <img class="foto" src="img/home/porto-cervo-folla-notte-palme.webp?v=1791992786" width="1440" height="1800" alt="The Sanctuary Porto Cervo" loading="lazy" decoding="async">        <span class="sede-testo">
-          <span class="kicker">Sardinia</span>
-          <strong>Porto Cervo</strong>
-          <span>Sardinia&#039;s coastline meets the pulse of the night.</span>
+          <span class="firma sede-firma"><span class="firma-titolo">Porto Cervo</span><span class="firma-sotto">Sardinia</span></span>          <span>Sardinia&#039;s coastline meets the pulse of the night.</span>
           <span class="etichetta">Opening July 2027</span>
         </span>
       </a>
             <a class="sede copre" href="itria-valley.html" data-appare>
         <img class="foto" src="img/home/itria-tenda-lanterna-tramonto.webp?v=1791992786" width="1440" height="1800" alt="The Sanctuary Itria Valley" loading="lazy" decoding="async">        <span class="sede-testo">
-          <span class="kicker">Apulia</span>
-          <strong>Itria Valley</strong>
-          <span>Music under the starry sky, by the sea.</span>
+          <span class="firma sede-firma"><span class="firma-titolo">Itria Valley</span><span class="firma-sotto">Apulia</span></span>          <span>Music under the starry sky, by the sea.</span>
           <span class="etichetta">Opening July 2027</span>
         </span>
       </a>
@@ -281,8 +273,7 @@
     <div class="footer-sedi">
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-roma-chiaro.svg" width="643" height="136" alt="The Sanctuary Rome">
-                  </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Roma</span></span>                  </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>Via delle Terme di Traiano, 4a · 00184 Roma</li>
@@ -298,8 +289,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-milano-chiaro.svg" width="643" height="136" alt="The Sanctuary Milan">
-                  </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Milano</span></span>                  </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>Via Valenza, 16 · 20142 Milano</li>
@@ -315,8 +305,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-porto-cervo-chiaro.svg" width="643" height="136" alt="The Sanctuary Porto Cervo">
-          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Porto Cervo</span></span>          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>SP59, Golfo Pevero · 07021 Sassari</li>
@@ -329,8 +318,7 @@
       </details>
             <details class="footer-sede">
         <summary>
-          <img class="footer-sede-marchio" src="img/logo/marchio-itria-chiaro.svg" width="643" height="136" alt="The Sanctuary Itria Valley">
-          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
+          <span class="firma footer-sede-marchio"><span class="firma-titolo">The Sanctuary</span><span class="firma-sotto">Itria Valley</span></span>          <span class="footer-sede-stato">Opening July 2027</span>        </summary>
         <div class="footer-sede-corpo">
           <ul>
             <li>SP 90, Savelletri · 72015 Torre Canne (BR)</li>

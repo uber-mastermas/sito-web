@@ -14,12 +14,11 @@ require 'partials/prenotazione-invio.php';
 include 'partials/header.php';
 ?>
 
-  <section class="hero copre" style="--velo: 1.2">
+  <section class="hero hero-centro copre" style="--velo: 1.2">
     <?= video_hero('', 'img/pagine/roma/roma-colosseo-palme.webp', 'img/video/famiglia-sanctuary-verticale.mp4', 'img/video/famiglia-sanctuary-verticale-attesa.webp', 'The Colosseum seen through palm leaves, a few steps from The Sanctuary Rome') ?>
     <div class="hero-testo">
       <p class="kicker">The Sanctuary · Monti</p>
-      <h1>Rome</h1>
-      <p class="hero-sotto">A hidden garden steps away from the Colosseum.</p>
+      <?= firma('Rome', 'A hidden garden steps away from the Colosseum.', 'h1', 'firma-hero', true) ?>
       <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Book a table</a>
         <a class="bottone bottone-chiaro-linea" href="#restaurant">Discover</a>

@@ -44,6 +44,7 @@ $SITO = [
 $SEDI = [
   'roma' => [
     'nome'       => 'Rome',
+    'nome_locale' => 'Roma',
     'paese'      => 'Italy',
     'pagina'     => 'rome.php',
     'modulo'     => true,       // la pagina ha il modulo di prenotazione (#book)
@@ -64,6 +65,7 @@ $SEDI = [
   ],
   'milano' => [
     'nome'       => 'Milan',
+    'nome_locale' => 'Milano',
     'paese'      => 'Italy',
     'pagina'     => 'milan.php',
     'modulo'     => true,       // la pagina ha il modulo di prenotazione (#book)
@@ -134,4 +136,4 @@ $PROGRAMMA = [
 $ARTISTI = ['Âme', 'Acid Pauli', 'Acid Arab', 'Ben Klock', 'Bonobo', 'Bedouin', 'Blond:ish', 'Black Coffee', 'Brina Knauss', 'Carlita', 'Chet Faker', 'Damian Lazarus', 'Dixon', 'DJ Tennis', 'Fatboy Slim', 'Guy Gerber', 'Jackmaster', 'Jayda G', 'Måneskin', 'Marcel Dettmann', 'Marcelo Burlon', 'Monolink', 'Negramaro', 'Nina Kraviz', 'Polo & Pan', 'Peggy Gou', 'Red Axes', 'RY X', 'Salmo', 'Satori live', 'Seth Troxler', 'Stavroz live', 'Sven Väth', 'Travis Scott', 'Venerus', 'WhoMadeWho'];
 
 // Versione di CSS e JS: aumentarla a ogni modifica di style.css o layout.js
-$V = 5;
+$V = 7;

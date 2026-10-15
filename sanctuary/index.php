@@ -34,8 +34,7 @@ include 'partials/header.php';
       <a class="sede copre" href="<?= e($s['pagina']) ?>" data-appare>
         <?= foto($s['foto'], 'The Sanctuary ' . $s['nome'], 1440, 1800, 'Sede di ' . $s['nome']) ?>
         <span class="sede-testo">
-          <span class="kicker"><?= e($s['paese']) ?></span>
-          <strong><?= e($s['nome']) ?></strong>
+          <?= firma($s['nome'], $s['paese'], 'span', 'sede-firma') ?>
           <span><?= e($s['frase']) ?></span>
           <span class="etichetta"><?= $s['stato'] !== '' ? e($s['stato']) : 'Discover' ?></span>
         </span>

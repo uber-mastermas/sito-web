@@ -12,12 +12,11 @@ require 'partials/prenotazione-invio.php';
 include 'partials/header.php';
 ?>
 
-  <section class="hero copre" style="--velo: 1.1">
+  <section class="hero hero-centro copre" style="--velo: 1.1">
     <?= video_hero('', 'img/pagine/itria/itria-tenda-tramonto-orizzontale.webp', 'img/video/itria-verticale.mp4', 'img/video/itria-verticale-attesa.webp', 'A wooden tent with a hanging lantern against the sunset sky over the sea') ?>
     <div class="hero-testo">
       <p class="kicker">The Sanctuary · Apulia</p>
-      <h1>Itria Valley</h1>
-      <p class="hero-sotto">Summer season 2027 · Opening in July</p>
+      <?= firma('Itria Valley', 'Opening in July 2027', 'h1', 'firma-hero', false) ?>
       <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Stay in touch</a>
         <a class="bottone bottone-chiaro-linea" href="#summer">Discover</a>

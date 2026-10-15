@@ -12,12 +12,11 @@ require 'partials/prenotazione-invio.php';
 include 'partials/header.php';
 ?>
 
-  <section class="hero copre" style="--velo: 1.15">
+  <section class="hero hero-centro copre" style="--velo: 1.15">
     <?= video_hero('img/video/famiglia-sanctuary-orizzontale.mp4', 'img/pagine/porto-cervo/porto-cervo-piscina-notte.webp', 'img/video/porto-cervo-verticale.mp4', 'img/video/porto-cervo-verticale-attesa.webp', 'Night by the pool at The Sanctuary Porto Cervo') ?>
     <div class="hero-testo">
       <p class="kicker">The Sanctuary · Sardinia</p>
-      <h1>Porto Cervo</h1>
-      <p class="hero-sotto">Summer season 2027 · Opening in July</p>
+      <?= firma('Porto Cervo', 'Opening in July 2027', 'h1', 'firma-hero', false) ?>
       <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Stay in touch</a>
         <a class="bottone bottone-chiaro-linea" href="#summer">Discover</a>

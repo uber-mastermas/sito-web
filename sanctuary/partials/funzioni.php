@@ -115,3 +115,16 @@ function video_hero($desktop, $poster_desktop, $mobile = '', $poster_mobile = ''
          . '></video>';
   return $html;
 }
+
+/* ---------- Firma: titolo / linea irregolare / sottotitolo ----------
+   Elemento base del sito (logo, sedi nel footer, aperture delle sedi).
+   La linea è quella del logo (img/logo/linea-sanctuary.svg), sempre uguale.
+   $tag: elemento esterno (span, h1…); $corsivo: sottotitolo come frase in corsivo. */
+function firma($titolo, $sotto = '', $tag = 'span', $classe = '', $corsivo = false) {
+  $html = '<' . $tag . ' class="firma' . ($classe !== '' ? ' ' . e($classe) : '') . '">'
+        . '<span class="firma-titolo">' . e($titolo) . '</span>';
+  if ($sotto !== '') {
+    $html .= '<span class="firma-sotto' . ($corsivo ? ' corsivo' : '') . '">' . e($sotto) . '</span>';
+  }
+  return $html . '</' . $tag . '>';
+}

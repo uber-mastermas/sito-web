@@ -13,6 +13,7 @@
 @font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/schibsted-grotesk-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/schibsted-grotesk-latin-500-normal.woff2") format("woff2"); }
 @font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/schibsted-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "IM Fell DW Pica SC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/im-fell-dw-pica-sc-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/dm-mono-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/dm-mono-latin-500-normal.woff2") format("woff2"); }
 
@@ -33,6 +34,7 @@
   /* Font */
   --font-titolo: "Instrument Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --font-testo: "Schibsted Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-firma: "IM Fell DW Pica SC", "Iowan Old Style", Georgia, serif;   /* titoli sopra la linea irregolare */
   --font-mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
 
   /* Misure */
@@ -149,7 +151,7 @@ body.con-hero .site-header:not(.pieno)::before {
 }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; flex: none; }
 .logo-simbolo { height: 38px; width: auto; }
-.logo-scritta { height: 26px; width: auto; }
+.logo-firma { font-size: 15px; }
 .logo img { transition: filter .35s; }
 
 .menu, .sottomenu, .menu-esterni { list-style: none; margin: 0; padding: 0; }
@@ -199,7 +201,7 @@ body.con-hero .site-header:not(.pieno) .bottone-reserve:hover { background: #fff
 @media (max-width: 1100px) {
   .site-header .barra { gap: 12px; }
   .logo-simbolo { height: 32px; }
-  .logo-scritta { height: 20px; }
+  .logo-firma { font-size: 12px; }
   .bottone-reserve { min-height: 40px; padding: 8px 16px; font-size: .72rem; }
   .menu-toggle {
     display: grid; place-items: center;
@@ -256,8 +258,8 @@ body.con-hero .site-header:not(.pieno) .bottone-reserve:hover { background: #fff
   }
   body.menu-bloccato { overflow: hidden; }
 }
-@media (max-width: 420px) {
-  .logo-scritta { display: none; }
+@media (max-width: 379px) {
+  .logo .logo-firma { display: none; }
   .logo-simbolo { height: 34px; }
 }
 
@@ -316,6 +318,33 @@ body.reserve-aperto { overflow: hidden; }
 .copre > .foto, .copre > picture > .foto, .copre > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
 .copre > picture { position: absolute; inset: 0; }
 
+/* ---------- FIRMA: titolo / linea irregolare / sottotitolo ----------
+   La linea è quella del logo, con le sue proporzioni (581 × 7,3): non si deforma mai
+   e prende il colore del testo. Si usa con firma() in partials/funzioni.php. */
+.firma { display: grid; justify-items: center; text-align: center; margin: 0; font-weight: 400; --sotto: .7em; }
+.firma-titolo {
+  display: block; width: fit-content; max-width: 100%;
+  font-family: var(--font-firma); font-weight: 400;
+  text-transform: uppercase; letter-spacing: .3em; padding-left: .3em; line-height: 1;
+}
+.firma-titolo::after {
+  content: ""; display: block; aspect-ratio: 581 / 7.3; min-height: 2px; margin: .34em 5% 0;
+  background: currentColor;
+  -webkit-mask: url("../img/logo/linea-sanctuary.svg") center / 100% 100% no-repeat;
+          mask: url("../img/logo/linea-sanctuary.svg") center / 100% 100% no-repeat;
+}
+.firma-sotto {
+  display: block; margin-top: .62em;
+  font-family: var(--font-firma); font-size: var(--sotto);
+  text-transform: uppercase; letter-spacing: .4em; padding-left: .4em; line-height: 1.2;
+  opacity: .62;
+}
+.firma-sotto.corsivo {
+  font-family: var(--font-titolo); font-style: italic; text-transform: none;
+  letter-spacing: 0; padding-left: 0; opacity: .92; margin-top: .55em;
+}
+.scura .firma-sotto:not(.corsivo), .site-footer .firma-sotto:not(.corsivo) { opacity: .55; }
+
 /* ---------- APERTURA (foto o video a tutto schermo) ---------- */
 .hero {
   display: flex; align-items: flex-end;
@@ -337,6 +366,12 @@ body.reserve-aperto { overflow: hidden; }
 .hero h1 { font-size: clamp(3.1rem, 9vw, 7.4rem); line-height: .94; max-width: 13ch; margin-bottom: 22px; }
 .hero-sotto { font-size: clamp(1.05rem, 1.8vw, 1.25rem); max-width: 46ch; margin: 0; opacity: .92; }
 .hero .azioni { margin-top: 28px; }
+/* Aperture delle sedi: testo centrato con la firma */
+.hero-centro .hero-testo { display: grid; justify-items: center; text-align: center; }
+.hero-centro .azioni { justify-content: center; }
+.hero .firma-hero { font-size: clamp(1.7rem, 7vw, 5.6rem); line-height: 1; max-width: none; margin: 0 0 6px; --sotto: .3em; }
+.firma-hero .firma-sotto.corsivo { font-size: clamp(1.15rem, 2.2vw, 1.6rem); max-width: 34ch; }
+.firma-hero .firma-sotto:not(.corsivo) { font-size: clamp(.78rem, 1.3vw, .95rem); opacity: .85; }
 @media (max-width: 520px) { .hero .azioni .bottone { flex: 1 1 100%; } }
 
 /* ---------- MANIFESTO ---------- */
@@ -439,8 +474,10 @@ body.reserve-aperto { overflow: hidden; }
 .sede:hover > .foto { transform: scale(1.04); }
 .sede-testo { position: relative; z-index: 1; display: grid; gap: 4px; padding: 26px 24px; }
 .sede-testo .kicker { color: var(--pesca); margin: 0; }
-.sede-testo strong { font-family: var(--font-titolo); font-weight: 400; font-size: clamp(2.4rem, 3.6vw, 3rem); line-height: 1; }
-.sede-testo span { font-size: .95rem; opacity: .9; }
+.sede-firma { justify-items: start; text-align: left; font-size: clamp(1.1rem, 1.5vw, 1.35rem); margin-bottom: 8px; --sotto: .62em; }
+@media (max-width: 1099px) { .sede-firma { font-size: 1.5rem; } }
+.sede-firma .firma-titolo::after { margin-left: 0; margin-right: 10%; }
+.sede-testo > span:not(.firma) { font-size: .95rem; opacity: .9; }
 .etichetta {
   justify-self: start; margin-top: 10px;
   font-family: var(--font-mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
@@ -620,7 +657,7 @@ body:not(.con-hero) main > .testata:first-child { padding-top: clamp(48px, 9vw, 
 }
 .footer-sede summary:hover::after { opacity: .9; }
 .footer-sede[open] summary::after { transform: translateY(3px) rotate(225deg); }
-.footer-sede-marchio { width: min(78%, 260px); height: auto; }
+.footer-sede-marchio { font-size: 21px; }
 .footer-sede-stato { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: #d9a77f; }
 .footer-sede-corpo { padding: 6px 0 22px; }
 .footer-sede-corpo .orari { justify-content: center; text-align: left; }

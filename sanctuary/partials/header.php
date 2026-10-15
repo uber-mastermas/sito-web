@@ -85,6 +85,7 @@ function link_spazio($sede, $chiave) {
 <link rel="icon" href="img/logo/simbolo-sanctuary.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/logo/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/im-fell-dw-pica-sc-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css?v=<?= $V ?>">
@@ -97,7 +98,7 @@ function link_spazio($sede, $chiave) {
   <div class="barra">
     <a class="logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
       <img class="logo-simbolo" src="img/logo/simbolo-sanctuary.svg" width="206" height="326" alt="">
-      <img class="logo-scritta" src="img/logo/logo-sanctuary.svg" width="643" height="133" alt="">
+      <?= firma('The Sanctuary', 'Eco Retreat', 'span', 'logo-firma') ?>
     </a>
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">

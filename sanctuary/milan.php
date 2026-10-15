@@ -14,12 +14,11 @@ require 'partials/prenotazione-invio.php';
 include 'partials/header.php';
 ?>
 
-  <section class="hero copre" style="--velo: 1.15">
+  <section class="hero hero-centro copre" style="--velo: 1.15">
     <?= video_hero('', 'img/pagine/milano/milano-piscina-giardino-palme.webp', 'img/video/milano-verticale.mp4', 'img/video/milano-verticale-attesa.webp', 'The pool and the garden of The Sanctuary Milan') ?>
     <div class="hero-testo">
       <p class="kicker">The Sanctuary · Porta Genova</p>
-      <h1>Milan</h1>
-      <p class="hero-sotto">An industrial space reimagined as a living sanctuary.</p>
+      <?= firma('Milan', 'An industrial space reimagined as a living sanctuary.', 'h1', 'firma-hero', true) ?>
       <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Book a table</a>
         <a class="bottone bottone-chiaro-linea" href="#restaurant">Discover</a>
