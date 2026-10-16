@@ -118,7 +118,7 @@ b{font-weight:600}
 .icona{flex:0 0 auto;width:var(--icona-w,7mm);height:auto;display:block}
 .piede{display:flex;gap:2mm;align-items:flex-end;margin-top:.8mm}
 #claim{background:var(--fondo-fronte);border-left:.6mm solid var(--verde);padding:.5mm 1.2mm}
-.pol-tit{display:block;line-height:1.15;margin-bottom:.3mm;font-family:var(--font-fronte);font-weight:600;font-variant-numeric:lining-nums;text-transform:uppercase;letter-spacing:.1mm;color:var(--verde);font-size:8pt}
+.pol-tit{display:inline;line-height:1.15;margin-right:1mm;font-family:var(--font-fronte);font-weight:600;font-variant-numeric:lining-nums;text-transform:uppercase;letter-spacing:.1mm;color:var(--verde);font-size:8pt}
 .pol-num{text-transform:none;font-size:10.5pt}
 .claim{font-size:var(--corpo-claim,5pt);line-height:var(--riga-claim,1.9mm);color:var(--ink-2)}
 .amb-riga{margin-bottom:.5mm}
@@ -179,9 +179,9 @@ b{font-weight:600}
     <div class="blocco claim" id="claim" data-campo="Claim EFSA"></div>   <!-- facoltativo: corpo ridotto, fuori dal controllo «x ≥ 1,2 mm» -->
     <div class="blocco" id="nutrizione" data-campo="Dichiarazione nutrizionale" data-obbl></div>
     <div class="blocco secondario"><span id="categoria" data-campo="Dicitura di categoria" data-obbl></span> <span id="conservazione" data-campo="Conservazione" data-obbl></span></div>
-    <div class="blocco chiusura" id="dati" data-campo="Campagna, TMC, lotto" data-obbl></div>
-    <div class="piede chiusura">
-      <div class="piede-testi"><div id="operatore" data-campo="Operatore" data-obbl></div><div class="secondario" id="ambientale" data-campo="Etichettatura ambientale" data-obbl style="margin-top:.5mm"></div></div>
+    <div class="blocco chiusura" id="operatore" data-campo="Operatore" data-obbl></div>
+    <div class="piede">
+      <div class="piede-testi"><div id="dati" data-campo="Campagna, TMC" data-obbl style="margin-bottom:.8mm"></div><div class="secondario" id="ambientale" data-campo="Etichettatura ambientale" data-obbl style="margin-top:.5mm"></div></div>
       <div class="barcode-box" id="ean"></div>
     </div>
     <div class="secondario claim" id="comune" style="margin-top:.4mm;overflow:hidden"></div>   <!-- raccomandazione CONAI, corpo ridotto -->
@@ -247,7 +247,7 @@ const SCHEDA = {
   tmc: '2028-06-02',               // 'AAAA-MM-GG', massimo 18 mesi dall'imbottigliamento
   lotto: '',
 
-  operatore: 'Confezionato da <b>Azienda Agricola Tolone</b> – Via Garibaldi 1000 – 88024 Girifalco (CZ)',
+  operatore: 'Prodotto e confezionato da <b>Frantoio Molino</b>, Via Girifalco 1, per <b>Azienda Agricola Tolone</b>, Via Garibaldi 1000 – 88024 Girifalco (CZ)',   // il frantoio molisce e imbottiglia; responsabile commerciale: Tolone
   chiusura: [ ['2','Tappo','HDPE 2','Raccolta plastica'] ],   // Guala DOP antirabbocco: plastica (come Dorica 250)
 
   ean_numero: '8151120261184',
@@ -341,7 +341,7 @@ function componi(){
 
   $('conservazione').textContent=CONSERVAZIONE;
 
-  $('dati').innerHTML='<span class="nb">Campagna di raccolta <b>'+(SCHEDA.campagna||'[ ]')+'</b></span><br>Da consumarsi preferibilmente <span class="nb">entro il <b>'+data(SCHEDA.tmc)+'</b></span>';
+  $('dati').innerHTML='Campagna di raccolta <b class="nb">'+(SCHEDA.campagna||'[ ]')+'</b><br>Da consumarsi preferibilmente <span class="nb">entro il <b>'+data(SCHEDA.tmc)+'</b></span>';
   // lotto omesso: il TMC è indicato con giorno, mese e anno (Dir. 2011/91/UE)
   const op=SCHEDA.operatore;
   $('operatore').innerHTML=(SCHEDA.icona_retro?'<div class="oper"><img class="icona" src="'+SCHEDA.icona_retro+'" alt=""><div>'+op+'</div></div>':op);
