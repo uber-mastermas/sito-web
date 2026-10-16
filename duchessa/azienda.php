@@ -28,8 +28,7 @@ include 'partials/header.php';
           <h2>Seguire ogni passaggio</h2>
         </div>
         <div class="capitolo-testo">
-          <p>A Girifalco abbiamo scelto di prenderci cura di una piccola produzione e di seguirne direttamente ogni passaggio.</p>
-          <p>Perché crediamo che la qualità cominci dalla conoscenza.</p>
+          <p>Crediamo che la qualità cominci dalla conoscenza.</p>
           <p class="frase">Conoscere la pianta.<br>Conoscere la terra.<br>Conoscere il momento giusto.</p>
         </div>
       </div>
@@ -44,7 +43,8 @@ include 'partials/header.php';
         <div class="capitolo-testo">
           <p class="testo-grande">Non volevamo semplicemente produrre un olio.</p>
           <p>Volevamo dare una forma a qualcosa che già esisteva: un patrimonio fatto di ulivi, stagioni, lavoro e memoria.</p>
-          <p>Abbiamo scelto di valorizzarlo attraverso una produzione attenta, in quantità contenute, dove ogni raccolto conserva il carattere dell'annata.</p>
+          <p>È nata così, da un'intuizione diventata presto un progetto condiviso tra fratelli, l'idea di valorizzare ciò che per tanto tempo era rimasto un patrimonio di famiglia, dando la possibilità anche ad altri di conoscere e apprezzare il frutto di quella terra.</p>
+          <p>Perché ci sono eredità che non si misurano in ciò che si possiede, ma in ciò che si sceglie di tramandare.</p>
         </div>
       </div>
     </section>
@@ -78,7 +78,6 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p>Vogliamo mantenere un rapporto diretto con la pianta e con il prodotto.</p>
-          <p>Per questo seguiamo da vicino ogni fase, dalla raccolta al frantoio.</p>
           <p>Per noi il tempo fa parte della qualità.</p>
           <p>Meno tempo passa tra la raccolta e la molitura, più possiamo preservare le caratteristiche delle olive appena raccolte.</p>
         </div>
@@ -108,7 +107,6 @@ include 'partials/header.php';
         </div>
         <div class="capitolo-testo">
           <p class="testo-grande">La nostra produzione è contenuta.</p>
-          <p>Ed è proprio questo che ci permette di seguire il prodotto con attenzione.</p>
           <p>Dall'ulivo al frantoio.<br>Dal frantoio alla bottiglia.</p>
         </div>
       </div>
@@ -117,7 +115,6 @@ include 'partials/header.php';
 
   <section class="fascia" data-appare>
     <div class="contenitore">
-      <p class="frase">La terra non racconta mai la stessa storia due volte.</p>
       <div class="azioni">
         <a class="bottone" href="processo.php">Scopri il processo</a>
       </div>

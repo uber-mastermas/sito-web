@@ -142,7 +142,7 @@ include 'partials/header.php';
         <div class="capitolo-testo">
           <p class="testo-grande">Un olio prezioso merita cura.</p>
           <p>Conservare la bottiglia in un luogo fresco e asciutto, idealmente tra 12 e 18&nbsp;°C, lontano dalla luce e dalle fonti di calore.</p>
-          <p>Con il tempo può formarsi un leggero deposito: di solito non è un difetto, ma l'effetto della decantazione naturale.</p>
+          <p>Con il tempo può formarsi un leggero deposito: non è un difetto, ma l'effetto della decantazione naturale.</p>
           <p>Per apprezzarne al meglio le caratteristiche, consigliamo di consumarlo entro la data indicata in etichetta.</p>
         </div>
       </div>
@@ -155,7 +155,6 @@ include 'partials/header.php';
           <h2>Un'annata da custodire</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">Ogni raccolto è diverso.</p>
           <p>La bottiglia racconta una stagione precisa: quelle olive, quella terra, quel momento.</p>
           <p class="frase">Annata 2025.<br>Un anno che non tornerà.</p>
           <p style="margin-top:1.2em">Ed è proprio questo, in fondo, il fascino di un olio che nasce dalla terra.</p>
@@ -178,7 +177,7 @@ include 'partials/header.php';
           <h2>Portarlo a tavola</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">Non è soltanto un condimento. È il gesto finale, quello che arriva quando tutto il resto è pronto.</p>
+          <p class="testo-grande">Non è soltanto un condimento. È un'esperienza di gusto, fatta di equilibrio, carattere e autenticità.</p>
           <div class="formati">
             <div class="formato">
               <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 586, 1600, 'Bottiglia 500 ml') ?>
@@ -198,7 +197,6 @@ include 'partials/header.php';
 
   <section class="fascia" data-appare>
     <div class="contenitore">
-      <p class="frase">Il gesto più semplice per portare un pezzo di Calabria a tavola.</p>
       <div class="azioni">
         <a class="bottone" href="contatti.php#acquista">Acquista</a>
         <a class="bottone bottone-linea" href="processo.php">Il Processo</a>

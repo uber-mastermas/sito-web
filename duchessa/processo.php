@@ -28,7 +28,7 @@ include 'partials/header.php';
           <span class="passo-numero" aria-hidden="true">01</span>
           <h2>La raccolta</h2>
           <h3>Il momento giusto</h3>
-          <p>La raccolta avviene nella prima metà di novembre.</p>
+          <p>La raccolta avviene nell'ultima metà di ottobre.</p>
           <p>Le olive si raccolgono quando raggiungono la maturazione giusta per esprimere il carattere della nostra Carolea.</p>
           <p>Manualità e tecnologia si incontrano nel rispetto della pianta.</p>
           <p class="frase">La raccolta dura poco.<br>L'attesa è durata un anno.</p>
@@ -114,7 +114,6 @@ include 'partials/header.php';
 
   <section class="fascia" data-appare>
     <div class="contenitore">
-      <p class="frase">La terra cambia.<br>Il tempo cambia.<br>E ogni raccolto ha qualcosa di nuovo da raccontare.</p>
       <div class="azioni">
         <a class="bottone" href="prodotto.php">Scopri l'olio</a>
       </div>

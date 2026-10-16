@@ -31,7 +31,7 @@
       </div>
 
       <div class="footer-colonna footer-acquista">
-        <h2>Vuoi portarlo sulla tua tavola?</h2>
+        <h2>E se questa storia arrivasse fino a te?</h2>
         <a class="bottone bottone-chiaro" href="contatti.php#acquista">Acquista</a>
       </div>
 

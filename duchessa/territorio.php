@@ -64,7 +64,6 @@ include 'partials/header.php';
         <div class="capitolo-testo">
           <p class="testo-grande">Prima ancora di diventare un olio, tutto comincia dalla terra.</p>
           <p>La coltivazione dell'olivo è profondamente legata alla Calabria e la Carolea rappresenta una delle varietà più caratteristiche della regione.</p>
-          <p>Tra queste colline, l'agricoltura ha disegnato nel tempo un paesaggio che ancora oggi vive del lavoro dei campi.</p>
         </div>
       </div>
     </section>
@@ -102,10 +101,8 @@ include 'partials/header.php';
           <h2>La Duchessa</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">La storia della Duchessa appartiene alla storia di Girifalco.</p>
-          <p>Nel Seicento il feudo fu retto dalla duchessa Virginia Ravaschieri. Il suo matrimonio con la famiglia Caracciolo legò per sempre Girifalco a questo casato.</p>
-          <p>Sono passati secoli, ma alcune storie rimangono nei luoghi, nei nomi e nella memoria. A Girifalco c'è ancora chi chiama un angolo del paese "l'orto della Duchessa".</p>
-          <p>Abbiamo scelto di chiamare questo olio L'Olio della Duchessa perché volevamo che anche una bottiglia potesse portare con sé un frammento di questa storia.</p>
+          <p>Nel Seicento il feudo fu retto dalla duchessa Virginia Ravaschieri. Il suo matrimonio con la famiglia Caracciolo legò per sempre Girifalco a questo casato. Sono passati secoli, ma alcune storie continuano a vivere nei luoghi e nei loro nomi. Il terreno su cui crescono i nostri ulivi porta ancora oggi un nome che appartiene alla storia di Girifalco: "Orto della Duchessa".</p>
+          <p>È proprio da questo luogo che nasce <strong>L'Olio della Duchessa</strong>. Un nome che non è soltanto un omaggio alla storia del paese, ma racchiude un legame autentico con la terra da cui tutto ha origine.</p>
         </div>
       </div>
     </section>
@@ -114,11 +111,10 @@ include 'partials/header.php';
       <div class="capitolo-griglia">
         <div class="capitolo-titolo">
           <p class="occhiello">Un omaggio</p>
-          <h2>Il nome</h2>
+          <h2>Una storia che continua</h2>
         </div>
         <div class="capitolo-testo">
-          <p class="testo-grande">L'Olio della Duchessa è un omaggio a Girifalco.</p>
-          <p>Alla sua terra, alla sua storia, a quel legame invisibile che unisce ciò che siamo oggi a ciò che è stato prima di noi.</p>
+          <p class="testo-grande">Ogni annata rinnova un legame che attraversa il tempo: quello tra Girifalco, la sua terra e chi continua a coltivarla.</p>
         </div>
       </div>
     </section>
@@ -126,7 +122,7 @@ include 'partials/header.php';
 
   <section class="fascia" data-appare>
     <div class="contenitore">
-      <p class="frase">Una bottiglia può contenere un olio.<br>Ma può anche custodire un ricordo.</p>
+      <p class="frase">Una bottiglia può contenere un olio.<br>Ma può anche custodire una storia.</p>
       <div class="azioni">
         <a class="bottone" href="processo.php">Scopri il processo</a>
         <a class="bottone bottone-linea" href="azienda.php">L'Azienda</a>
