@@ -182,7 +182,7 @@ b{font-weight:600}
     <div class="blocco secondario"><span id="categoria" data-campo="Dicitura di categoria" data-obbl></span> <span id="conservazione" data-campo="Conservazione" data-obbl></span></div>
     <div class="blocco chiusura" id="dati" data-campo="Campagna, TMC, lotto" data-obbl></div>
     <div class="piede chiusura">
-      <div class="piede-testi"><div id="lotto" data-campo="Lotto" data-obbl style="margin-bottom:.4mm"></div><div id="operatore" data-campo="Operatore" data-obbl></div><div class="secondario" id="ambientale" data-campo="Etichettatura ambientale" data-obbl style="margin-top:.5mm"></div></div>
+      <div class="piede-testi"><div id="operatore" data-campo="Operatore" data-obbl></div><div class="secondario" id="ambientale" data-campo="Etichettatura ambientale" data-obbl style="margin-top:.5mm"></div></div>
       <div class="barcode-box" id="ean"></div>
     </div>
     <div class="secondario claim" id="comune" style="margin-top:.4mm;overflow:hidden"></div>   <!-- raccomandazione CONAI, corpo ridotto -->
@@ -215,7 +215,7 @@ const SCHEDA = {
 
   nome: "L'Olio della Duchessa",
   nome_fronte: 'Olio <span class="piccolo">della</span> Duchessa',   // nome sul fronte, in Sloop come l'etichetta storica
-  annata: 'Annata 2026',
+  annata: 'Annata 2026/2027',
   profilo: 'Fruttato leggero',     // termine organolettico: richiede il panel test della partita
   marchio: 'Tolone',
   motto: 'Arte olearia per passione',   // niente località sul fronte: vietati riferimenti geografici più piccoli dello Stato (Reg. 2022/2104, art. 8)
@@ -248,7 +248,7 @@ const SCHEDA = {
   tmc: '2028-06-02',               // 'AAAA-MM-GG', massimo 18 mesi dall'imbottigliamento
   lotto: '',
 
-  operatore: 'Prodotto e confezionato da <b>Azienda Agricola Tolone</b> – [via] – 88024 Girifalco (CZ)',
+  operatore: 'Confezionato da <b>Azienda Agricola Tolone</b> – [via] – 88024 Girifalco (CZ)',
   chiusura: [ ['2','Tappo','HDPE 2','Raccolta plastica'] ],   // Guala DOP antirabbocco: plastica (come Dorica 250)
 
   ean_numero: '8151120261184',
@@ -343,7 +343,7 @@ function componi(){
   $('conservazione').textContent=CONSERVAZIONE;
 
   $('dati').innerHTML='<span class="nb">Campagna di raccolta <b>'+(SCHEDA.campagna||'[ ]')+'</b></span><br>Da consumarsi preferibilmente <span class="nb">entro il <b>'+data(SCHEDA.tmc)+'</b></span>';
-  $('lotto').innerHTML='<span class="nb">Lotto <b>'+(SCHEDA.lotto||'L [ … ]')+'</b></span>';
+  // lotto omesso: il TMC è indicato con giorno, mese e anno (Dir. 2011/91/UE)
   const op=SCHEDA.operatore;
   $('operatore').innerHTML=(SCHEDA.icona_retro?'<div class="oper"><img class="icona" src="'+SCHEDA.icona_retro+'" alt=""><div>'+op+'</div></div>':op);
 
