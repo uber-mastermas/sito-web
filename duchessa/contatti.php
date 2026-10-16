@@ -105,7 +105,7 @@ include 'partials/header.php';
       <p>Scrivici indicando formato e quantità: ti risponderemo con disponibilità e modalità di acquisto.</p>
       <div class="formati">
         <div class="formato">
-          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 577, 1600, 'Bottiglia 500 ml') ?>
+          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 586, 1600, 'Bottiglia 500 ml') ?>
           <h3>Bottiglia</h3><p>500 ml</p>
         </div>
         <div class="formato">

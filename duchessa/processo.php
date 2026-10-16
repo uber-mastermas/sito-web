@@ -83,7 +83,7 @@ include 'partials/header.php';
 
       <li class="passo" id="imbottigliamento" data-appare>
         <div class="passo-foto passo-bottiglia">
-          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "La bottiglia de L'Olio della Duchessa", 577, 1600, 'Bottiglia') ?>
+          <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "La bottiglia de L'Olio della Duchessa", 586, 1600, 'Bottiglia') ?>
         </div>
         <div>
           <span class="passo-numero" aria-hidden="true">05</span>
