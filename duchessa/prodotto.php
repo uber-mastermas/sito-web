@@ -57,7 +57,7 @@ include 'partials/header.php';
 
     <div class="coppia pari" data-appare>
       <?= foto('img/pagine/prodotto/assaggio-olio-bicchiere-blu.webp', "L'assaggio dell'olio nel bicchiere blu da degustazione", 1006, 1563, 'Assaggio') ?>
-      <?= foto('img/pagine/prodotto/olio-versato-bicchieri-degustazione.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
+      <?= foto('img/pagine/prodotto/olio-versato-bicchieri-degustazione.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1792, 2400, 'Olio che scende, versamento in primo piano') ?>
     </div>
 
     <section class="capitolo" id="dati" data-appare>
@@ -90,7 +90,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre alta">
-      <?= foto('img/pagine/prodotto/bottiglia-tavola-pane-pomodori-pesce.webp', "Una bottiglia de L'Olio della Duchessa sulla tavola, con pane, pomodori e pesce", 1920, 1456, 'A tavola: pane, verdure, pesce, tavola naturale', ['classe' => 'pos-basso']) ?>
+      <?= foto('img/pagine/prodotto/bottiglia-tavola-pane-pomodori-pesce.webp', "Una bottiglia de L'Olio della Duchessa sulla tavola, con pane, pomodori e pesce", 1920, 1072, 'A tavola: pane, verdure, pesce, tavola naturale', ['classe' => 'pos-basso']) ?>
     </div>
   </div>
 
@@ -165,7 +165,7 @@ include 'partials/header.php';
 
   <div class="foto-larga" data-appare>
     <div class="copre alta">
-      <?= foto('img/pagine/prodotto/bottiglia-tavolo-ristorante.webp', "Una bottiglia de L'Olio della Duchessa su un tavolo apparecchiato di un ristorante", 1920, 1456, 'Bottiglia in un contesto elegante', ['classe' => 'in-alto']) ?>
+      <?= foto('img/pagine/prodotto/bottiglia-tavolo-ristorante.webp', "Una bottiglia de L'Olio della Duchessa su un tavolo apparecchiato di un ristorante", 1920, 1072, 'Bottiglia in un contesto elegante', ['classe' => 'in-alto']) ?>
     </div>
   </div>
 
@@ -185,7 +185,7 @@ include 'partials/header.php';
               <p>500 ml</p>
             </div>
             <div class="formato">
-              <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l.webp', "Latta da 5 litri de L'Olio della Duchessa", 827, 1600, 'Latta 5 L') ?>
+              <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l.webp', "Latta da 5 litri de L'Olio della Duchessa", 872, 1600, 'Latta 5 L') ?>
               <h3>Latta</h3>
               <p>5 litri</p>
             </div>

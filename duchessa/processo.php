@@ -28,7 +28,7 @@ include 'partials/header.php';
           <span class="passo-numero" aria-hidden="true">01</span>
           <h2>La raccolta</h2>
           <h3>Il momento giusto</h3>
-          <p>La raccolta avviene nell'ultima metà di ottobre.</p>
+          <p>La raccolta avviene nella seconda metà di ottobre.</p>
           <p>Le olive si raccolgono quando raggiungono la maturazione giusta per esprimere il carattere della nostra Carolea.</p>
           <p>Manualità e tecnologia si incontrano nel rispetto della pianta.</p>
           <p class="frase">La raccolta dura poco.<br>L'attesa è durata un anno.</p>

@@ -385,6 +385,9 @@ h1, h2, h3 {
 }
 .fascia .frase { margin: 0 auto; max-width: 22ch; }
 .fascia .azioni { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+/* fascia con i soli pulsanti: più bassa */
+.fascia:not(:has(.frase)) { padding-block: clamp(44px, 6vw, 72px); }
+.fascia:not(:has(.frase)) .azioni { margin-top: 0; }
 
 /* ---------- IL PROCESSO ---------- */
 .passi { list-style: none; margin: 0; padding: 0; }

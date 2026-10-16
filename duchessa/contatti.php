@@ -92,7 +92,7 @@ include 'partials/header.php';
           <?php if ($SITO['telefono'] !== ''): ?><li><a href="tel:<?= e(preg_replace('/[^0-9+]/', '', $SITO['telefono'])) ?>"><?= e($SITO['telefono']) ?></a></li><?php endif; ?>
         </ul>
         <div class="recapiti-foto">
-          <?= foto('img/pagine/contatti/olio-bicchieri-degustazione-aperto.webp', "L'olio versato nei bicchieri da degustazione, all'aperto", 1200, 1600, 'Immagine facoltativa') ?>
+          <?= foto('img/pagine/contatti/olio-bicchieri-degustazione-aperto.webp', "L'olio versato nei bicchieri da degustazione, all'aperto", 1792, 2400, 'Immagine facoltativa') ?>
         </div>
       </aside>
     </div>
@@ -109,7 +109,7 @@ include 'partials/header.php';
           <h3>Bottiglia</h3><p>500 ml</p>
         </div>
         <div class="formato">
-          <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l.webp', 'Latta da 5 litri', 827, 1600, 'Latta 5 L') ?>
+          <?= foto('img/pagine/prodotto/latta-olio-duchessa-5l-crema.webp', 'Latta da 5 litri', 856, 1600, 'Latta 5 L') ?>
           <h3>Latta</h3><p>5 litri</p>
         </div>
       </div>
