@@ -79,7 +79,7 @@ b{font-weight:600}
 .fronte-p .sicura{color:var(--nero)}
 .fr .annata,.fr .profilo,.tolone,.motto{text-transform:uppercase}
 .fr .annata{font-family:var(--font-berose);font-size:8.5pt;letter-spacing:.6mm;line-height:1;margin-top:1mm}
-.fr .nome-fr{font-family:var(--font-nome);font-size:var(--nome);line-height:1;color:var(--oro-nome);white-space:nowrap;margin-top:-1mm}
+.fr .nome-fr{font-family:var(--font-nome);font-size:var(--nome);line-height:1;color:var(--oro-nome);white-space:nowrap;margin-top:-3.5mm;position:relative}
 .fr .nome-fr .piccolo{font-size:.62em}
 .fr .riga-fr{width:62%;height:.2mm;background:var(--nero);opacity:.7;margin:1.6mm auto 1.6mm}
 .fr .profilo{font-family:var(--font-berose);font-size:10pt;line-height:1.05;letter-spacing:.15mm}
@@ -91,7 +91,8 @@ b{font-weight:600}
 .marchio{text-align:center}
 .tolone{font-family:var(--font-berose);font-size:10pt;letter-spacing:.15mm;line-height:1}
 .motto{font-family:var(--font-berose);font-size:5pt;line-height:1.25;letter-spacing:.1mm;margin-top:.5mm}
-.fr .qta{justify-self:end;font-family:var(--font-berose);color:var(--nero);letter-spacing:0;gap:.5mm}
+.fr .qta-fr{justify-content:center;margin-top:1.8mm}
+.fr .qta{font-family:var(--font-berose);color:var(--nero);letter-spacing:0;gap:.5mm}
 .fr{align-items:stretch;text-align:center}
 .fr > *{flex-shrink:0}
 .logo-prodotto{display:block;width:var(--logo-w,40mm);height:auto;object-fit:contain;margin-top:0}
@@ -159,10 +160,8 @@ b{font-weight:600}
     <div class="origine" id="origine" data-campo="Origine" data-obbl></div>
     <div class="cultivar" id="cultivar" data-campo="Cultivar"></div>
     <div class="spazio"></div>
-    <div class="piede-fr">
-      <div class="marchio"><div class="tolone" id="marchio"></div><div class="motto" id="motto"></div></div>
-      <div class="qta" id="qta" data-campo="Contenuto nominale" data-obbl></div>
-    </div>
+    <div class="marchio"><div class="tolone" id="marchio"></div><div class="motto" id="motto"></div></div>
+    <div class="qta qta-fr" id="qta" data-campo="Contenuto nominale" data-obbl></div>
    </div>
    <svg class="cornice" id="cornice"></svg>
    <svg class="guide"></svg>
