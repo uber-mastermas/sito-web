@@ -12,7 +12,7 @@ include 'partials/header.php';
     </ol>
     <div class="scheda">
       <div class="scheda-bottiglia">
-        <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 322, 1600, 'Bottiglia isolata, luce naturale', ['subito' => true]) ?>
+        <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 557, 1600, 'Bottiglia isolata, luce naturale', ['subito' => true]) ?>
       </div>
       <div>
         <p class="occhiello">Il Prodotto</p>
@@ -56,7 +56,7 @@ include 'partials/header.php';
     </section>
 
     <div class="coppia pari" data-appare>
-      <?= foto('img/pagine/prodotto/assaggio-olio-bicchiere-blu.webp', "L'assaggio dell'olio nel bicchiere blu da degustazione", 1232, 1920, 'Assaggio') ?>
+      <?= foto('img/pagine/prodotto/assaggio-olio-bicchiere-blu.webp', "L'assaggio dell'olio nel bicchiere blu da degustazione", 1006, 1563, 'Assaggio') ?>
       <?= foto('img/pagine/prodotto/olio-versato-bicchieri-degustazione.webp', "L'olio versato dalla bottiglia nei bicchieri da degustazione", 1200, 1600, 'Olio che scende, versamento in primo piano') ?>
     </div>
 
@@ -181,7 +181,7 @@ include 'partials/header.php';
           <p class="testo-grande">Non è soltanto un condimento. È il gesto finale, quello che arriva quando tutto il resto è pronto.</p>
           <div class="formati">
             <div class="formato">
-              <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 322, 1600, 'Bottiglia 500 ml') ?>
+              <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', 'Bottiglia da 500 ml', 557, 1600, 'Bottiglia 500 ml') ?>
               <h3>Bottiglia</h3>
               <p>500 ml</p>
             </div>

@@ -30,7 +30,7 @@ include 'partials/header.php';
   <section class="vetrina">
     <div class="contenitore vetrina-griglia">
       <div class="vetrina-bottiglia" data-appare>
-        <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 322, 1600, 'Bottiglia, estrema semplicità') ?>
+        <?= foto('img/pagine/prodotto/bottiglia-olio-duchessa-500ml.webp', "Bottiglia de L'Olio della Duchessa, 500 ml", 557, 1600, 'Bottiglia, estrema semplicità') ?>
       </div>
       <div class="vetrina-testo" data-appare>
         <h2>L'Olio della Duchessa</h2>
