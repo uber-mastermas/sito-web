@@ -109,7 +109,7 @@ b{font-weight:600}
 
 /* retro: tabella nutrizionale su due colonne */
 .nutri{width:100%;border-collapse:collapse}
-.nutri th,.nutri td{padding:0;border-bottom:.15mm solid var(--filo);vertical-align:top;font-weight:400}
+.nutri th,.nutri td{padding:.1mm 0 .3mm;line-height:1.1;border-bottom:.12mm solid var(--filo);vertical-align:bottom;font-weight:400}
 .nutri th{text-align:left}
 .nutri td{text-align:right;white-space:nowrap}
 .nutri .sub th{padding-left:1.8mm}
@@ -422,7 +422,9 @@ function segui(s,I){  // ogni blocco si allarga o si stringe seguendo i lati inc
   const blocchi=[...s.children].filter(b=>!b.classList.contains('riga-fr'));   // il filetto resta centrato
   for(let giro=0;giro<4;giro++) blocchi.forEach(b=>{
     const r=b.getBoundingClientRect(), fondo=(r.bottom-top())/MM + S;   // mm dal bordo alto del rifilo
-    const m=k*(fondo-S+I); b.style.marginLeft=b.style.marginRight=m.toFixed(2)+'mm';
+    const m=k*(fondo-S+I);
+    if(s.id==='s-retro'){ b.style.marginLeft=(k*(H-S-I)).toFixed(2)+'mm'; b.style.marginRight=m.toFixed(2)+'mm'; }   // retro: margine sinistro allineato, solo il destro segue il trapezio
+    else { b.style.marginLeft=b.style.marginRight=m.toFixed(2)+'mm'; }
   });
 }
 componi(); impostaPagina(); trapezioRetro();
