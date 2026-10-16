@@ -256,8 +256,8 @@ const SCHEDA = {
 
 /* ---- valori fissi del progetto (non toccare) ---- */
 const FORMATI = {
-  colette500: {nome:'Colette DOP 500 ml (quadrata)', ml:500, faccia_alto:76, faccia_basso:66, dritta:120,   // misure dalla foto in scala: verificare con sagoma di carta
-               alto:60, basso:51, altezza:112, titolo:'7.5pt', nome_corpo:'23pt', corpo:'7.2pt', riga:'2.6mm', qta:'17pt', provvisorio:true}
+  colette500: {nome:'Colette DOP 500 ml (Cristallo)', ml:500, faccia_alto:77.3, faccia_basso:67.8, dritta:123.7,   // disegno tecnico Cristallo 06.04.2022: corpo 77,3 → 67,8 mm su 123,7 mm
+               alto:63, basso:54, altezza:112, titolo:'7.5pt', nome_corpo:'23pt', corpo:'7.2pt', riga:'2.6mm', qta:'17pt', provvisorio:true}
 };
 const DENSITA = 0.915;
 const CATEGORIA = "Olio di oliva di categoria superiore ottenuto direttamente dalle olive e unicamente mediante procedimenti meccanici.";
@@ -370,7 +370,7 @@ function impostaPagina(){
     const sg=fg.querySelector('.segni'); sg.setAttribute('viewBox','0 0 '+(PW+ex)+' '+(PH+ex)); sg.innerHTML=m;
     fg.querySelector('.dicitura').textContent=(i?'RETRO':'FRONTE')+' · '+SCHEDA.nome+' '+F.ml+' ml · '+F.nome+' · Rifilo trapezio '+f(F.alto)+' (alto) / '+f(F.basso)+' (basso) × '+f(H)+' mm, r '+f(R)+' mm · Abbondanza '+f(B)+' mm · Pagina '+f(PW+ex)+' × '+f(PH+ex)+' mm';
   });
-  const righe=[['Bottiglia',F.nome+' – faccia ≈ '+f(F.faccia_alto)+' / '+f(F.faccia_basso)+' mm, parte piana ≈ '+f(F.dritta)+' mm'+(F.provvisorio?' (stima: misurare)':'')],
+  const righe=[['Bottiglia',F.nome+' – faccia ≈ '+f(F.faccia_alto)+' / '+f(F.faccia_basso)+' mm, parte dritta '+f(F.dritta)+' mm (disegno Cristallo)'],
     ['Etichette','2, separate: pagina 1 = fronte, pagina 2 = retro (stessa sagoma)'],
     ['Etichetta finita (rifilo)','trapezio '+f(F.alto)+' mm in alto → '+f(F.basso)+' mm in basso × '+f(H)+' mm, angoli r '+f(R)+' mm (fustella), lato largo in alto · altezza max '+f(hmax)+' mm'],
     ['Abbondanza',f(B)+' mm per lato (sagoma espansa)'],
@@ -385,7 +385,7 @@ function verifica(){
     (s.scrollHeight>s.clientHeight+1||s.scrollWidth>s.clientWidth+1) ? ko(nm+': il contenuto esce dal margine di sicurezza (troppo pieno).') : ok(nm+': contenuto dentro il margine di sicurezza.');
     [...s.children].forEach(b=>{ if(b.scrollWidth>b.clientWidth+1) ko(nm+': un elemento esce dai lati inclinati ('+(b.id||b.className)+').'); });});
   if(H>hmax) ko('Altezza etichetta '+H+' mm oltre il massimo del formato ('+hmax+' mm).');
-  if(F.provvisorio) av('Misure della bottiglia stimate: verificare parte piana e larghezze col righello o col disegno tecnico prima della stampa.');
+  if(F.provvisorio) av('Raggio degli spigoli verticali non indicato nel disegno: confermare la larghezza con la sagoma di carta prima della fustella.');
   document.querySelectorAll('[data-obbl]').forEach(el=>{
     const t=[el,...el.querySelectorAll('*')].filter(x=>[...x.childNodes].some(c=>c.nodeType===3&&c.textContent.trim()));
     if(!t.length) return; const m=Math.min(...t.map(x=>misura(x,'x')));
