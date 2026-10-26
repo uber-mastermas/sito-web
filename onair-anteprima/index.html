@@ -21,6 +21,8 @@
     --rosso: #e52823;
     --palermo: #b8735a;
     --courmayeur: #7f9cad;
+    --sabbia: #c9b391;
+    --sabbia-scuro: #9a8463;
     --largo: 1200px;
   }
   * { box-sizing: border-box; }
@@ -111,8 +113,7 @@
   .tappa-video .dettaglio { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; margin: 0 0 8px; }
   .tappa-video .citta { font-size: clamp(2.2rem, 4.6vw, 4.6rem); letter-spacing: .08em; text-transform: uppercase; line-height: 1; margin: 0; font-weight: 400; }
   .tappa-video .tratto { width: 70px; height: 3px; margin-top: 18px; }
-  .tappa-video.palermo .tratto { background: var(--palermo); }
-  .tappa-video.courmayeur .tratto { background: var(--courmayeur); }
+  .tappa-video .tratto { background: var(--sabbia); }
 
   .sigillo {
     position: absolute; z-index: 5; left: 50%; top: 50%; transform: translate(-50%, -50%);
@@ -124,8 +125,7 @@
   .sigillo h1 { font-size: clamp(1.2rem, 2vw, 1.7rem); letter-spacing: .1em; text-transform: uppercase; line-height: 1.2; margin: 0 0 24px; font-weight: 400; }
   .sigillo .barra-colori { display: flex; height: 3px; margin: 0 -40px; }
   .sigillo .barra-colori span { flex: 1; }
-  .sigillo .barra-colori span:first-child { background: var(--palermo); }
-  .sigillo .barra-colori span:last-child { background: var(--courmayeur); }
+  .sigillo .barra-colori span { background: var(--sabbia); }
 
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; min-height: 620px; }
@@ -164,11 +164,9 @@
   .scheda .foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
   .scheda:hover .foto img { transform: scale(1.04); }
   .scheda .corpo { padding: 28px 0 0; border-top: 3px solid; margin-top: -3px; position: relative; display: flex; flex-direction: column; flex: 1; }
-  .scheda.palermo .corpo { border-color: var(--palermo); }
-  .scheda.courmayeur .corpo { border-color: var(--courmayeur); }
+  .scheda .corpo { border-color: var(--sabbia); }
   .scheda .regione { font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; margin: 0 0 8px; }
-  .scheda.palermo .regione { color: var(--palermo); }
-  .scheda.courmayeur .regione { color: var(--courmayeur); }
+  .scheda .regione { color: var(--sabbia-scuro); }
   .scheda h3 { font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: .08em; text-transform: uppercase; font-weight: 400; margin: 0 0 12px; line-height: 1; }
   .scheda p { margin: 0; color: var(--grigio); }
   .scheda .barrette { margin-top: auto; padding-top: 6px; }
@@ -177,7 +175,7 @@
 
   /* ---------- 4. Il festival ---------- */
   .festival .colonne { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 90px); align-items: start; }
-  .festival .titolo .rosso { color: var(--rosso); }
+  .festival .titolo .sabbia { color: var(--sabbia); }
   .festival h3 { font-weight: 400; font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; margin: 30px 0 8px; color: #fff; }
   .festival p { color: rgba(255,255,255,.75); margin: 0; }
   .citazione { margin-top: clamp(56px, 8vw, 90px); display: grid; grid-template-columns: 1fr 1fr; min-height: 400px; }
@@ -194,12 +192,17 @@
   /* ---------- 5. Format e territorio ---------- */
   .format { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; border-top: 1px solid var(--testo); padding-top: 32px; }
   .format h3 { font-weight: 400; font-size: 1.05rem; letter-spacing: .14em; text-transform: uppercase; margin: 0; }
-  .format h3::after { content: ""; display: block; width: 32px; height: 2px; background: var(--rosso); margin-top: 12px; }
+  .format h3::after { content: ""; display: block; width: 32px; height: 2px; background: var(--sabbia); margin-top: 12px; }
   .format p { margin: 14px 0 0; color: var(--grigio); font-size: .95rem; }
   @media (max-width: 960px) { .format { grid-template-columns: 1fr 1fr; gap: 36px 24px; } }
   @media (max-width: 520px) { .format { grid-template-columns: 1fr; } }
 
-  .vetrine { margin-top: clamp(64px, 9vw, 110px); }
+  .territorio-testa { margin-top: clamp(72px, 10vw, 120px); }
+  .attivita { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+  .attivita img { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; background: #e6dfd5; }
+  .attivita h3 { font-weight: 400; font-size: .85rem; letter-spacing: .24em; text-transform: uppercase; margin: 16px 0 4px; }
+  .attivita p { margin: 0; color: var(--grigio); font-size: .92rem; }
+  @media (max-width: 860px) { .attivita { grid-template-columns: 1fr 1fr; gap: 28px 14px; } }
   .vetrina { position: relative; color: #fff; min-height: 480px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: #3a3737; }
   .vetrina > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .vetrina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,28,28,.9) 25%, rgba(30,28,28,.1) 80%); }
@@ -215,7 +218,7 @@
   .edizione { display: block; text-decoration: none; padding: 26px 24px 26px 0; }
   .edizione + .edizione { padding-left: 24px; border-left: 1px solid var(--filetto); }
   .edizione .anno { display: block; font-size: clamp(2.8rem, 5.6vw, 4.8rem); line-height: 1; letter-spacing: .04em; transition: color .2s; }
-  .edizione:hover .anno { color: var(--rosso); }
+  .edizione:hover .anno { color: var(--sabbia-scuro); }
   .edizione .ordinale { display: block; margin-top: 10px; font-size: .72rem; letter-spacing: .3em; text-transform: uppercase; color: var(--grigio); }
   @media (max-width: 760px) {
     .edizioni { grid-template-columns: 1fr; }
@@ -399,7 +402,7 @@
       <div class="colonne">
         <div>
           <p class="occhiello">Il festival</p>
-          <h2 class="titolo">Il cinema, <span class="rosso">le emozioni</span>, il sociale</h2>
+          <h2 class="titolo">Il cinema, <span class="sabbia">le emozioni</span>, il sociale</h2>
         </div>
         <div>
           <p>Un progetto dedicato al mondo dell'audiovisivo: un appuntamento che unisce serie TV e cinema ai temi sociali, per esplorare, riflettere e discutere le questioni che attraversano la società contemporanea.</p>
@@ -434,6 +437,13 @@
         <div><h3>Il territorio</h3><p>Luoghi, tradizioni e sapori: ogni tappa è anche un viaggio alla scoperta della città che la ospita.</p></div>
       </div>
 
+      <div class="testa territorio-testa">
+        <div>
+          <p class="occhiello">Le realtà del territorio</p>
+          <h2 class="titolo">Ogni tappa ha la sua vetrina</h2>
+        </div>
+        <p class="testo-lungo">Nato con la terza edizione, il format On Air dedicato al territorio racconta le iniziative culturali e imprenditoriali locali, nel segno della sostenibilità e della valorizzazione del patrimonio.</p>
+      </div>
       <div class="vetrine griglia-due">
         <article class="vetrina">
           <img src="https://festivalonair.com/wp-content/uploads/2024/05/trapani.jpg" alt="">
@@ -452,6 +462,13 @@
             <p>Lo stesso racconto arriva ai piedi del Monte Bianco, con le comunità e le imprese alpine.</p>
           </div>
         </article>
+      </div>
+
+      <div class="attivita">
+        <div><img src="https://festivalonair.com/wp-content/uploads/2024/05/mare-600x903.jpg" alt=""><h3>I luoghi</h3><p>Giornate alla scoperta di luoghi unici.</p></div>
+        <div><img src="https://festivalonair.com/wp-content/uploads/2026/04/Palermo-Festival-OnAir-680x1024.webp" alt=""><h3>La cultura</h3><p>Eventi dedicati al patrimonio artistico del territorio.</p></div>
+        <div><img src="https://festivalonair.com/wp-content/uploads/2024/05/trapani-600x903.jpg" alt=""><h3>Il benessere</h3><p>Spazi dedicati alla cura del corpo e della mente.</p></div>
+        <div><img src="https://festivalonair.com/wp-content/uploads/2024/05/impasto-600x903.jpg" alt=""><h3>I sapori</h3><p>La cucina della tradizione, a chilometro zero.</p></div>
       </div>
     </div>
   </section>
@@ -472,7 +489,7 @@
 
 <footer class="scuro">
   <div class="partner-scorre" aria-label="Partner">
-    <div class="scorre"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana2.png" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes">25/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes">25/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"></div>
+    <div class="scorre"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="" aria-hidden="true"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="" aria-hidden="true"></div>
   </div>
   <div class="contenitore newsletter">
     <div>
