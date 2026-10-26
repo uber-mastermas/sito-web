@@ -128,7 +128,8 @@
   .sigillo .barra-colori span { background: var(--sabbia); }
 
   @media (max-width: 760px) {
-    .hero { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; min-height: 620px; }
+    .hero { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; min-height: 0; }
+    .tappa-video { aspect-ratio: 4 / 3.3; }
     .tappa-video { padding: 20px 16px; }
     .tappa-video.palermo { justify-content: flex-start; }
     .tappa-video.palermo::after { background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 55%); }
@@ -519,22 +520,11 @@
 </footer>
 
 <script>
-  // Video: orizzontali su desktop, verticali su mobile
-  (function () {
-    var mq = window.matchMedia('(max-width: 760px)');
-    function carica() {
-      document.querySelectorAll('.tappa-video video').forEach(function (v) {
-        var src = mq.matches ? v.dataset.verticale : v.dataset.orizzontale;
-        if (mq.matches && v.dataset.posterVerticale) v.poster = v.dataset.posterVerticale;
-        if (v.getAttribute('src') !== src) {
-          v.src = src;
-          var p = v.play(); if (p && p.catch) p.catch(function () {});
-        }
-      });
-    }
-    carica();
-    if (mq.addEventListener) mq.addEventListener('change', carica);
-  })();
+  // Video orizzontali su desktop e su mobile
+  document.querySelectorAll('.tappa-video video').forEach(function (v) {
+    v.src = v.dataset.orizzontale;
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  });
 
   // Menu laterale a doppio stadio
   (function () {
