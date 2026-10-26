@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>On Air Festival 2027 · Palermo e Courmayeur</title>
+<meta name="description" content="On Air Festival 2027: un festival, due tappe. Serie TV e cinema per il cambiamento sociale, a Palermo e a Courmayeur.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0e0d10">
+<link rel="icon" href="https://festivalonair.com/wp-content/uploads/2024/04/iconONAIR.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nero: #0e0d10;
+    --nero-2: #19171c;
+    --carta: #f4f1ec;
+    --testo: #1d1b20;
+    --grigio: #6b6670;
+    --filetto: #ddd8d1;
+    --onair: #e5322d;
+    --palermo: #e8833a;
+    --courmayeur: #7cc4e8;
+    --largo: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0;
+    background: var(--carta);
+    color: var(--testo);
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-stretch: 100%;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--onair); outline-offset: 3px; }
+
+  .titolo {
+    font-stretch: 70%;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: .95;
+    letter-spacing: .01em;
+    margin: 0;
+  }
+  .occhiello {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .occhiello::before {
+    content: "";
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--onair);
+    margin-right: 10px;
+    vertical-align: 1px;
+  }
+  .contenitore { max-width: var(--largo); margin: 0 auto; padding: 0 16px; }
+  section { padding: clamp(64px, 10vw, 120px) 0; }
+
+  /* Segnaposto: dati ancora da definire, ben visibili */
+  .da-definire {
+    display: inline-block;
+    border: 1px dashed currentColor;
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-size: .85em;
+    opacity: .85;
+  }
+
+  /* ---------- Avviso anteprima ---------- */
+  .avviso {
+    background: var(--onair);
+    color: #fff;
+    font-size: .78rem;
+    text-align: center;
+    padding: 6px 16px;
+    letter-spacing: .04em;
+  }
+
+  @media (max-width: 760px) { .solo-desktop { display: none; } }
+
+  /* ---------- Testata ---------- */
+  .testata {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(14, 13, 16, .92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+  }
+  .testata .contenitore {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .testata .logo img { height: 34px; width: auto; }
+  .menu-principale ul { list-style: none; margin: 0; padding: 0; }
+  .menu-principale a, .menu-principale button {
+    color: #fff; text-decoration: none; background: none; border: 0;
+    font: inherit; font-size: .88rem; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; cursor: pointer;
+  }
+  .hamburger {
+    display: none;
+    background: none; border: 0; color: #fff; cursor: pointer;
+    width: 44px; height: 44px; padding: 10px;
+  }
+  .hamburger span { display: block; height: 2px; background: currentColor; margin: 5px 0; transition: transform .25s, opacity .25s; }
+  .testata.aperto .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .testata.aperto .hamburger span:nth-child(2) { opacity: 0; }
+  .testata.aperto .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .chevron { display: inline-block; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-left: 8px; vertical-align: 3px; transition: transform .2s; }
+  .pallino { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+  .pallino.palermo { background: var(--palermo); }
+  .pallino.courmayeur { background: var(--courmayeur); }
+
+  @media (min-width: 961px) {
+    .menu-principale > ul { display: flex; gap: 28px; }
+    .menu-principale li { position: relative; }
+    .menu-principale .sottomenu {
+      position: absolute; top: calc(100% + 20px); left: -16px;
+      min-width: 220px; background: var(--nero-2); padding: 10px 0;
+      border-top: 2px solid var(--onair);
+      opacity: 0; visibility: hidden; transform: translateY(6px);
+      transition: opacity .2s, transform .2s, visibility .2s;
+    }
+    .menu-principale .sottomenu::before { content: ""; position: absolute; top: -22px; left: 0; right: 0; height: 22px; }
+    .menu-principale li:hover > .sottomenu,
+    .menu-principale li:focus-within > .sottomenu { opacity: 1; visibility: visible; transform: none; }
+    .menu-principale .sottomenu a { display: block; padding: 9px 16px; text-transform: none; letter-spacing: 0; font-weight: 500; font-size: .95rem; }
+    .menu-principale .sottomenu a:hover { background: rgba(255,255,255,.06); }
+  }
+  @media (max-width: 960px) {
+    .hamburger { display: block; }
+    .menu-principale {
+      position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+      background: var(--nero); overflow-y: auto;
+      opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s;
+      padding: 8px 16px 40px;
+    }
+    .testata.aperto .menu-principale { opacity: 1; visibility: visible; }
+    .menu-principale > ul > li { border-bottom: 1px solid rgba(255,255,255,.12); }
+    .menu-principale > ul > li > a,
+    .menu-principale > ul > li > button {
+      display: flex; justify-content: space-between; align-items: center;
+      width: 100%; padding: 18px 0; font-size: 1.05rem; text-align: left;
+    }
+    .menu-principale .sottomenu { list-style: none; padding: 0 0 12px 14px; display: none; }
+    .menu-principale li.aperto > .sottomenu { display: block; }
+    .menu-principale li.aperto .chevron { transform: rotate(-135deg); }
+    .menu-principale .sottomenu a { display: block; padding: 10px 0; text-transform: none; letter-spacing: 0; font-weight: 500; font-size: 1rem; color: rgba(255,255,255,.8); }
+  }
+
+  /* ---------- Hero: due tappe ---------- */
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100svh - 92px);
+    min-height: 560px;
+    background: var(--nero);
+    color: #fff;
+    overflow: hidden;
+  }
+  .tappa-hero {
+    position: relative;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: clamp(24px, 4vw, 56px);
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .tappa-hero video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .tappa-hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(14,13,16,.85) 0%, rgba(14,13,16,.15) 55%, rgba(14,13,16,.35) 100%);
+  }
+  .tappa-hero:hover video { transform: scale(1.03); }
+  .tappa-hero > * { position: relative; z-index: 1; }
+  .tappa-hero .regione { font-size: .8rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 6px; }
+  .tappa-hero.palermo .regione { color: var(--palermo); }
+  .tappa-hero.courmayeur .regione { color: var(--courmayeur); }
+  .tappa-hero .citta { font-size: clamp(2.4rem, 5vw, 5.4rem); }
+  .tappa-hero .quando { margin: 10px 0 18px; font-size: 1rem; }
+  .bottone {
+    display: inline-flex; align-items: center; gap: 10px;
+    align-self: flex-start;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700; font-size: .85rem; letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none;
+    transition: transform .2s, background .2s;
+  }
+  .bottone::after { content: "→"; }
+  .bottone:hover { transform: translateX(3px); }
+  .palermo .bottone { background: var(--palermo); color: var(--nero); }
+  .courmayeur .bottone { background: var(--courmayeur); color: var(--nero); }
+
+  .sigillo {
+    position: absolute; z-index: 5;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(360px, 34vw);
+    background: var(--nero);
+    padding: 30px 28px 26px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+    pointer-events: none;
+  }
+  .sigillo img { width: 72%; margin: 0 auto 16px; }
+  .sigillo .anno { font-size: .78rem; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.7); margin: 0 0 8px; }
+  .sigillo .slogan { font-size: clamp(1.4rem, 2.4vw, 2.1rem); }
+  .sigillo .slogan em { font-style: normal; color: var(--onair); }
+  .sigillo .barra { display: flex; height: 4px; margin-top: 18px; }
+  .sigillo .barra span { flex: 1; }
+  .sigillo .barra span:first-child { background: var(--palermo); }
+  .sigillo .barra span:last-child { background: var(--courmayeur); }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; min-height: 640px; }
+    .tappa-hero { padding: 20px 16px; }
+    .tappa-hero.palermo { justify-content: flex-start; padding-top: 24px; }
+    .tappa-hero.palermo::after { background: linear-gradient(to bottom, rgba(14,13,16,.8) 0%, rgba(14,13,16,.1) 60%); }
+    .tappa-hero .citta { font-size: 2.9rem; }
+    .tappa-hero .quando { margin: 6px 0 12px; font-size: .92rem; }
+    .bottone { padding: 10px 18px; font-size: .78rem; }
+    .sigillo {
+      width: auto; left: 0; right: 0; transform: translateY(-50%);
+      display: flex; align-items: center; gap: 14px;
+      padding: 12px 16px; text-align: left;
+    }
+    .sigillo img { width: 92px; margin: 0; flex: none; }
+    .sigillo .anno { margin: 0 0 2px; font-size: .68rem; }
+    .sigillo .slogan { font-size: 1.25rem; }
+    .sigillo .barra { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; height: 3px; }
+  }
+
+  /* ---------- Le tappe ---------- */
+  .intro { max-width: 760px; margin-bottom: 48px; }
+  .intro .titolo { font-size: clamp(2.4rem, 5.5vw, 4.2rem); margin-bottom: 18px; }
+  .intro p { font-size: 1.1rem; color: var(--grigio); margin: 0; }
+  .griglia-tappe { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .scheda-tappa { background: #fff; border-top: 6px solid; display: flex; flex-direction: column; }
+  .scheda-tappa.palermo { border-color: var(--palermo); }
+  .scheda-tappa.courmayeur { border-color: var(--courmayeur); }
+  .scheda-tappa .foto { aspect-ratio: 16 / 10; overflow: hidden; background: var(--nero-2); }
+  .scheda-tappa .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .scheda-tappa .corpo { padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .scheda-tappa .titolo { font-size: 2.6rem; }
+  .scheda-tappa .dati { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; font-size: .95rem; }
+  .scheda-tappa dt { font-weight: 700; text-transform: uppercase; font-size: .75rem; letter-spacing: .12em; color: var(--grigio); padding-top: 3px; }
+  .scheda-tappa dd { margin: 0; }
+  .scheda-tappa .indice { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .scheda-tappa .indice li { font-size: .8rem; padding: 4px 12px; border: 1px solid var(--filetto); border-radius: 999px; }
+  .scheda-tappa .bottone { margin-top: auto; }
+  @media (max-width: 760px) { .griglia-tappe { grid-template-columns: 1fr; } .scheda-tappa .corpo { padding: 22px 18px; } }
+
+  /* ---------- Il festival ---------- */
+  .festival { background: var(--nero); color: #fff; }
+  .festival .colonne { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+  .festival .titolo { font-size: clamp(2.8rem, 7vw, 5.6rem); }
+  .festival .titolo span { display: block; }
+  .festival .titolo span:nth-child(2) { color: var(--onair); }
+  .festival p { color: rgba(255,255,255,.78); font-size: 1.08rem; }
+  .festival h3 { font-size: 1.4rem; margin: 32px 0 10px; }
+  .temi { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 16px 0 0; }
+  .temi li { border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 6px 14px; font-size: .88rem; }
+  .citazione { margin: 56px 0 0; padding: 28px 0 0; border-top: 1px solid rgba(255,255,255,.15); }
+  .citazione p { font-stretch: 85%; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.3; color: #fff; margin: 0 0 10px; font-weight: 500; }
+  .citazione cite { font-style: normal; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+  @media (max-width: 860px) { .festival .colonne { grid-template-columns: 1fr; } }
+
+  /* ---------- Il format ---------- */
+  .format-griglia { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--testo); }
+  .format-voce { padding: 28px 24px 8px 0; border-right: 1px solid var(--filetto); }
+  .format-voce + .format-voce { padding-left: 24px; }
+  .format-voce:last-child { border-right: 0; }
+  .format-voce .numero { font-stretch: 70%; font-weight: 800; font-size: 3rem; line-height: 1; color: var(--onair); }
+  .format-voce h3 { font-size: 1.2rem; margin: 14px 0 8px; }
+  .format-voce p { margin: 0; color: var(--grigio); font-size: .97rem; }
+  @media (max-width: 960px) {
+    .format-griglia { grid-template-columns: 1fr 1fr; }
+    .format-voce, .format-voce + .format-voce { padding: 24px 16px 24px 0; border-right: 0; border-bottom: 1px solid var(--filetto); }
+    .format-voce:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--filetto); }
+  }
+  @media (max-width: 560px) {
+    .format-griglia { grid-template-columns: 1fr; }
+    .format-voce:nth-child(even) { padding-left: 0; border-left: 0; }
+  }
+
+  /* ---------- Territorio ---------- */
+  .territorio { background: #fff; }
+  .vetrine { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .vetrina { position: relative; color: #fff; min-height: 520px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+  .vetrina > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .vetrina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,13,16,.92) 15%, rgba(14,13,16,.2) 70%); }
+  .vetrina .testo { position: relative; z-index: 1; padding: 28px; }
+  .vetrina .marchio { font-stretch: 70%; font-weight: 800; text-transform: uppercase; font-size: 2.4rem; line-height: 1; margin: 0 0 6px; }
+  .vetrina.sicilia .marchio span { color: var(--palermo); }
+  .vetrina.vallee .marchio span { color: var(--courmayeur); }
+  .vetrina .sottotitolo { margin: 0 0 16px; font-size: .95rem; color: rgba(255,255,255,.8); }
+  .vetrina ul { list-style: none; padding: 0; margin: 0 0 18px; }
+  .vetrina li { padding: 10px 0; border-top: 1px solid rgba(255,255,255,.18); font-size: .95rem; }
+  .vetrina li strong { display: block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+  .vetrina.sicilia li strong { color: var(--palermo); }
+  .vetrina.vallee li strong { color: var(--courmayeur); }
+  .esperienze { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .esperienza img { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; }
+  .esperienza h3 { font-size: 1.05rem; margin: 12px 0 4px; text-transform: uppercase; letter-spacing: .06em; }
+  .esperienza p { margin: 0; color: var(--grigio); font-size: .92rem; }
+  @media (max-width: 860px) {
+    .vetrine { grid-template-columns: 1fr; }
+    .vetrina { min-height: 480px; }
+    .vetrina .testo { padding: 22px 18px; }
+    .esperienze { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ---------- Responsabilità sociale ---------- */
+  .sociale { background: var(--onair); color: #fff; }
+  .sociale .colonne { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(32px, 6vw, 80px); }
+  .sociale .titolo { font-size: clamp(2.6rem, 6vw, 4.6rem); }
+  .sociale .occhiello::before { background: #fff; }
+  .sociale p { font-size: 1.08rem; }
+  .sociale ol { list-style: none; counter-reset: obiettivo; padding: 0; margin: 0; }
+  .sociale ol li { counter-increment: obiettivo; padding: 18px 0 18px 52px; border-top: 1px solid rgba(255,255,255,.35); position: relative; font-size: 1.05rem; }
+  .sociale ol li::before { content: "0" counter(obiettivo); position: absolute; left: 0; top: 16px; font-stretch: 70%; font-weight: 800; font-size: 1.5rem; }
+  @media (max-width: 860px) { .sociale .colonne { grid-template-columns: 1fr; } }
+
+  /* ---------- Archivio ---------- */
+  .archivio-griglia { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .edizione {
+    display: block; text-decoration: none;
+    padding: 28px 24px; background: #fff; border: 1px solid var(--filetto);
+    transition: border-color .2s, transform .2s;
+  }
+  .edizione:hover { border-color: var(--testo); transform: translateY(-3px); }
+  .edizione .anno { font-stretch: 70%; font-weight: 800; font-size: 3.4rem; line-height: 1; }
+  .edizione .ordinale { display: block; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--grigio); margin-top: 8px; }
+  .edizione .vai { display: block; margin-top: 18px; font-size: .9rem; font-weight: 600; }
+  .edizione .vai::after { content: " →"; color: var(--onair); }
+  @media (max-width: 760px) { .archivio-griglia { grid-template-columns: 1fr; } }
+
+  /* ---------- Partner e newsletter ---------- */
+  .partner-newsletter { background: var(--nero); color: #fff; }
+  .partner-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 72px; }
+  .gruppo-partner { border-top: 4px solid; padding-top: 20px; }
+  .gruppo-partner.palermo { border-color: var(--palermo); }
+  .gruppo-partner.courmayeur { border-color: var(--courmayeur); }
+  .gruppo-partner h3 { margin: 0 0 18px; font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; }
+  .loghi { display: flex; flex-wrap: wrap; align-items: center; gap: 32px; }
+  .logo-partner { display: flex; flex-direction: column; gap: 8px; }
+  .logo-partner img { height: 54px; width: auto; object-fit: contain; }
+  .logo-partner span { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+  .newsletter { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; border-top: 1px solid rgba(255,255,255,.15); padding-top: 56px; }
+  .newsletter .titolo { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .newsletter p { color: rgba(255,255,255,.72); margin: 12px 0 0; }
+  .newsletter form { display: grid; gap: 14px; }
+  .newsletter fieldset { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .newsletter legend { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 10px; }
+  .scelta { position: relative; }
+  .scelta input { position: absolute; opacity: 0; }
+  .scelta span { display: inline-block; padding: 8px 16px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; cursor: pointer; font-size: .92rem; }
+  .scelta input:checked + span { background: #fff; color: var(--nero); border-color: #fff; }
+  .scelta input:focus-visible + span { outline: 3px solid var(--onair); outline-offset: 2px; }
+  .riga-email { display: flex; gap: 8px; }
+  .riga-email input {
+    flex: 1; min-width: 0; padding: 14px 16px; font: inherit;
+    border: 1px solid rgba(255,255,255,.35); background: transparent; color: #fff; border-radius: 999px;
+  }
+  .riga-email button { padding: 0 24px; border: 0; border-radius: 999px; background: var(--onair); color: #fff; font: inherit; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; cursor: pointer; }
+  .consenso { font-size: .8rem; color: rgba(255,255,255,.6); display: flex; gap: 10px; align-items: flex-start; }
+  .consenso input { margin-top: 3px; }
+  @media (max-width: 860px) {
+    .partner-griglia, .newsletter { grid-template-columns: 1fr; }
+    .riga-email { flex-direction: column; }
+    .riga-email button { padding: 14px; }
+  }
+
+  /* ---------- Piede ---------- */
+  .piede { background: var(--nero); color: rgba(255,255,255,.65); font-size: .85rem; padding: 40px 0 48px; border-top: 1px solid rgba(255,255,255,.1); }
+  .piede .contenitore { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+  .piede ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  .piede a { text-decoration: none; }
+  .piede a:hover { color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="avviso">Anteprima di lavoro<span class="solo-desktop"> · proposta di riorganizzazione della home per l'edizione 2027</span> · non è il sito pubblicato</div>
+
+<header class="testata" id="testata">
+  <div class="contenitore">
+    <a class="logo" href="#" aria-label="On Air Festival, torna all'inizio">
+      <img src="https://festivalonair.com/wp-content/uploads/2024/05/festival-on-air-logo-bianco.png" alt="On Air Festival">
+    </a>
+    <button class="hamburger" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <nav class="menu-principale" id="menu" aria-label="Menu principale">
+      <ul>
+        <li>
+          <button class="voce-padre" aria-expanded="false">Il festival<i class="chevron"></i></button>
+          <ul class="sottomenu">
+            <li><a href="#festival">Il tema</a></li>
+            <li><a href="#format">Il format</a></li>
+            <li><a href="https://festivalonair.com/storia-del-festival/">La storia</a></li>
+            <li><a href="https://festivalonair.com/il-team/">Il team</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="voce-padre" aria-expanded="false">Edizione 2027<i class="chevron"></i></button>
+          <ul class="sottomenu">
+            <li><a href="#tappe"><i class="pallino palermo"></i>Palermo</a></li>
+            <li><a href="#tappe"><i class="pallino courmayeur"></i>Courmayeur</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="voce-padre" aria-expanded="false">Archivio<i class="chevron"></i></button>
+          <ul class="sottomenu">
+            <li><a href="https://festivalonair.com/programma-2026/">Terza edizione · 2026</a></li>
+            <li><a href="https://festivalonair.com/eventi-2025/">Seconda edizione · 2025</a></li>
+            <li><a href="https://festivalonair.com/gli-eventi-2024/">Prima edizione · 2024</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="voce-padre" aria-expanded="false">Stampa<i class="chevron"></i></button>
+          <ul class="sottomenu">
+            <li><a href="https://festivalonair.com/accrediti-stampa/">Accrediti</a></li>
+            <li><a href="https://festivalonair.com/comunicati-stampa/">Comunicati stampa</a></li>
+          </ul>
+        </li>
+        <li><a href="https://festivalonair.com/contattaci/">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: un festival, due tappe -->
+  <section class="hero" aria-label="On Air 2027, Palermo e Courmayeur" style="padding:0">
+    <a class="tappa-hero palermo" href="#tappe">
+      <video autoplay muted loop playsinline preload="metadata"
+        poster="https://festivalonair.com/wp-content/uploads/2026/04/Palermo-Festival-OnAir.webp"
+        data-orizzontale="https://festivalonair.com/wp-content/uploads/2025/10/on_air_orizzontale_home_1080.mp4"
+        data-verticale="https://festivalonair.com/wp-content/uploads/2025/10/on_air_sito_vert_10-10.mp4"></video>
+      <p class="regione">Sicilia</p>
+      <h2 class="titolo citta">Palermo</h2>
+      <p class="quando">2027 · <span class="da-definire">date in arrivo</span></p>
+      <span class="bottone">Scopri la tappa</span>
+    </a>
+    <a class="tappa-hero courmayeur" href="#tappe">
+      <video autoplay muted loop playsinline preload="metadata"
+        poster="img/courmayeur_poster_orizzontale.jpg"
+        data-poster-verticale="img/courmayeur_poster_verticale.jpg"
+        data-orizzontale="video/courmayeur_orizzontale.mp4"
+        data-verticale="video/courmayeur_verticale.mp4"></video>
+      <p class="regione">Valle d'Aosta</p>
+      <h2 class="titolo citta">Courmayeur</h2>
+      <p class="quando">2027 · <span class="da-definire">date in arrivo</span></p>
+      <span class="bottone">Scopri la tappa</span>
+    </a>
+    <div class="sigillo">
+      <img src="https://festivalonair.com/wp-content/uploads/2024/05/festival-on-air-logo-bianco.png" alt="">
+      <div>
+        <p class="anno">Quarta edizione · 2027</p>
+        <h1 class="titolo slogan">Un festival,<br><em>due tappe</em></h1>
+      </div>
+      <div class="barra"><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- LE TAPPE -->
+  <section id="tappe">
+    <div class="contenitore">
+      <div class="intro">
+        <p class="occhiello">On Air 2027</p>
+        <h2 class="titolo">Dal mare<br>alla montagna</h2>
+        <p>Dopo tre edizioni in Sicilia, On Air raddoppia. Lo stesso tema e lo stesso format, raccontati in due territori diversi: Palermo e Courmayeur.</p>
+      </div>
+      <div class="griglia-tappe">
+        <article class="scheda-tappa palermo">
+          <div class="foto"><img src="https://festivalonair.com/wp-content/uploads/2026/04/Palermo-Festival-OnAir.webp" alt="Palermo, Chiesa del Gesù" loading="lazy"></div>
+          <div class="corpo">
+            <h3 class="titolo">Palermo</h3>
+            <dl class="dati">
+              <dt>Quando</dt><dd><span class="da-definire">date in arrivo</span></dd>
+              <dt>Dove</dt><dd><span class="da-definire">sedi da definire</span></dd>
+            </dl>
+            <p>La città dove On Air è nato e cresciuto. Talk, proiezioni ed eventi tra il patrimonio artistico palermitano e le realtà dell'isola.</p>
+            <ul class="indice"><li>Programma</li><li>Ospiti</li><li>Sicily On Air</li><li>Info pratiche</li></ul>
+            <a class="bottone" href="#tappe">Vai a Palermo</a>
+          </div>
+        </article>
+        <article class="scheda-tappa courmayeur">
+          <div class="foto"><img src="img/courmayeur_vetta.jpg" alt="Le vette del Monte Bianco sopra Courmayeur" loading="lazy"></div>
+          <div class="corpo">
+            <h3 class="titolo">Courmayeur</h3>
+            <dl class="dati">
+              <dt>Quando</dt><dd><span class="da-definire">date in arrivo</span></dd>
+              <dt>Dove</dt><dd><span class="da-definire">sedi da definire</span></dd>
+            </dl>
+            <p>La novità del 2027. Ai piedi del Monte Bianco, il festival incontra la cultura alpina e le comunità della Valle d'Aosta.</p>
+            <ul class="indice"><li>Programma</li><li>Ospiti</li><li>Vallée On Air</li><li>Info pratiche</li></ul>
+            <a class="bottone" href="#tappe">Vai a Courmayeur</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- IL FESTIVAL -->
+  <section class="festival" id="festival">
+    <div class="contenitore">
+      <div class="colonne">
+        <div>
+          <p class="occhiello">Il festival</p>
+          <h2 class="titolo"><span>Il cinema</span><span>le emozioni</span><span>il sociale</span></h2>
+        </div>
+        <div>
+          <p>On Air è un progetto dedicato all'audiovisivo: un appuntamento che unisce serie TV e cinema ai temi sociali, per esplorare, riflettere e discutere le questioni che attraversano la società contemporanea.</p>
+          <h3>Il tema: serie TV e cinema per il cambiamento sociale</h3>
+          <p>Proiezioni, talk e incontri per capire come il racconto audiovisivo possa sollevare questioni rilevanti e stimolare il cambiamento.</p>
+          <ul class="temi">
+            <li>Uguaglianza di genere</li>
+            <li>Diversità</li>
+            <li>Inclusione sociale</li>
+            <li>Giustizia sociale</li>
+            <li>Tutela dell'ambiente</li>
+          </ul>
+        </div>
+      </div>
+      <blockquote class="citazione">
+        <p>«Guardare una serie TV è come intraprendere un viaggio, con ogni episodio che rivela nuove tappe del percorso.»</p>
+        <cite>J.J. Abrams</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- IL FORMAT -->
+  <section id="format">
+    <div class="contenitore">
+      <div class="intro">
+        <p class="occhiello">Il format</p>
+        <h2 class="titolo">Tre giorni,<br>in ogni tappa</h2>
+        <p>Palermo e Courmayeur condividono la stessa formula: cambia il paesaggio, non lo spirito.</p>
+      </div>
+      <div class="format-griglia">
+        <div class="format-voce">
+          <div class="numero">01</div>
+          <h3>Talk con i protagonisti</h3>
+          <p>Attori, registi e sceneggiatori incontrano il pubblico. A tutti gli ospiti i moderatori rivolgono la stessa domanda, per costruire una mappa dei temi sociali raccontati da cinema e serie TV.</p>
+        </div>
+        <div class="format-voce">
+          <div class="numero">02</div>
+          <h3>Masterclass ed eventi</h3>
+          <p>Masterclass, party ed eventi musicali: esperienze da vivere e da far vivere agli spettatori.</p>
+        </div>
+        <div class="format-voce">
+          <div class="numero">03</div>
+          <h3>Dirette social</h3>
+          <p>Incontri ed eventi a tema raccontati in diretta, per portare il festival oltre la sala.</p>
+        </div>
+        <div class="format-voce">
+          <div class="numero">04</div>
+          <h3>Il territorio</h3>
+          <p>Luoghi, tradizioni, sapori e realtà locali: ogni tappa è anche un viaggio alla scoperta della città che la ospita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRITORIO -->
+  <section class="territorio" id="territorio">
+    <div class="contenitore">
+      <div class="intro">
+        <p class="occhiello">Le realtà del territorio</p>
+        <h2 class="titolo">Ogni tappa<br>ha la sua vetrina</h2>
+        <p>Nato con la terza edizione, il format On Air dedicato al territorio racconta le iniziative culturali e imprenditoriali locali, nel segno della sostenibilità e della valorizzazione del patrimonio.</p>
+      </div>
+      <div class="vetrine">
+        <article class="vetrina sicilia">
+          <img src="https://festivalonair.com/wp-content/uploads/2024/05/trapani.jpg" alt="" loading="lazy">
+          <div class="testo">
+            <p class="marchio">Sicily <span>On Air</span></p>
+            <p class="sottotitolo">Identità siciliana, realtà da scoprire</p>
+            <ul>
+              <li><strong>Modica</strong>Il simbolo delle radici storiche e culturali della città</li>
+              <li><strong>Gin Valle</strong>Custode della sacralità della Valle dei Templi di Agrigento</li>
+              <li><strong>Upcycling</strong>Consumi responsabili attraverso il recupero delle vele usate</li>
+            </ul>
+            <a class="bottone" href="https://festivalonair.com/sicily-on-air/" style="background:var(--palermo);color:var(--nero)">Scopri Sicily On Air</a>
+          </div>
+        </article>
+        <article class="vetrina vallee">
+          <img src="img/courmayeur_poster_orizzontale.jpg" alt="" loading="lazy">
+          <div class="testo">
+            <p class="marchio">Vallée <span>On Air</span></p>
+            <p class="sottotitolo">Nome di lavoro <span class="da-definire">da confermare</span></p>
+            <ul>
+              <li><strong>Realtà locali</strong><span class="da-definire">da individuare</span></li>
+              <li><strong>Cultura alpina</strong><span class="da-definire">da individuare</span></li>
+              <li><strong>Sostenibilità</strong><span class="da-definire">da individuare</span></li>
+            </ul>
+            <span class="bottone" style="background:var(--courmayeur);color:var(--nero)">In arrivo</span>
+          </div>
+        </article>
+      </div>
+      <div class="esperienze">
+        <div class="esperienza">
+          <img src="https://festivalonair.com/wp-content/uploads/2024/05/mare.jpg" alt="" loading="lazy">
+          <h3>I luoghi</h3>
+          <p>Giornate alla scoperta di luoghi unici.</p>
+        </div>
+        <div class="esperienza">
+          <img src="https://festivalonair.com/wp-content/uploads/2026/04/Palermo-Festival-OnAir.webp" alt="" loading="lazy">
+          <h3>La cultura</h3>
+          <p>Eventi dedicati al patrimonio artistico del territorio.</p>
+        </div>
+        <div class="esperienza">
+          <img src="img/courmayeur_vetta.jpg" alt="" loading="lazy">
+          <h3>Il benessere</h3>
+          <p>Spazi dedicati alla cura del corpo e della mente.</p>
+        </div>
+        <div class="esperienza">
+          <img src="https://festivalonair.com/wp-content/uploads/2024/05/impasto.jpg" alt="" loading="lazy">
+          <h3>I sapori</h3>
+          <p>La cucina della tradizione, a chilometro zero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESPONSABILITÀ SOCIALE -->
+  <section class="sociale" id="sociale">
+    <div class="contenitore colonne">
+      <div>
+        <p class="occhiello">Responsabilità sociale</p>
+        <h2 class="titolo">Raccontare<br>per cambiare</h2>
+        <p>On Air collabora con organizzazioni locali e nazionali per sensibilizzare il pubblico su cause sociali importanti.</p>
+      </div>
+      <ol>
+        <li>Far comprendere più a fondo il ruolo del cinema e delle serie TV nella società contemporanea.</li>
+        <li>Promuovere la riflessione critica e il dibattito sui temi sociali attraverso l'arte e lo spettacolo.</li>
+        <li>Creare un ponte tra industria cinematografica, cultura locale e comunità.</li>
+        <li>Ispirare azioni concrete di cambiamento attraverso la forza del racconto.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ARCHIVIO -->
+  <section id="archivio">
+    <div class="contenitore">
+      <div class="intro">
+        <p class="occhiello">Le edizioni</p>
+        <h2 class="titolo">Tre anni<br>di On Air</h2>
+      </div>
+      <div class="archivio-griglia">
+        <a class="edizione" href="https://festivalonair.com/programma-2026/">
+          <span class="anno">2026</span>
+          <span class="ordinale">Terza edizione · 23–25 aprile</span>
+          <span class="vai">Il programma</span>
+        </a>
+        <a class="edizione" href="https://festivalonair.com/eventi-2025/">
+          <span class="anno">2025</span>
+          <span class="ordinale">Seconda edizione</span>
+          <span class="vai">Gli eventi</span>
+        </a>
+        <a class="edizione" href="https://festivalonair.com/gli-eventi-2024/">
+          <span class="anno">2024</span>
+          <span class="ordinale">Prima edizione</span>
+          <span class="vai">Gli eventi</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER E NEWSLETTER -->
+  <section class="partner-newsletter" id="partner">
+    <div class="contenitore">
+      <p class="occhiello">Partner</p>
+      <div class="partner-griglia">
+        <div class="gruppo-partner palermo">
+          <h3>Palermo</h3>
+          <div class="loghi">
+            <a class="logo-partner" href="https://www.marlu.it/">
+              <img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu_logo_white.png" alt="Marlu" loading="lazy">
+              <span>Main sponsor</span>
+            </a>
+            <a class="logo-partner" href="https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/assessorato-turismo-sport-spettacolo">
+              <img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="Regione Siciliana" loading="lazy">
+              <span>Partner istituzionale</span>
+            </a>
+          </div>
+        </div>
+        <div class="gruppo-partner courmayeur">
+          <h3>Courmayeur</h3>
+          <div class="loghi">
+            <div class="logo-partner"><span class="da-definire" style="color:#fff">partner istituzionali da definire</span></div>
+            <div class="logo-partner"><span class="da-definire" style="color:#fff">sponsor da definire</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <div>
+          <h2 class="titolo">Resta<br>On Air</h2>
+          <p>Date, ospiti e programma di ogni tappa, prima di tutti.</p>
+        </div>
+        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Grazie!';">
+          <fieldset>
+            <legend>Quale tappa ti interessa?</legend>
+            <label class="scelta"><input type="checkbox" name="tappa" value="palermo" checked><span><i class="pallino palermo"></i>Palermo</span></label>
+            <label class="scelta"><input type="checkbox" name="tappa" value="courmayeur" checked><span><i class="pallino courmayeur"></i>Courmayeur</span></label>
+          </fieldset>
+          <div class="riga-email">
+            <input type="email" placeholder="La tua email" aria-label="Email" required>
+            <button type="submit">Iscriviti</button>
+          </div>
+          <label class="consenso"><input type="checkbox" required> Ho letto l'informativa sul trattamento dei dati personali e acconsento a ricevere informazioni sulle attività e le iniziative di On Air Festival.</label>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="piede">
+  <div class="contenitore">
+    <div>© 2026 Versus S.r.l. · Tutti i diritti riservati · C.F./P.IVA 12408490964</div>
+    <ul>
+      <li><a href="https://festivalonair.com/termini/">Termini di utilizzo</a></li>
+      <li><a href="https://festivalonair.com/cookies/">Cookie</a></li>
+      <li><a href="https://festivalonair.com/privacy-policy/">Privacy</a></li>
+      <li><a href="https://www.instagram.com/onair_fest/">Instagram</a></li>
+      <li>Sito realizzato da <a href="https://www.faberitalia.it/">Faber</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // Video: versione verticale su mobile, orizzontale su desktop
+  (function () {
+    var mq = window.matchMedia('(max-width: 760px)');
+    function carica() {
+      document.querySelectorAll('.tappa-hero video').forEach(function (v) {
+        var src = mq.matches ? v.dataset.verticale : v.dataset.orizzontale;
+        if (mq.matches && v.dataset.posterVerticale) v.poster = v.dataset.posterVerticale;
+        if (v.getAttribute('src') !== src) {
+          v.src = src;
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        }
+      });
+    }
+    carica();
+    if (mq.addEventListener) mq.addEventListener('change', carica);
+  })();
+
+  // Menu mobile a doppio stadio: hamburger + chevron sui sottomenu
+  (function () {
+    var testata = document.getElementById('testata');
+    var hamburger = testata.querySelector('.hamburger');
+    var mobile = window.matchMedia('(max-width: 960px)');
+    hamburger.addEventListener('click', function () {
+      var aperto = testata.classList.toggle('aperto');
+      hamburger.setAttribute('aria-expanded', aperto);
+      document.body.style.overflow = aperto ? 'hidden' : '';
+    });
+    testata.querySelectorAll('.voce-padre').forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (!mobile.matches) return;
+        var li = b.parentElement;
+        var aperto = li.classList.toggle('aperto');
+        b.setAttribute('aria-expanded', aperto);
+      });
+    });
+    testata.querySelectorAll('.menu-principale a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        testata.classList.remove('aperto');
+        hamburger.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
