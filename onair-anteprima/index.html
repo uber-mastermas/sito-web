@@ -221,9 +221,13 @@
     .edizioni { grid-template-columns: 1fr; }
     .edizione, .edizione + .edizione { padding: 22px 0; border-left: 0; border-bottom: 1px solid var(--filetto); }
   }
-  .partner { margin-top: clamp(64px, 8vw, 96px); }
-  .loghi { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 44px; }
-  .loghi img { height: 56px; width: auto; object-fit: contain; }
+
+  /* Partner: loghi che scorrono su fondo grigio, come sul sito */
+  .partner-scorre { background: #9a9a9a; overflow: hidden; padding: 26px 0; }
+  .partner-scorre .scorre { display: inline-flex; align-items: center; gap: 64px; padding-right: 64px; white-space: nowrap; animation: scorri 35s linear infinite; }
+  .partner-scorre img { height: 64px; width: auto; flex: none; object-fit: contain; }
+  .partner-scorre:hover .scorre { animation-play-state: paused; }
+  @media (max-width: 760px) { .partner-scorre img { height: 52px; } .partner-scorre .scorre { gap: 44px; padding-right: 44px; } }
 
   /* ---------- Piede ---------- */
   .newsletter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 48px; align-items: end; padding: 72px 16px 56px; }
@@ -452,7 +456,7 @@
     </div>
   </section>
 
-  <!-- 6. ARCHIVIO E PARTNER -->
+  <!-- 6. ARCHIVIO -->
   <section class="blocco" id="archivio" style="padding-top:0">
     <div class="contenitore">
       <p class="occhiello">Le edizioni</p>
@@ -461,21 +465,15 @@
         <a class="edizione" href="https://festivalonair.com/eventi-2025/"><span class="anno">2025</span><span class="ordinale">Seconda edizione</span></a>
         <a class="edizione" href="https://festivalonair.com/gli-eventi-2024/"><span class="anno">2024</span><span class="ordinale">Prima edizione</span></a>
       </div>
-      <div class="partner">
-        <p class="occhiello">Partner</p>
-        <div class="loghi">
-          <img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana2.png" alt="Regione Siciliana">
-          <img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="Grand Hotel et Des Palmes">
-          <img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="Marlù">
-          <img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="Coppola Palermo">
-        </div>
-      </div>
     </div>
   </section>
 
 </main>
 
 <footer class="scuro">
+  <div class="partner-scorre" aria-label="Partner">
+    <div class="scorre"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana2.png" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes">25/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes">25/04/regione-siciliana2.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"><img src="https://festivalonair.com/wp-content/uploads/2024/05/marlu.png" aria-hidden="true" alt="Marlù"><img src="https://festivalonair.com/wp-content/uploads/2025/04/regione-siciliana0.png" aria-hidden="true" alt="Regione Siciliana"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Coppola-Palermo.png" aria-hidden="true" alt="Aldo Coppola by Palermo"><img src="https://festivalonair.com/wp-content/uploads/2024/05/Des-Palmes2.png" aria-hidden="true" alt="Grand Hotel et Des Palmes"></div>
+  </div>
   <div class="contenitore newsletter">
     <div>
       <h2>Resta On Air</h2>
