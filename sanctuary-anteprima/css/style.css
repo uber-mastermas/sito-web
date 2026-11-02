@@ -662,12 +662,12 @@ body:not(.con-hero) main > .testata:first-child { padding-top: clamp(48px, 9vw, 
 .footer-testa .footer-motto { margin-inline: auto; }
 /* Sedi nel footer: il marchio della sede ("THE SANCTUARY" + città) apre la fisarmonica.
    Niente linee fra le sedi: solo i marchi e, aperta, i recapiti centrati. */
-.footer-sedi { display: grid; gap: 8px 40px; grid-template-columns: minmax(0, 1fr); padding-block: 48px 40px; }
+.footer-sedi { display: grid; gap: 0 40px; grid-template-columns: minmax(0, 1fr); padding-block: 36px 28px; }
 @media (min-width: 1100px) { .footer-sedi { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; } }
 .footer-sede { text-align: center; }
 .footer-sede summary {
   display: grid; justify-items: center; gap: 8px;
-  padding: 18px 0 10px; cursor: pointer; list-style: none;
+  padding: 14px 0 8px; cursor: pointer; list-style: none;
 }
 .footer-sede summary::-webkit-details-marker { display: none; }
 .footer-sede summary::after {
@@ -677,7 +677,10 @@ body:not(.con-hero) main > .testata:first-child { padding-top: clamp(48px, 9vw, 
 }
 .footer-sede summary:hover::after { opacity: .9; }
 .footer-sede[open] summary::after { transform: translateY(3px) rotate(225deg); }
-.footer-sede-marchio { font-size: 21px; }
+.footer-sede-nome {   /* solo il nome della sede, senza marchio (richiesta del 02/11) */
+  font-family: var(--font-firma); font-size: 1.15rem; letter-spacing: .2em; padding-left: .2em;
+  text-transform: uppercase; line-height: 1.2;
+}
 .footer-sede-stato { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: #d9a77f; }
 .footer-sede-corpo { padding: 6px 0 22px; }
 .footer-sede-corpo .orari { justify-content: center; text-align: left; }

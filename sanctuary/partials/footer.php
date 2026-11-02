@@ -14,7 +14,7 @@
       <?php foreach ($SEDI as $k => $s): ?>
       <details class="footer-sede">
         <summary>
-          <?= firma('The Sanctuary', $s['nome_locale'] ?? $s['nome'], 'span', 'footer-sede-marchio') ?>
+          <span class="footer-sede-nome"><?= e($s['nome']) ?></span>
           <?php if ($s['stato'] !== ''): ?><span class="footer-sede-stato"><?= e($s['stato']) ?></span><?php endif; ?>
         </summary>
         <div class="footer-sede-corpo">
