@@ -473,9 +473,12 @@ body.reserve-aperto { overflow: hidden; }
 .sede:hover > .foto { transform: scale(1.04); }
 .sede-testo { position: relative; z-index: 1; display: grid; gap: 4px; padding: 26px 24px; }
 .sede-testo .kicker { color: var(--pesca); margin: 0; }
-.sede-firma { justify-items: start; text-align: left; font-size: clamp(1.1rem, 1.5vw, 1.35rem); margin-bottom: 8px; --sotto: .62em; }
-@media (max-width: 1099px) { .sede-firma { font-size: 1.5rem; } }
-.sede-firma .firma-titolo::after { left: 0; right: 10%; }
+.sede-nome {   /* solo il nome della sede: niente linea né regione (richiesta del 02/11) */
+  font-family: var(--font-firma); font-weight: 400;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem); letter-spacing: .2em; text-transform: uppercase; line-height: 1.1;
+  margin-bottom: 4px;
+}
+@media (max-width: 1099px) { .sede-nome { font-size: 1.5rem; } }
 .sede-testo > span:not(.firma) { font-size: .95rem; opacity: .9; }
 .etichetta {
   justify-self: start; margin-top: 10px;
