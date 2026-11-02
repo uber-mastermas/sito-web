@@ -97,8 +97,7 @@ function link_spazio($sede, $chiave) {
 <header class="site-header">
   <div class="barra">
     <a class="logo" href="./" aria-label="<?= e($SITO['nome']) ?> — Home">
-      <img class="logo-simbolo" src="img/logo/simbolo-sanctuary.svg" width="206" height="326" alt="">
-      <?= firma('The Sanctuary', 'Eco Retreat', 'span', 'logo-firma') ?>
+      <img class="logo-una-riga" src="img/logo/logo-sanctuary-una-riga.svg" width="810" height="93" alt="">
     </a>
 
     <nav id="menu-principale" class="nav" aria-label="Main menu">

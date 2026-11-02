@@ -150,8 +150,7 @@ body.con-hero .site-header:not(.pieno)::before {
   display: flex; align-items: center; gap: 22px;
 }
 .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; flex: none; }
-.logo-simbolo { height: 38px; width: auto; }
-.logo-firma { font-size: 15px; }
+.logo-una-riga { height: 27px; width: auto; }   /* logo su una riga: simbolo + THE SANCTUARY (scelta del 02/11) */
 .logo img { transition: filter .35s; }
 
 .menu, .sottomenu, .menu-esterni { list-style: none; margin: 0; padding: 0; }
@@ -200,8 +199,7 @@ body.con-hero .site-header:not(.pieno) .bottone-reserve:hover { background: #fff
 
 @media (max-width: 1100px) {
   .site-header .barra { gap: 12px; }
-  .logo-simbolo { height: 32px; }
-  .logo-firma { font-size: 12px; }
+  .logo-una-riga { height: 23px; }
   .bottone-reserve { min-height: 40px; padding: 8px 16px; font-size: .72rem; }
   .menu-toggle {
     display: grid; place-items: center;
@@ -259,8 +257,7 @@ body.con-hero .site-header:not(.pieno) .bottone-reserve:hover { background: #fff
   body.menu-bloccato { overflow: hidden; }
 }
 @media (max-width: 379px) {
-  .logo .logo-firma { display: none; }
-  .logo-simbolo { height: 34px; }
+  .logo-una-riga { height: 19px; }
 }
 
 /* ---------- PANNELLO RESERVE ---------- */
@@ -772,3 +769,12 @@ body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6p
 .sezioni-nav::after  { content: "›"; right: 0; justify-content: flex-end; padding-right: 12px; background: linear-gradient(270deg, var(--crema) 58%, rgba(243, 236, 226, 0)); }
 .sezioni-nav ul { position: relative; z-index: 1; }
 .sezioni-nav.scorre-sinistra::before, .sezioni-nav.scorre-destra::after { opacity: 1; }
+
+/* Desktop stretto (1101–1320 px): logo e menu un po' più compatti, così Reserve resta nello schermo */
+@media (min-width: 1101px) and (max-width: 1320px) {
+  .logo-una-riga { height: 22px; }
+  .site-header .barra { gap: 16px; }
+  .menu { gap: 16px; }
+  .menu a { letter-spacing: .1em; font-size: .72rem; }
+  .bottone-reserve { padding: 9px 16px; }
+}
