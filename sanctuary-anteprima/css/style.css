@@ -787,3 +787,14 @@ body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6p
 
 /* Home: la barra delle sedi serve solo su telefono e tablet; su desktop le sedi sono già nel menu principale */
 @media (min-width: 1101px) { .pagina-index .sezioni-nav { display: none; } }
+
+/* ---------- ROMA, NUOVA VERSIONE (rome-nuova.php) ---------- */
+.titolo-kai { line-height: 0; margin-bottom: 22px; }
+.logo-kai { width: clamp(140px, 20vw, 210px); height: auto; }
+.scura .spazio { padding-top: var(--respiro); }
+/* calendario su fondo chiaro */
+.programma-chiaro, .programma-chiaro li { border-color: var(--filetto); }
+.programma-chiaro time { color: var(--fumo); }
+/* due foto affiancate tra karaoke e biliardo */
+.due-foto { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(10px, 2vw, 24px); margin-top: var(--respiro); }
+.due-foto .foto { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
