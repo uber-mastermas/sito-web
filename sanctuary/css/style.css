@@ -784,3 +784,6 @@ body:has(.sezioni-nav) [id] { scroll-margin-top: calc(var(--altezza-header) - 6p
   .menu a { letter-spacing: .1em; font-size: .72rem; }
   .bottone-reserve { padding: 9px 16px; }
 }
+
+/* Home: la barra delle sedi serve solo su telefono e tablet; su desktop le sedi sono già nel menu principale */
+@media (min-width: 1101px) { .pagina-index .sezioni-nav { display: none; } }
