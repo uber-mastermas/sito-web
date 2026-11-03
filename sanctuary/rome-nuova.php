@@ -50,7 +50,7 @@ $R = 'img/pagine/roma-nuova/';
   <section class="hero hero-centro copre" style="--velo: 1.2">
     <?= video_hero('', $R . 'roma-giardino-folla-notte.webp', '', $R . 'roma-parete-luci-simbolo.webp', 'The garden at night, crowded under the palm trees and the lanterns') ?>
     <div class="hero-testo">
-      <p class="kicker">The Sanctuary · Monti</p>
+      <p class="kicker">The Sanctuary</p>
       <?= firma('Rome', 'Between sound and taste.', 'h1', 'firma-hero', true) ?>
       <div class="azioni">
         <a class="bottone bottone-chiaro" href="#book">Book a table</a>
@@ -88,7 +88,7 @@ $R = 'img/pagine/roma-nuova/';
         <p class="kicker">Restaurant · Mediterranean cuisine</p>
         <h2 id="titolo-ristorante">Restaurant</h2>
         <p class="sottotitolo">Our kitchen speaks Mediterranean: honest ingredients, the rhythm of the seasons, instinctive and recognisable cooking.</p>
-        <p>Whole fish, generous cuts, seasonal vegetables, pasta and the dishes of our own culture, retold in the Sanctuary spirit.</p>
+        <p>Large-catch whole fish, generous cuts, seasonal vegetables, pasta and the dishes of our own culture, retold in the Sanctuary spirit.</p>
         <p>A menu made for the middle of the table: to share, taste and discover together.</p>
         <dl class="orari-blocco">
           <?php foreach ($sede['orari_ristorante'] as $giorni => $ore): ?>
