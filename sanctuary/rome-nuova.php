@@ -48,7 +48,7 @@ $R = 'img/pagine/roma-nuova/';
 ?>
 
   <section class="hero hero-centro copre" style="--velo: 1.2">
-    <?= video_hero('', $R . 'roma-giardino-folla-notte.webp', '', $R . 'roma-parete-luci-simbolo.webp', 'The garden at night, crowded under the palm trees and the lanterns') ?>
+    <?= video_hero('img/video/roma-orizzontale.mp4', 'img/video/roma-orizzontale-attesa.webp', 'img/video/famiglia-sanctuary-verticale.mp4', 'img/video/famiglia-sanctuary-verticale-attesa.webp', 'Rome at sunset, the fountains, the garden and the pool of The Sanctuary') ?>
     <div class="hero-testo">
       <p class="kicker">The Sanctuary</p>
       <?= firma('Rome', 'Between sound and taste.', 'h1', 'firma-hero', true) ?>
