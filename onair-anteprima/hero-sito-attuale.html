@@ -9,7 +9,7 @@ body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
 </style></head><body>
 <div class="avviso">Anteprima di lavoro · nuova parte alta della home di festivalonair.com</div>
 <div class="finta-testata">qui resta la testata attuale del sito</div>
-<!-- ON AIR · Hero "due tappe" per la home del sito attuale (widget HTML di Elementor) · v1 · --oa-testata = altezza della testata del sito -->
+<!-- ON AIR · Hero "due tappe" per la home del sito attuale (widget HTML di Elementor) · v2 · --oa-testata = altezza della testata del sito -->
 <style>
 .oa-hero{--oa-nero:#111012;--oa-palermo:#e52823;--oa-palermo-testo:#ff6058;--oa-courmayeur:#7cc4e8;--oa-testata:90px;position:relative;display:grid;grid-template-columns:1fr 1fr;height:calc(100vh - var(--oa-testata));height:calc(100svh - var(--oa-testata));min-height:520px;background:var(--oa-nero);color:#fff;overflow:hidden;font-family:"Questrial",system-ui,sans-serif}
 .oa-hero *{box-sizing:border-box}
@@ -36,13 +36,15 @@ body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
 .oa-barra span:first-child{background:var(--oa-courmayeur)}
 .oa-barra span:last-child{background:var(--oa-palermo)}
 @media (max-width:767px){
-.oa-hero{grid-template-columns:1fr;grid-template-rows:1fr 1fr;min-height:600px}
+.oa-hero{grid-template-columns:1fr;grid-template-rows:auto 1fr 1fr;min-height:640px}
+.oa-courmayeur{grid-row:2}
+.oa-palermo{grid-row:3}
 .oa-tappa{padding:20px 18px}
 .oa-courmayeur{justify-content:flex-start;padding-top:24px}
 .oa-courmayeur::after{background:linear-gradient(to bottom,rgba(17,16,18,.8) 0%,rgba(17,16,18,.1) 60%)}
 .oa-citta{font-size:2.6rem!important}
 .oa-bottone{margin-top:12px!important;padding:9px 16px;font-size:.72rem}
-.oa-sigillo{width:auto;left:0;right:0;transform:translateY(-50%);display:flex;align-items:center;gap:14px;padding:12px 18px;text-align:left}
+.oa-sigillo{grid-row:1;position:relative;left:auto;top:auto;width:auto;transform:none;box-shadow:none;display:flex;align-items:center;gap:14px;padding:12px 18px 15px;text-align:left}
 .oa-sigillo img{width:92px;margin:0;flex:none}
 .oa-anno{margin:0 0 2px;font-size:.65rem}
 .oa-slogan{font-size:1.05rem!important}
