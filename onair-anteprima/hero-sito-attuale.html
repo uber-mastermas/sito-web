@@ -9,7 +9,7 @@ body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
 </style></head><body>
 <div class="avviso">Anteprima di lavoro · nuova parte alta della home di festivalonair.com</div>
 <div class="finta-testata">qui resta la testata attuale del sito</div>
-<!-- ON AIR · Hero "due tappe" per la home del sito attuale (widget HTML di Elementor) · v2 · --oa-testata = altezza della testata del sito -->
+<!-- ON AIR · Hero "due tappe" per la home del sito attuale (widget HTML di Elementor) · v3 · --oa-testata = altezza della testata del sito -->
 <style>
 .oa-hero{--oa-nero:#111012;--oa-palermo:#e52823;--oa-palermo-testo:#ff6058;--oa-courmayeur:#7cc4e8;--oa-testata:90px;position:relative;display:grid;grid-template-columns:1fr 1fr;height:calc(100vh - var(--oa-testata));height:calc(100svh - var(--oa-testata));min-height:520px;background:var(--oa-nero);color:#fff;overflow:hidden;font-family:"Questrial",system-ui,sans-serif}
 .oa-hero *{box-sizing:border-box}
@@ -44,10 +44,13 @@ body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
 .oa-courmayeur::after{background:linear-gradient(to bottom,rgba(17,16,18,.8) 0%,rgba(17,16,18,.1) 60%)}
 .oa-citta{font-size:2.6rem!important}
 .oa-bottone{margin-top:12px!important;padding:9px 16px;font-size:.72rem}
-.oa-sigillo{grid-row:1;position:relative;left:auto;top:auto;width:auto;transform:none;box-shadow:none;display:flex;align-items:center;gap:14px;padding:12px 18px 15px;text-align:left}
-.oa-sigillo img{width:92px;margin:0;flex:none}
-.oa-anno{margin:0 0 2px;font-size:.65rem}
-.oa-slogan{font-size:1.05rem!important}
+.oa-sigillo{grid-row:1;position:relative;left:auto;top:auto;width:auto;transform:none;box-shadow:none;padding:11px 12px 14px;text-align:center}
+.oa-sigillo img{display:none}
+.oa-sigillo>div:not(.oa-barra){display:flex;justify-content:center;align-items:baseline;gap:.7em;white-space:nowrap}
+.oa-anno{margin:0;font-size:.62rem;letter-spacing:.2em}
+.oa-anno::after{content:"·";margin-left:.7em;opacity:.7}
+.oa-slogan{font-size:.88rem!important;letter-spacing:.08em}
+.oa-slogan br{display:none}
 .oa-barra{position:absolute;left:0;right:0;bottom:0;margin:0;height:3px}
 }
 @media (prefers-reduced-motion:reduce){.oa-tappa video{transition:none}}
@@ -78,7 +81,7 @@ body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
     <img src="https://festivalonair.com/wp-content/uploads/2024/05/festival-on-air-logo-bianco.png" alt="On Air Festival" width="300" height="113">
     <div>
       <p class="oa-anno">On Air · 2027</p>
-      <h1 class="oa-slogan">Un festival,<br>due tappe</h1>
+      <h1 class="oa-slogan">Un festival,<br> due tappe</h1>
     </div>
     <div class="oa-barra" aria-hidden="true"><span></span><span></span></div>
   </div>
