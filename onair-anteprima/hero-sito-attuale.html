@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Anteprima · nuova parte alta della home attuale</title>
+<style>@font-face{font-family:"Questrial";src:url(font/questrial-400.woff2) format("woff2")}
+body{margin:0;font-family:"Questrial",sans-serif;color:#29332f}
+.avviso{background:#e52823;color:#fff;font-size:.8rem;text-align:center;padding:6px 12px;letter-spacing:.04em}
+.finta-testata{height:90px;display:flex;align-items:center;padding:0 24px;border-bottom:1px solid #e5e5e5;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#949997}
+.sotto{padding:60px 24px;text-align:center;letter-spacing:.2em;text-transform:uppercase;color:#949997;font-size:.85rem}
+</style></head><body>
+<div class="avviso">Anteprima di lavoro · nuova parte alta della home di festivalonair.com</div>
+<div class="finta-testata">qui resta la testata attuale del sito</div>
+<!-- ON AIR · Hero "due tappe" per la home del sito attuale (widget HTML di Elementor) · v1 · --oa-testata = altezza della testata del sito -->
+<style>
+.oa-hero{--oa-nero:#111012;--oa-palermo:#e52823;--oa-palermo-testo:#ff6058;--oa-courmayeur:#7cc4e8;--oa-testata:90px;position:relative;display:grid;grid-template-columns:1fr 1fr;height:calc(100vh - var(--oa-testata));height:calc(100svh - var(--oa-testata));min-height:520px;background:var(--oa-nero);color:#fff;overflow:hidden;font-family:"Questrial",system-ui,sans-serif}
+.oa-hero *{box-sizing:border-box}
+.oa-tappa{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,4vw,56px);color:#fff!important;text-decoration:none!important;overflow:hidden}
+.oa-tappa video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.oa-tappa::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(17,16,18,.88) 0%,rgba(17,16,18,.15) 55%,rgba(17,16,18,.35) 100%)}
+.oa-tappa:hover video{transform:scale(1.03)}
+.oa-tappa>*:not(video){position:relative;z-index:1;margin:0}
+.oa-regione{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.oa-courmayeur .oa-regione{color:var(--oa-courmayeur)}
+.oa-palermo .oa-regione{color:var(--oa-palermo-testo)}
+.oa-citta{font-size:clamp(2.6rem,5.4vw,5.6rem)!important;line-height:1!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.08em;margin:.15em 0 .2em!important;color:#fff!important;font-family:inherit!important}
+.oa-quando{font-size:clamp(1rem,1.6vw,1.3rem);letter-spacing:.12em;text-transform:uppercase}
+.oa-edizione{font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;opacity:.75;margin-top:.5em!important}
+.oa-bottone{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-top:22px!important;padding:12px 22px;border:1px solid #fff;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;transition:background .2s,color .2s}
+.oa-bottone::after{content:"";width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translate(-2px,-2px)}
+.oa-tappa:hover .oa-bottone{background:#fff;color:var(--oa-nero)}
+.oa-sigillo{position:absolute;z-index:5;left:50%;top:clamp(24px,7vh,72px);transform:translateX(-50%);width:min(340px,32vw);background:var(--oa-nero);padding:28px 26px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.45);pointer-events:none}
+.oa-sigillo img{width:72%;height:auto;margin:0 auto 14px;display:block}
+.oa-anno{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;opacity:.7;margin:0 0 8px}
+.oa-slogan{font-size:clamp(1.2rem,2vw,1.7rem)!important;line-height:1.15!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.12em;margin:0!important;color:#fff!important;font-family:inherit!important}
+.oa-barra{display:flex;height:4px;margin-top:18px}
+.oa-barra span{flex:1}
+.oa-barra span:first-child{background:var(--oa-courmayeur)}
+.oa-barra span:last-child{background:var(--oa-palermo)}
+@media (max-width:767px){
+.oa-hero{grid-template-columns:1fr;grid-template-rows:1fr 1fr;min-height:600px}
+.oa-tappa{padding:20px 18px}
+.oa-courmayeur{justify-content:flex-start;padding-top:24px}
+.oa-courmayeur::after{background:linear-gradient(to bottom,rgba(17,16,18,.8) 0%,rgba(17,16,18,.1) 60%)}
+.oa-citta{font-size:2.6rem!important}
+.oa-bottone{margin-top:12px!important;padding:9px 16px;font-size:.72rem}
+.oa-sigillo{width:auto;left:0;right:0;transform:translateY(-50%);display:flex;align-items:center;gap:14px;padding:12px 18px;text-align:left}
+.oa-sigillo img{width:92px;margin:0;flex:none}
+.oa-anno{margin:0 0 2px;font-size:.65rem}
+.oa-slogan{font-size:1.05rem!important}
+.oa-barra{position:absolute;left:0;right:0;bottom:0;margin:0;height:3px}
+}
+@media (prefers-reduced-motion:reduce){.oa-tappa video{transition:none}}
+</style>
+
+<section class="oa-hero" aria-label="On Air 2027: Courmayeur e Palermo">
+  <a class="oa-tappa oa-courmayeur" href="#step1">
+    <video muted loop playsinline preload="metadata"
+      data-orizzontale="https://festivalonair.com/wp-content/uploads/2026/11/courmayeur_orizzontale.mp4"
+      data-verticale="https://festivalonair.com/wp-content/uploads/2026/11/courmayeur_verticale.mp4"></video>
+    <p class="oa-regione">Valle d'Aosta</p>
+    <h2 class="oa-citta">Courmayeur</h2>
+    <p class="oa-quando">21 – 24 gennaio 2027</p>
+    <p class="oa-edizione">Prima edizione</p>
+    <span class="oa-bottone">Scopri On Air</span>
+  </a>
+  <a class="oa-tappa oa-palermo" href="#step1">
+    <video muted loop playsinline preload="metadata"
+      data-orizzontale="https://festivalonair.com/wp-content/uploads/2026/11/on_air_orizzontale_home_1080.mp4"
+      data-verticale="https://festivalonair.com/wp-content/uploads/2026/11/on_air_sito_vert_10-10.mp4"></video>
+    <p class="oa-regione">Sicilia</p>
+    <h2 class="oa-citta">Palermo</h2>
+    <p class="oa-quando">22 – 25 aprile 2027</p>
+    <p class="oa-edizione">Quarta edizione</p>
+    <span class="oa-bottone">Scopri On Air</span>
+  </a>
+  <div class="oa-sigillo">
+    <img src="https://festivalonair.com/wp-content/uploads/2024/05/festival-on-air-logo-bianco.png" alt="On Air Festival" width="300" height="113">
+    <div>
+      <p class="oa-anno">On Air · 2027</p>
+      <h1 class="oa-slogan">Un festival,<br>due tappe</h1>
+    </div>
+    <div class="oa-barra" aria-hidden="true"><span></span><span></span></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var mq = window.matchMedia('(max-width: 767px)');
+  var ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function carica() {
+    document.querySelectorAll('.oa-tappa video').forEach(function (v) {
+      var src = mq.matches ? v.dataset.verticale : v.dataset.orizzontale;
+      if (v.getAttribute('src') !== src) {
+        v.src = src;
+        if (!ridotto) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      }
+    });
+  }
+  carica();
+  if (mq.addEventListener) mq.addEventListener('change', carica);
+})();
+</script>
+
+<div class="sotto" id="step1">qui sotto resta il resto della home attuale<br>(il cinema, le emozioni, il sociale…)</div>
+</body></html>
